@@ -1,0 +1,14 @@
+query TermsOfUseContent($locale: I18NLocaleCode) {
+  termsOfUse(locale: $locale) {
+    data {
+      id
+      attributes {
+        createdAt
+        publishedAt
+        updatedAt
+        locale
+        LegalContent
+      }
+    }
+  }
+}

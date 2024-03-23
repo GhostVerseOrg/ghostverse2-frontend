@@ -1,0 +1,15 @@
+{
+  "name": "MvX Me",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "STRAPI API": {
+        "url": "${env:NEXT_PUBLIC_STRAPI_API_URL}",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": true
+      }
+    }
+  }
+}

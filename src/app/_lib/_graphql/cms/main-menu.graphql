@@ -1,0 +1,24 @@
+query MainMenu($locale: I18NLocaleCode) {
+  navigationHeader(locale: $locale) {
+    data {
+      attributes {
+        MenuBody {
+          ... on ComponentMenuLink {
+            Label
+            Url
+            Target
+          }
+
+          ... on ComponentMenuDropdown {
+            Label
+            Links {
+              Label
+              Url
+              Target
+            }
+          }
+        }
+      }
+    }
+  }
+}

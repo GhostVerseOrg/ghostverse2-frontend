@@ -1,0 +1,29 @@
+{
+  "mainPageTitle": "(EN) MvX Me",
+  "mainPageDescription": "MvX Me SEO in English",
+
+  "changeLanguage": "Language",
+
+  "blogPageTitle": "Blog",
+  "blogPageNoBlogsSorry": "Currently there are no blogs.",
+
+  "navHome": "Home",
+  "navDashboard": "Dashboard",
+  "navDAO": "DAO",
+  "navTreasury": "Treasury",
+  "navProjects": "Projects",
+  "navMembers": "Members",
+  "navTokenomics": "Tokenomics",
+  "navExamples": "Examples",
+  "navAbout": "About",
+
+  "aboutPageTitle": "(EN) About Us - MvX Me",
+  "aboutPageDescription": "Learn more about MvX Me and our mission.",
+  "header": "About Us - Header",
+  "content": "Here at MvX Me, we believe in...",
+
+  "sorry": "Sorry!",
+  "genericError": "There was an error.",
+
+  "treasuryReserves": "Treasury Reserves"
+}

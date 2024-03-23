@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  web-mvx-frontend:
+    container_name: web-mvx-frontend
+    build:
+      context: .
+      target: runner
+      network: host
+    restart: always # Change if you don't want your container restarting
+    environment:
+      - NODE_ENV=production
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env

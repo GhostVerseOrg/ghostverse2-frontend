@@ -1,0 +1,4 @@
+.next
+src/app/_lib/_graphql/cms/schema.graphql
+src/app/_lib/_graphql/cms/generated.ts
+*.md

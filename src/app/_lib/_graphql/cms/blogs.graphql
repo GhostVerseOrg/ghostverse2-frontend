@@ -1,0 +1,11 @@
+query BlogsSlugs($locale: I18NLocaleCode) {
+  blogs(locale: $locale) {
+    data {
+      id
+      attributes {
+        Slug
+        locale
+      }
+    }
+  }
+}

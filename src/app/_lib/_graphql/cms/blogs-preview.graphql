@@ -1,0 +1,45 @@
+query BlogsPreview($locale: I18NLocaleCode, $limit: Int, $offset: Int) {
+  blogs(
+    pagination: { limit: $limit, start: $offset }
+    locale: $locale
+    sort: "createdAt:desc"
+  ) {
+    data {
+      id
+      attributes {
+        createdAt
+        publishedAt
+        updatedAt
+        Slug
+        locale
+        Title
+        Summary
+        CategoryColor
+        CategoryLabel
+        Thumbnail {
+          data {
+            attributes {
+              url
+              previewUrl
+              caption
+            }
+          }
+        }
+        FeaturedImage {
+          data {
+            attributes {
+              url
+              previewUrl
+              caption
+            }
+          }
+        }
+      }
+    }
+    meta {
+      pagination {
+        total
+      }
+    }
+  }
+}

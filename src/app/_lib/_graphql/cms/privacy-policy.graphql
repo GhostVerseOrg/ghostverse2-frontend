@@ -1,0 +1,14 @@
+query PrivacyPolicyContent($locale: I18NLocaleCode) {
+  privacyPolicy(locale: $locale) {
+    data {
+      id
+      attributes {
+        createdAt
+        publishedAt
+        updatedAt
+        locale
+        LegalContent
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "mainPageTitle": "(IT) MvX Me",
+  "mainPageDescription": "SEO di MvX Me in italiano",
+
+  "changeLanguage": "Lingua",
+
+  "blogPageTitle": "Blog",
+  "blogPageNoBlogsSorry": "Attualmente non ci sono blog.",
+
+  "navHome": "Home",
+  "navDashboard": "Cruscotto",
+  "navDAO": "DAO",
+  "navTreasury": "Tesoreria",
+  "navProjects": "Progetti",
+  "navMembers": "Membri",
+  "navTokenomics": "Tokenomics",
+  "navAbout": "Chi Siamo",
+
+  "aboutPageTitle": "(IT) Chi Siamo - MvX Me",
+  "aboutPageDescription": "Scopri di più su MvX Me e sulla nostra missione.",
+  "header": "Chi Siamo - Intestazione",
+  "content": "Qui a MvX Me, crediamo in...",
+
+  "sorry": "Spiacente!",
+  "genericError": "Si è verificato un errore."
+}

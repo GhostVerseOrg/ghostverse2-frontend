@@ -1,0 +1,9 @@
+overwrite: true
+generates:
+  src/app/_lib/_graphql/cms/generated.ts:
+    documents: './src/app/_lib/_graphql/cms/*.graphql'
+    schema: ${NEXT_PUBLIC_STRAPI_API_URL}
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node

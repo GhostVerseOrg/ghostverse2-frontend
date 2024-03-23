@@ -1,0 +1,42 @@
+query BlogsSingleContent($locale: I18NLocaleCode, $slug: String) {
+  blogs(locale: $locale, filters: { Slug: { eq: $slug } }) {
+    data {
+      id
+      attributes {
+        createdAt
+        publishedAt
+        updatedAt
+        Slug
+        locale
+        Title
+        Summary
+        CategoryColor
+        CategoryLabel
+        Content
+        Thumbnail {
+          data {
+            attributes {
+              url
+              previewUrl
+              caption
+            }
+          }
+        }
+        FeaturedImage {
+          data {
+            attributes {
+              url
+              previewUrl
+              caption
+            }
+          }
+        }
+      }
+    }
+    meta {
+      pagination {
+        total
+      }
+    }
+  }
+}
