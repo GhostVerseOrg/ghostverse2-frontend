@@ -43,7 +43,7 @@ export default async function Page({ params: { locale } }) {
       <Layout
         // @ts-ignore
         menuItems={pageStaticData.menuItems}
-        classNameCustom="bg-slate-800"
+        classNameCustom="bg-colr-d-bg"
       >
         <PageWrapper>
           <div className="max-w-[1280px] md:py-10 mx-auto">

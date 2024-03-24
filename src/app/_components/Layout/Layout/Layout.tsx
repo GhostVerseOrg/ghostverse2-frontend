@@ -15,7 +15,7 @@ type Props = {
 
 export const Layout = ({ children, menuItems, classNameCustom }: Props) => {
   return (
-    <div className="flex min-h-screen flex-col scroll-smooth">
+    <div className="flex min-h-screen flex-col scroll-smooth bg-colr-d-bg">
       <Header menuItems={menuItems} />
       <main
         className={twMerge(

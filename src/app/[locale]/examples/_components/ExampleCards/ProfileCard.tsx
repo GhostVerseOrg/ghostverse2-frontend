@@ -13,7 +13,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   socialLinks,
 }) => {
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-gradient-to-br from-gray-700 to-gray-900 p-6 text-white flex flex-col items-center">
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-gradient-to-br from-gray-700 to-gray-900 p-6 text-colr-d-fg flex flex-col items-center">
       <img
         className="hover:bg-colr-mvx-teal rounded-full h-24 w-24 border-4 border-colr-mvx-teal transform hover:scale-110 transition duration-250 ease-in-out relative"
         src={avatarUrl}
@@ -27,7 +27,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           <a
             key={index}
             href={link.url}
-            className="mx-2 text-white hover:text-colr-mvx-teal transition-colors duration-300"
+            className="mx-2 text-colr-d-fg hover:text-colr-mvx-teal transition-colors duration-300"
           >
             {link.icon}
           </a>

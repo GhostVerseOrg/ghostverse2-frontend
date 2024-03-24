@@ -10,13 +10,15 @@ export const Header = ({ menuItems }: Props) => {
   return (
     <header
       id="header"
-      className="flex items-center border-b border border-gray-800"
+      className="border-b border-gray-800"
     >
-      <div className="hidden w-full md:block text-white">
-        <DesktopMenu menuItems={menuItems} />
-      </div>
-      <div className="z-50 md:hidden right-0">
-        <MobileMenu menuItems={menuItems} />
+      <div className="flex items-center container mx-auto px-20">
+        <div className="hidden w-full md:block text-colr-d-fg">
+          <DesktopMenu menuItems={menuItems} />
+        </div>
+        <div className="z-50 md:hidden right-0">
+          <MobileMenu menuItems={menuItems} />
+        </div>
       </div>
     </header>
   );

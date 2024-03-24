@@ -48,7 +48,7 @@ export default async function Page({
       <Layout
         // @ts-ignore
         menuItems={pageStaticData.menuItems}
-        classNameCustom="bg-white px-5 bg-slate-800 text-gray-100"
+        classNameCustom="bg-white px-5 bg-colr-d-bg text-gray-100"
       >
         <div className="w-full min-w-full">
           <header className="py-14 lg:py-20">

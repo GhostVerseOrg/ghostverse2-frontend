@@ -6,7 +6,7 @@ export const About = () => {
     <section
       id="about"
       className="
-      max-w-[1280px] py-16 text-white flex flex-col items-center justify-center px-6 space-y-8
+      max-w-[1280px] py-16 text-colr-d-fg flex flex-col items-center justify-center px-6 space-y-8
       lg:flex-row lg:justify-between md:px-12 lg:px-0 lg:space-y-0 lg:space-x-10"
     >
       <div className="lg:w-1/2 space-y-6">
