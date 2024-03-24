@@ -37,7 +37,6 @@ export default async function Page({ params: { locale } }) {
         classNameCustom="bg-colr-d-bg"
       >
         <PageWrapper>
-
           <ScrollUp />
 
           <Hero />

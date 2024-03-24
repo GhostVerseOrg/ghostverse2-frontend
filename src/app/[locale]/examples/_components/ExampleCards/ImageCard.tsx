@@ -15,7 +15,9 @@ const ImageCard: React.FC<ImageCardProps> = ({ imageUrl, title }) => {
         alt={title}
       />
       <div className="absolute bottom-0 left-0 right-0 bg-colr-d-bg bg-opacity-75 p-4">
-        <div className="font-bold text-colr-d-fg text-xl text-center">{title}</div>
+        <div className="font-bold text-colr-d-fg text-xl text-center">
+          {title}
+        </div>
       </div>
     </div>
   );
