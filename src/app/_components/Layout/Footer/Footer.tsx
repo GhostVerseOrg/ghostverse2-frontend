@@ -46,7 +46,7 @@ export const Footer = () => {
                 <li>
                   <Link
                     href="https://multiversx.com/"
-                    className="hover:underline hover:text-colr-mvx-teal"
+                    className="hover:text-colr-mvx-teal"
                   >
                     Green Token
                   </Link>
@@ -111,21 +111,15 @@ export const Footer = () => {
             href="/"
             className="flex justify-center items-center sm:justify-start md:hidden"
           >
-            <span className="self-center font-russo-one-regular text-2xl font-extrabold whitespace-nowrap text-gray-200 px-1">
-              MV
-            </span>
-            <div className="inline-block min-w-[50px]">
+            <div className="inline-block min-w-[200px]">
               <Image
-                src="/assets/img/mvx.svg"
+                src="/assets/img/logo-ghostverse.png"
                 alt="MvX Me Logo"
-                width={40}
+                width={200}
                 height={40}
                 priority
               />
             </div>
-            <span className="self-center font-russo-one-regular text-2xl font-extrabold whitespace-nowrap text-gray-200 -m-2">
-              ME
-            </span>
           </Link>
         </div>
       </div>
