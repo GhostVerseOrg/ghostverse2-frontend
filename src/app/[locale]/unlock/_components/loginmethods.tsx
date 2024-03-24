@@ -35,7 +35,7 @@ export const LoginMethods = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row bg-colr-d-bg">
       <WalletConnectLoginButton
         loginButtonText="xPortal App"
         onLoginRedirect={onLoginRedirect}
