@@ -11,13 +11,13 @@ export const SocialLinks = () => {
           className: 'fill-slate-300 w-6 h-6 sm:w-[22px] sm:h-[22px]',
         }}
       >
-        <SocialLink href="https://twitter.com/mvxunity" label="">
+        <SocialLink href="https://twitter.com/GhostVerseOrg" label="">
           <FaXTwitter className="hover:fill-colr-mvx-teal" />
         </SocialLink>
-        <SocialLink href="https://dsc.gg/mvx" label="">
+        <SocialLink href="https://discord.com/invite/tXSeJfVVnH" label="">
           <FaDiscord className="hover:fill-colr-mvx-teal" />
         </SocialLink>
-        <SocialLink href="https://github.com/mvxme" label="">
+        <SocialLink href="https://github.com/GhostVerseOrg" label="">
           <FaGithub className="hover:fill-colr-mvx-teal" />
         </SocialLink>
       </IconContext.Provider>

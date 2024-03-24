@@ -5,11 +5,9 @@ import { AuthRedirectWrapper } from '@/app/_wrappers/AuthRedirectWrapper';
 import { PageWrapper } from '@/app/_wrappers/PageWrapper';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
-import { About } from './_components/Sections/About';
 import { ProjectCards } from './_components/Projects/projects';
 import { Hero } from './_components/Sections/Hero';
 import { ScrollUp } from './_components/SrollToTop/ScrollToTop';
-import { SubNavigationMenu } from './_components/SubNavigationMenu/SubNavigationMenu';
 
 // @ts-ignore
 export default async function Page({ params: { locale } }) {
@@ -36,18 +34,15 @@ export default async function Page({ params: { locale } }) {
       <Layout
         // @ts-ignore
         menuItems={pageStaticData.menuItems}
-        classNameCustom="bg-slate-800"
+        classNameCustom="bg-colr-d-bg"
       >
         <PageWrapper>
-          <SubNavigationMenu />
 
           <ScrollUp />
 
           <Hero />
 
           <ProjectCards />
-
-          <About />
 
           {/*<FeaturesSection />
           <HowItWorksSection />

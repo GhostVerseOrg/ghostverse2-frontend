@@ -75,7 +75,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
   return (
     <>
       <div
-        className="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-black to-slate-900 text-white
+        className="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-black to-slate-900 text-colr-d-fg
       border-b border border-gray-800"
       >
         <div className="flex justify-between items-center w-full px-2">
@@ -125,7 +125,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
 
       <div
         className={clsx(
-          'fixed inset-0 z-40 bg-gray-800 text-white duration-[400ms] bg-gradient-to-t from-black to-slate-900 opacity-0',
+          'fixed inset-0 z-40 bg-gray-800 text-colr-d-fg duration-[400ms] bg-gradient-to-t from-black to-slate-900 opacity-0',
           {
             'translate-x-0 opacity-100': isMenuOpen,
             'translate-x-full': !isMenuOpen,
@@ -143,7 +143,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
           {isLoggedIn ? (
             <Button
               onClick={handleLogout}
-              className="w-full flex items-center justify-center p-3 m-2 rounded-md shadow-sm font-medium text-black bg-colr-d-btn hover:bg-colr-mvx-teal transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-mvx-teal"
+              className="w-full flex items-center justify-center p-3 m-2 rounded-full shadow-sm font-medium text-black bg-colr-d-btn hover:bg-colr-mvx-teal transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-mvx-teal"
             >
               Sign Out
             </Button>

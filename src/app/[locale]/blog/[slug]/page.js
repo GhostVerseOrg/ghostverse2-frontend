@@ -59,7 +59,7 @@ export default async function BlogDetails({ params: { locale, slug } }) {
       <Layout
         // @ts-ignore
         menuItems={pageStaticData.menuItems}
-        classNameCustom="px-5 bg-slate-800 text-gray-100"
+        classNameCustom="px-5 bg-colr-d-bg text-gray-100"
       >
         <div className="w-full min-w-full">
           <div className="max-w-4xl flex flex-col m-auto pt-8">

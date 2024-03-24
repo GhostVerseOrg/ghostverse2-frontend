@@ -8,7 +8,7 @@ const cardStyle =
 
 const HeroBanner = () => {
   return (
-    <div className="rounded-lg shadow-2xl p-6 bg-black text-white text-center">
+    <div className="rounded-lg shadow-2xl p-6 bg-colr-d-bg text-colr-d-fg text-center">
       <h1 className="text-4xl font-bold mb-4 transform hover:scale-125 transition duration-250 ease-in-out">
         DAO Summary
       </h1>

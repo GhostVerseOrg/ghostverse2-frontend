@@ -17,7 +17,7 @@ const EnhancedInteractiveCard: React.FC<InteractiveCardProps> = ({
   const [value, setValue] = useState(0);
 
   return (
-    <div className="max-w-md rounded-lg overflow-hidden shadow-2xl p-6 bg-gradient-to-br from-gray-800 to-gray-900 text-white flex flex-col items-center space-y-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+    <div className="max-w-md rounded-lg overflow-hidden shadow-2xl p-6 bg-gradient-to-br from-gray-800 to-gray-900 text-colr-d-fg flex flex-col items-center space-y-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
       <h2 className="text-2xl font-bold mb-2">{title}</h2>
       <p className="text-lg">{description}</p>
       <input

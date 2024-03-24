@@ -7,27 +7,22 @@ export const Hero = () => {
     <section
       id="hero"
       className="
-      max-w-[1280px] mx-auto text-white flex flex-col text-center items-center justify-between px-6 py-20
-      lg:flex-row lg:px-0 lg:py-32 lg:text-left"
+      max-w-[1280px] mx-auto text-colr-d-fg flex flex-col text-center items-center justify-between px-6 py-20
+       lg:px-0 lg:mx-80 lead"
     >
-      <div className="lg:w-3/5 space-y-6">
-        <h1 className="text-5xl lg:text-6xl font-bold leading-snug">
-          Transform Your Wealth
+      <div className="w-full space-y-8 mb-10">
+        <h1 className="text-5xl lg:text-7xl font-bold lg:leading-snug">
+          Unlock The Power Of GREEN token With GhostVerse DAO
         </h1>
-        <p className="text-lg lg:text-2xl leading-relaxed mt-4">
-          Elite finance converges with groundbreaking Artificial Intelligence to
-          redefine wealth management. As pioneers at the forefront of digital
-          innovation, we offer unparalleled opportunities for discerning
-          investors to magnify their returns. Experience the apex of investment
-          strategy specifically tailored for the elite.
+        <p className="text-lg text-colr-l-fg leading-relaxed my-5">
+          Join a scary universe ghostverned by 2664 Mr Ghost NFT
         </p>
-
-        <div className="flex justify-center gap-5 lg:justify-start w-full lg:w-fit">
+        <div className="flex justify-center gap-5 lg:justify-start w-full lg:w-fit mx-auto">
           <Link
             href="/about"
             className="
-              w-full max-w-60 lg:w-44 py-3 px-4 text-lg font-medium rounded-md text-center shadow-sm whitespace-nowrap transition-all duration-300 text-black bg-colr-mvx-teal 
-              md:hover:scale-105 hover:bg-black hover:text-colr-mvx-teal hover:ring-2 hover:ring-colr-mvx-teal
+              w-full max-w-60 lg:w-44 py-3 px-4 text-lg font-medium rounded-lg text-center shadow-sm whitespace-nowrap transition-all duration-300 text-black bg-colr-mvx-teal 
+              md:hover:scale-105 hover:bg-colr-d-bg hover:text-colr-mvx-teal hover:ring-2 hover:ring-colr-mvx-teal
               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-mvx-teal"
           >
             Learn More
@@ -35,7 +30,7 @@ export const Hero = () => {
           <Link
             href="/unlock"
             className="
-              w-full max-w-60 lg:w-44 py-3 px-4 text-lg font-medium rounded-md text-center shadow-sm whitespace-nowrap transition-all duration-300 text-white border border-colr-mvx-teal 
+              w-full max-w-60 lg:w-44 py-3 px-4 text-lg font-medium rounded-lg text-center shadow-sm whitespace-nowrap transition-all duration-300 text-colr-d-fg border border-colr-mvx-teal 
               md:hover:scale-105 hover:bg-colr-mvx-teal hover:text-black hover:ring-2 hover:ring-white
               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-mvx-teal"
           >
@@ -43,9 +38,9 @@ export const Hero = () => {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center lg:justify-end w-full lg:w-2/5 max-w-lg lg:max-w-none">
+      <div className="flex justify-center lg:justify-end w-full max-w-lg lg:max-w-none">
         <Image
-          src="/assets/img/phoenix-icon.png"
+          src="/assets/img/hero-ghostverse.jpeg"
           alt="MvX Me Phoenix"
           width={0}
           height={0}

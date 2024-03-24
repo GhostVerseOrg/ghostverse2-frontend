@@ -12,7 +12,7 @@ export default async function Custom404(params) {
     <Layout
       // @ts-ignore
       menuItems={pageStaticData.menuItems}
-      classNameCustom="px-5 bg-slate-800 text-gray-100"
+      classNameCustom="px-5 bg-colr-d-bg text-gray-100"
     >
       <div className="flex flex-col md:flex-row items-center justify-center m-auto h-full md:min-w-4/6 py-12 mx-auto">
         <div className="md:w-1/2">

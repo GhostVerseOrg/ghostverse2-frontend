@@ -8,7 +8,7 @@ type Props = {
 export const Divider = ({ isDark = false, dividerColor }: Props) => {
   return (
     <div
-      className={clsx('h-px bg-gray-600 my-3', { 'bg-gray-600': isDark })}
+      className={clsx('h-px bg-gray-800 my-10', { 'bg-gray-600': isDark })}
       style={{ backgroundColor: dividerColor }}
     />
   );
