@@ -3,7 +3,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { AuthRedirectWrapper } from '@/app/_wrappers/AuthRedirectWrapper';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
-import { About } from '../_components/Sections/About';
+import { About } from './_components/About';
 
 // @ts-ignore
 export default async function Page({

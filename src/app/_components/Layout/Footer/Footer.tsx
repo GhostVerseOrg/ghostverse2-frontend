@@ -21,12 +21,51 @@ export const Footer = () => {
               />
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 lg:gap-10">
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 lg:gap-16">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-colr-d-fg">
+              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase">
+                Follow us
+              </h2>
+              <ul className="text-gray-500 font-medium">
+                <li className="mb-4">
+                  <Link
+                    href="https://medium.com/@GokaiLabs"
+                    className="hover:text-colr-mvx-teal"
+                  >
+                    Medium
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link
+                    href="https://twitter.com/GokaiLabs"
+                    className="hover:text-colr-mvx-teal"
+                  >
+                    Twitter
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link
+                    href="https://discord.com/invite/tXSeJfVVnH"
+                    className="hover:text-colr-mvx-teal"
+                  >
+                    Discord
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://github.com/gokaiorg"
+                    className="hover:text-colr-mvx-teal"
+                  >
+                    GitHub
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase">
                 Resources
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <Link
                     href="/privacy-policy"
@@ -53,42 +92,11 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            {/* <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-colr-d-fg">
-                Follow us
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <Link
-                    href="https://twitter.com/mvXunity"
-                    className="hover:text-colr-mvx-teal"
-                  >
-                    Twitter
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link
-                    href="https://dsc.gg/mvx"
-                    className="hover:text-colr-mvx-teal"
-                  >
-                    Discord
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://github.com/mvxme"
-                    className="hover:text-colr-mvx-teal"
-                  >
-                    GitHub
-                  </Link>
-                </li>
-              </ul>
-            </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-colr-d-fg">
+              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase">
                 About Us
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <Link href="/contacts" className="hover:text-colr-mvx-teal">
                     Contact Us
@@ -100,7 +108,7 @@ export const Footer = () => {
                   </Link>
                 </li>
               </ul>
-            </div> */}
+            </div>
           </div>
         </div>
 
