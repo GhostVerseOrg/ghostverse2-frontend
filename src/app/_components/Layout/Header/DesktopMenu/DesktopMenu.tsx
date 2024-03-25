@@ -63,7 +63,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
       <div>
         <Link href="/" className="shrink-0 flex items-center">
           {/* Wrapper div for applying custom styles */}
-          <div className="inline-block min-w-[50px]">
+          <div className="inline-block min-w-[150px]">
             <Image
               src="/assets/img/logo-ghostverse.png"
               alt="GhostVerse"
