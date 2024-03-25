@@ -6,11 +6,11 @@ import { Divider } from './Divider';
 export const Footer = () => {
   return (
     <footer className="bg-colr-d-bg">
-      <div className="container max-w-[1400px] mx-auto px-20 lg:px-0">
+      <div className="container max-w-[1400px] mx-auto px-20 lg:px-8">
         <Divider />
         <div className="my-5 pb-4 md:flex md:justify-start">
           {/* Footer Logo */}
-          <div className="mb-6 md:mb-0 md:min-w-[200px] lg:min-w-[300px]">
+          <div className="mb-6 md:mb-0 md:min-w-[250px] lg:min-w-[300px]">
             <Link href="/" className="hidden md:flex items-center">
               <Image
                 src="/assets/img/logo-ghostverse.png"
@@ -124,7 +124,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1400px] mx-auto px-20 lg:px-8">
         <Divider />
 
         <div className="container mx-auto px-20 lg:px-0 flex flex-col sm:flex-row sm:justify-between items-center my-6 lg:-mt-5">
