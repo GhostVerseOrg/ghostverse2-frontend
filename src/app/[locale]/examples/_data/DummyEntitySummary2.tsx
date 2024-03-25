@@ -1,7 +1,3 @@
-// src/app/_data/DummyEntitySummary2.tsx
-
-import React from 'react';
-
 const DummyEntitySummary2 = [
   {
     id: '1',

@@ -11,24 +11,20 @@ export const About = () => {
     >
       <div className="lg:w-1/2 space-y-6">
         <h2 className="text-3xl lg:text-4xl font-bold text-center lg:text-left">
-          About the MvX Me
+          About the GhostVerse
         </h2>
         <p className="text-xl lg:text-2xl">
-          The MvX Me is revolutionizing the digital finance space by leveraging
-          the power of decentralized autonomous organization structures. Our
-          goal is to empower individuals with the tools and knowledge needed to
-          take control of their financial future.
+          Creative Web3 agency building on MultiversX.
         </p>
         <p className="text-xl lg:text-2xl">
-          Through a combination of advanced technology, transparent processes,
-          and community governance, were creating a new paradigm in wealth
-          management thats open, inclusive, and forward-thinking.
+          Gokai Labs is a contributor and community member of the GhostVerse DAO
+          on MultiversX.
         </p>
         {/* Add more content here if necessary */}
       </div>
       <div className="lg:w-1/2 max-w-lg mx-auto lg:mx-0">
         <Image
-          src="/assets/img/DAOStory1.svg" // Replace with your about image path
+          src="/assets/img/ghostverse-hero.jpeg" // Replace with your about image path
           alt="About MvX Me"
           width={0}
           height={0}

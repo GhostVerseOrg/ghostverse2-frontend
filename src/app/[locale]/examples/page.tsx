@@ -28,15 +28,7 @@ export default async function Page({ params: { locale } }) {
 
   const pageStaticData = await getStaticPageDetails(locale);
 
-  const cardsData = [
-    {
-      title: t('mainPageTitle'),
-      description: t('mainPageDescription'),
-      imageUrl: '/path-to-your-image.jpg',
-    },
-  ];
-
-  const treasuryFunds = '$661,708.69'; // This would be fetched dynamically
+  const treasuryFunds = '$661,708.69';
 
   return (
     <AuthRedirectWrapper requireAuth={false}>
@@ -54,14 +46,14 @@ export default async function Page({ params: { locale } }) {
             <div className="flex flex-col md:flex-row items-center justify-center p-2">
               <div className="w-full md:w-1/2 p-2 justify-center flex">
                 <InteractiveCard
-                  title="Acces DeFi Services Now"
+                  title="Access DeFi Services Now"
                   description="Borrow or Deposit, choose your preference."
                 />
               </div>
               <div className="flex flex-col md:w-1/2 p-2">
                 <ProfileCard
-                  avatarUrl="assets/img/v_avatar.png"
-                  name="The Banished"
+                  avatarUrl="assets/icons/avatar.svg"
+                  name="The profilename"
                   socialLinks={[
                     {
                       icon: <span>Connect on Social</span>,
@@ -131,16 +123,6 @@ export default async function Page({ params: { locale } }) {
                 title="Basic Card"
                 content="This is a basic card."
                 footer="Footer Text"
-              />
-              <ProfileCard
-                avatarUrl="assets/img/v_avatar.png"
-                name="The Banished"
-                socialLinks={[
-                  {
-                    icon: <span>Connect on Social</span>,
-                    url: '',
-                  },
-                ]}
               />
             </div>
 

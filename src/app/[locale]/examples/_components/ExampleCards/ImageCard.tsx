@@ -1,4 +1,3 @@
-// components/ImageCard.tsx
 import React from 'react';
 
 interface ImageCardProps {
@@ -14,10 +13,8 @@ const ImageCard: React.FC<ImageCardProps> = ({ imageUrl, title }) => {
         src={imageUrl}
         alt={title}
       />
-      <div className="absolute bottom-0 left-0 right-0 bg-colr-d-bg bg-opacity-75 p-4">
-        <div className="font-bold text-colr-d-fg text-xl text-center">
-          {title}
-        </div>
+      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-4">
+        <div className="font-bold text-white text-xl text-center">{title}</div>
       </div>
     </div>
   );

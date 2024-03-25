@@ -11,7 +11,7 @@ export const TreasuryReservesCard: React.FC<
   const t = await getTranslations();
 
   return (
-    <div className="w-full max-w-xs bg-colr-l-primary bg-opacity-100 backdrop-filter backdrop-blur-md rounded-lg shadow-lg p-4 text-colr-d-fg flex flex-col items-center">
+    <div className="w-full max-w-xs bg-gradient-to-br from-gray-800 to-gray-900 backdrop-filter backdrop-blur-md rounded-lg shadow-lg p-4 text-white flex flex-col items-center">
       <h3 className="text-sm sm:text-md font-bold tracking-wide text-colr-mvx-teal truncate">
         {t('treasuryReserves')}
       </h3>
