@@ -8,7 +8,7 @@ export const Hero = () => {
       id="hero"
       className="
       max-w-[1280px] mx-auto text-colr-d-fg flex flex-col text-center items-center justify-between px-6 py-20
-       lg:px-0 lg:mx-80 lead"
+       lg:px-0 lg:mx-80"
     >
       <div className="w-full space-y-8 mb-10">
         <h1 className="text-5xl lg:text-7xl font-bold lg:leading-snug">
