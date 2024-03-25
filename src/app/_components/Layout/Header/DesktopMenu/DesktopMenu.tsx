@@ -59,7 +59,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
   };
 
   return (
-    <div className="flex w-full justify-between items-center p-3 lg:px-16">
+    <div className="flex w-full justify-between items-center p-3 lg:px-20">
       <div>
         <Link href="/" className="shrink-0 flex items-center">
           {/* Wrapper div for applying custom styles */}
