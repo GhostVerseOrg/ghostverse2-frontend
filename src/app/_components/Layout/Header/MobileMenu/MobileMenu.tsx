@@ -82,21 +82,15 @@ export const MobileMenu = ({ menuItems }: Props) => {
           <div className="flex justify-between items-center w-full p-4 mx-0">
             <Link href="/" className="shrink-0 flex items-center">
               {/* Wrapper div for applying custom styles */}
-              <span className="self-center font-russo-one-regular text-2xl font-extrabold whitespace-nowrap text-gray-200 px-1">
-                MV
-              </span>
               <div className="inline-block min-w-[50px]">
                 <Image
-                  src="/assets/img/mvx.svg"
-                  alt="MvX Me Logo"
-                  width={40}
+                  src="/assets/img/logo-ghostverse.png"
+                  alt="Ghost verse Logo"
+                  width={200}
                   height={40}
                   priority
                 />
               </div>
-              <span className="self-center font-russo-one-regular text-2xl font-extrabold whitespace-nowrap text-gray-200 -m-2">
-                ME
-              </span>
             </Link>
           </div>
 
