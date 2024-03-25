@@ -59,7 +59,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
   };
 
   return (
-    <div className="flex w-full justify-between items-center p-3 lg:px-20">
+    <div className="flex w-full justify-between items-center p-3 lg:px-20 max-w-[1800px] mx-auto">
       <div>
         <Link href="/" className="shrink-0 flex items-center">
           {/* Wrapper div for applying custom styles */}
@@ -91,7 +91,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
               focus:ring-colr-mvx-teal focus:outline-none focus:ring-2 focus:ring-offset-2
                 "
             >
-              Close
+              Logout
             </Button>
           ) : (
             <TealGradientButton href={RouteNamesEnum.unlock} text="Connect" />
