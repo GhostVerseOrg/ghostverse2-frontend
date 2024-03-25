@@ -75,7 +75,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
         </Link>
       </div>
 
-      <div className="flex items-center gap-10 max-w-[1250px] justify-start ml-auto">
+      <div className="flex items-center gap-10 max-w-[1250px] justify-start ml-10">
         {renderLinks()}
       </div>
 
