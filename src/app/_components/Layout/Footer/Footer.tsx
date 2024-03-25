@@ -6,7 +6,7 @@ import { Divider } from './Divider';
 export const Footer = () => {
   return (
     <footer className="bg-colr-d-bg">
-      <div className="container mx-auto px-20">
+      <div className="container max-w-[1400px] mx-auto px-20">
         <Divider />
         <div className="my-5 pb-4 md:flex md:justify-start">
           {/* Footer Logo */}
