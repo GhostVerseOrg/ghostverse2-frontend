@@ -26,23 +26,23 @@ export const SubNavigationMenu = () => {
   };
 
   return (
-    <div className="hidden lg:flex justify-center items-center space-x-4 bg-slate-800 text-white py-3">
+    <div className="hidden lg:flex justify-center items-center space-x-4 bg-colr-d-bg text-colr-d-fg py-3">
       {Object.entries(submenuItems).map(([menu, items], index, array) => (
         <div
           className={`relative group ${index < array.length - 1 ? 'border-r border-slate-600 pr-4' : ''}`}
           key={menu}
         >
           <button
-            className={`px-3 py-2 rounded-md text-sm font-bold bg-slate-800 text-white focus:outline-none`}
+            className={`px-3 py-2 rounded-md text-sm font-bold bg-colr-d-bg text-colr-d-fg focus:outline-none`}
           >
             {menu}
             {/* SVG icon placeholder */}
           </button>
-          <div className="absolute hidden group-hover:block z-10 mt-0 w-80 rounded-md shadow-lg bg-slate-900 text-white">
+          <div className="absolute hidden group-hover:block z-10 mt-0 w-80 rounded-md shadow-lg bg-slate-900 text-colr-d-fg">
             {items.map((subItem) => (
               <a
                 href="#"
-                className={`block px-4 py-2 text-sm hover:bg-slate-500 hover:text-white`}
+                className={`block px-4 py-2 text-sm hover:bg-slate-500 hover:text-colr-d-fg`}
                 key={subItem}
               >
                 {subItem}

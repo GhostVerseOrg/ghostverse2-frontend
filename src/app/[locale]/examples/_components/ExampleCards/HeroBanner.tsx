@@ -1,4 +1,3 @@
-// components/HeroBanner.tsx
 import React from 'react';
 
 const headingStyle =
@@ -9,7 +8,7 @@ const cardStyle =
 const HeroBanner = () => {
   return (
     <div className="rounded-lg shadow-2xl p-6 bg-black text-white text-center">
-      <h1 className="text-4xl font-bold mb-4 transform hover:scale-125 transition duration-250 ease-in-out">
+      <h1 className="text-4xl font-bold mb-4 transform hover:scale-105 transition duration-250 ease-in-out">
         DAO Summary
       </h1>
       <p className="mb-8">Overview of Financials and Proposals</p>

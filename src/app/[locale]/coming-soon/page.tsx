@@ -13,13 +13,13 @@ export default async function Page({ params: { locale } }) {
   const t = await getTranslations({ locale: locale });
 
   return (
-    <div className="bg-black w-full h-full">
+    <div className="bg-colr-d-bg w-full h-full">
       <WavyBackground>
-        <div className="space-y-5 text-white flex flex-col justify-center">
+        <div className="space-y-5 text-colr-d-fg flex flex-col justify-center">
           {/* Phoenix icon */}
           <div className="w-3/5 flex justify-center mx-auto">
             <Image
-              src="/assets/img/phoenix-icon.png"
+              src="/assets/img/hero-ghostverse.jpeg"
               alt="MvX Me Logo"
               width={0}
               height={0}

@@ -17,7 +17,8 @@ export const DropdownMenu = ({ title, children, classNameCustom }: Props) => {
           <div>
             <Menu.Button
               className={twMerge(
-                'inline-flex justify-center items-center text-lg font-medium hover:scale-105 duration-200',
+                `*:inline-flex justify-center items-center text-lg font-medium 
+                hover:text-colr-mvx-teal duration-200`,
                 classNameCustom,
               )}
             >

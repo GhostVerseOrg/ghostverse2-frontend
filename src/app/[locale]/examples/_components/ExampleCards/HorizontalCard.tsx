@@ -1,4 +1,3 @@
-// components/HorizontalCard.tsx
 import React from 'react';
 
 interface HorizontalCardProps {

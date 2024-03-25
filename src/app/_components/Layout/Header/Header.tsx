@@ -8,11 +8,8 @@ type Props = {
 
 export const Header = ({ menuItems }: Props) => {
   return (
-    <header
-      id="header"
-      className="flex items-center border-b border border-gray-800"
-    >
-      <div className="hidden w-full md:block text-white">
+    <header id="header" className="border-b border-gray-800">
+      <div className="hidden w-full md:block text-colr-d-fg">
         <DesktopMenu menuItems={menuItems} />
       </div>
       <div className="z-50 md:hidden right-0">

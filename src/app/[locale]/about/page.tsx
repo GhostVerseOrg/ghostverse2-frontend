@@ -3,6 +3,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { AuthRedirectWrapper } from '@/app/_wrappers/AuthRedirectWrapper';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
+import { About } from '../_components/Sections/About';
 
 // @ts-ignore
 export default async function Page({
@@ -18,12 +19,12 @@ export default async function Page({
       <Layout
         // @ts-ignore
         menuItems={pageStaticData.menuItems}
-        classNameCustom="bg-white px-5 bg-slate-800 text-gray-100"
+        classNameCustom="bg-white px-5 bg-colr-d-bg text-gray-100"
       >
         <div className="w-full min-w-full">
           <header className="py-14 lg:py-20">
             <div className="m-auto max-w-[1280px]">
-              <div className="text-5xl font-medium">About</div>
+              <About />
             </div>
           </header>
         </div>

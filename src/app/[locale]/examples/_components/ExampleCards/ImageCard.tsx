@@ -1,4 +1,3 @@
-// components/ImageCard.tsx
 import React from 'react';
 
 interface ImageCardProps {
