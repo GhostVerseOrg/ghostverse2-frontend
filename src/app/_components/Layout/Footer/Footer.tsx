@@ -6,7 +6,7 @@ import { Divider } from './Divider';
 export const Footer = () => {
   return (
     <footer className="bg-colr-d-bg">
-      <div className="container max-w-[1400px] mx-auto px-20">
+      <div className="container max-w-[1400px] mx-auto px-20 lg:px-0">
         <Divider />
         <div className="my-5 pb-4 md:flex md:justify-start">
           {/* Footer Logo */}
@@ -124,17 +124,19 @@ export const Footer = () => {
         </div>
       </div>
 
-      <Divider />
+      <div className="max-w-[1400px] mx-auto">
+        <Divider />
 
-      <div className="container mx-auto px-20 flex flex-col sm:flex-row sm:justify-between items-center my-6">
-        <span className="text-sm text-center text-gray-300 mb-2 sm:mb-0">
-          © {new Date().getFullYear()}{' '}
-          <Link href="/" className="hover:text-colr-mvx-teal">
-            Ghostverse
-          </Link>
-          . All Rights Reserved.
-        </span>
-        <SocialLinks />
+        <div className="container mx-auto px-20 lg:px-0 flex flex-col sm:flex-row sm:justify-between items-center my-6 lg:-mt-5">
+          <span className="text-sm text-center text-gray-300 mb-2 sm:mb-0">
+            © {new Date().getFullYear()}{' '}
+            <Link href="/" className="hover:text-colr-mvx-teal">
+              Ghostverse
+            </Link>
+            . All Rights Reserved.
+          </span>
+          <SocialLinks />
+        </div>
       </div>
     </footer>
   );
