@@ -125,11 +125,11 @@ export const Footer = () => {
 
         <Divider />
 
-        <div className="container mx-auto px-20 lg:px-0 flex flex-col sm:flex-row sm:justify-between items-center my-6 lg:-mt-5">
+        <div className="container mx-auto lg:px-0 flex flex-col sm:flex-row sm:justify-between items-center my-6 lg:-mt-5">
           <span className="text-sm text-center text-gray-300 mb-2 sm:mb-0 text-nowrap">
             {'© '} {new Date().getFullYear()}{' '}
             <Link href="/" className="hover:text-colr-mvx-teal">
-              Ghostverse
+              GhostVerse
             </Link>
             . All Rights Reserved.
           </span>
