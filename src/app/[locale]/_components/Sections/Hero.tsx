@@ -41,7 +41,7 @@ export const Hero = () => {
       <div className="flex justify-center lg:justify-end w-full max-w-lg lg:max-w-none">
         <Image
           src="/assets/img/hero-ghostverse.jpeg"
-          alt="MvX Me Phoenix"
+          alt="GhostVerse Logo"
           width={0}
           height={0}
           sizes="100vw"

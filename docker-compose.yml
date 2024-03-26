@@ -1,7 +1,7 @@
 version: '3.8'
 services:
-  web-mvx-frontend:
-    container_name: web-mvx-frontend
+  web-ghost-frontend:
+    container_name: web-ghost-frontend
     build:
       context: .
       target: runner

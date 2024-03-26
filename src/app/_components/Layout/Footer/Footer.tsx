@@ -122,7 +122,7 @@ export const Footer = () => {
             <div className="inline-block min-w-[200px]">
               <Image
                 src="/assets/img/logo-ghostverse.png"
-                alt="MvX Me Logo"
+                alt="GhostVerse Logo"
                 width={200}
                 height={40}
                 priority

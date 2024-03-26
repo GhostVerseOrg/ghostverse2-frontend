@@ -3,7 +3,7 @@ const DummyEntitySummary2 = [
     id: '1',
     date: '2024-02-18',
     amount: '427,163.02 USD',
-    recipient: 'MvX Me DeFi Lending',
+    recipient: 'GhostVerse DeFi Lending',
     note: 'Gold Backed Loans',
   },
   {

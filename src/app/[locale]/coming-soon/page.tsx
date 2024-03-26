@@ -16,11 +16,10 @@ export default async function Page({ params: { locale } }) {
     <div className="bg-colr-d-bg w-full h-full">
       <WavyBackground>
         <div className="space-y-5 text-colr-d-fg flex flex-col justify-center">
-          {/* Phoenix icon */}
           <div className="w-3/5 flex justify-center mx-auto">
             <Image
               src="/assets/img/hero-ghostverse.jpeg"
-              alt="MvX Me Logo"
+              alt="GhostVerse Logo"
               width={0}
               height={0}
               sizes="100vw"
@@ -34,7 +33,7 @@ export default async function Page({ params: { locale } }) {
           md:text-7xl
           "
           >
-            MvX Me
+            GhostVerse
           </p>
           <h1 className="text-5xl text-center font-bold">Coming Soon</h1>
           <SignUpForm />
@@ -56,7 +55,7 @@ export async function generateMetadata({ params: { locale } }) {
   // };
 
   return {
-    title: 'Coming Soon | MvX Me',
-    description: 'Coming Soon | MvX Me',
+    title: 'Coming Soon | GhostVerse',
+    description: 'Coming Soon | GhostVerse',
   };
 }

@@ -18,17 +18,6 @@ export default async function Page({ params: { locale } }) {
 
   const pageStaticData = await getStaticPageDetails(locale);
 
-  // Define Content Structure
-  // Identify the key sections that will be part of your homepage. These could be:
-
-  // Hero Banner: An eye-catching banner with a clear call to action.
-  // About MvX Me: A brief section introducing visitors to MvX Me.
-  // Features/Services: An overview of the services offered by MvX Me.
-  // How It Works: A step-by-step guide or infographic.
-  // Testimonials or Endorsements: Social proof from users or partners.
-  // Latest News or Blog Posts: Summaries or links to recent articles.
-  // CTA Section: A final call to action encouraging users to engage.
-
   return (
     <AuthRedirectWrapper requireAuth={false}>
       <Layout

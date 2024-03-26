@@ -1,6 +1,6 @@
 {
-  "mainPageTitle": "(FR) MvX Me | '{ PageName }'",
-  "mainPageDescription": "SEO de MvX Me en français",
+  "mainPageTitle": "GhostVerse",
+  "mainPageDescription": "SEO de GhostVerse en français",
 
   "blogPageTitle": "Blog",
   "blogPageNoBlogsSorry": "Actuellement, il n'y a aucun blog.",
@@ -16,10 +16,10 @@
   "navTokenomics": "Tokenomics",
   "navAbout": "À propos",
 
-  "aboutPageTitle": "(FR) À propos de nous - MvX Me",
-  "aboutPageDescription": "En savoir plus sur MvX Me et notre mission.",
+  "aboutPageTitle": "(FR) À propos de nous - GhostVerse",
+  "aboutPageDescription": "En savoir plus sur GhostVerse et notre mission.",
   "header": "À propos de nous",
-  "content": "Ici, chez MvX Me, nous croyons en...",
+  "content": "Ici, chez GhostVerse, nous croyons en...",
 
   "sorry": "Pardon!",
   "genericError": "Il y a une erreur.",

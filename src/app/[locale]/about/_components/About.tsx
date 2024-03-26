@@ -20,12 +20,16 @@ export const About = () => {
           Gokai Labs is a contributor and community member of the GhostVerse DAO
           on MultiversX.
         </p>
+        <p className="text-xl lg:text-2xl">
+          We&apos;re a creative team of developers, designers, and artists
+          building the future of the ghost web.
+        </p>
         {/* Add more content here if necessary */}
       </div>
       <div className="lg:w-1/2 max-w-lg mx-auto lg:mx-0">
         <Image
           src="/assets/img/ghostverse-hero.jpeg" // Replace with your about image path
-          alt="About MvX Me"
+          alt="About GhostVerse"
           width={0}
           height={0}
           sizes="100vw"

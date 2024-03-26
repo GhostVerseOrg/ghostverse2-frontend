@@ -18,7 +18,7 @@ export const ContactUs = () => {
       <div className="lg:w-1/2 max-w-lg mx-auto lg:mx-0">
         <Image
           src="/assets/img/ghostverse-hero.jpeg" // Replace with your about image path
-          alt="About MvX Me"
+          alt="About GhostVerse"
           width={0}
           height={0}
           sizes="100vw"

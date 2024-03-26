@@ -20,19 +20,19 @@ export const projects = [
   {
     title: 'Marketplace',
     description:
-      "At the heart of MvX Me, we're reimagining the essence of finance. Our platform leverages decentralized technology to create a secure, transparent, and equitable financial ecosystem for everyone.",
-    link: 'https://mvxme.com/defi',
+      "At the heart of GhostVerse, we're reimagining the essence of finance. Our platform leverages decentralized technology to create a secure, transparent, and equitable financial ecosystem for everyone.",
+    link: '/',
   },
   {
     title: 'Passive Income',
     description:
-      'Empowering investors with cutting-edge tools and insights, MvX Me democratizes access to elite financial strategies, previously reserved for the top echelon of investors.',
-    link: 'https://mvxme.com/investor-empowerment',
+      'Empowering investors with cutting-edge tools and insights, GhostVerse democratizes access to financial strategies, previously reserved for the top echelon of investors.',
+    link: '/',
   },
   {
     title: 'Payment 420 token',
     description:
       'Harness the power of Artificial Intelligence to navigate the complex world of digital finance. Our AI-driven investment strategies offer unparalleled precision and performance.',
-    link: 'https://mvxme.com/ai-strategies',
+    link: '/',
   },
 ];
