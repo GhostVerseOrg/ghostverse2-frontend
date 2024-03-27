@@ -1,5 +1,5 @@
 'use client';
-import React, { Suspense } from 'react';
+import React from 'react';
 import { useGetIsLoggedIn } from '@/app/_hooks';
 import { getWindowLocation, logout } from '@multiversx/sdk-dapp/utils';
 import { RouteNamesEnum } from '@/app/_constants/routes';
@@ -80,7 +80,6 @@ export const DesktopMenu = ({ menuItems }: Props) => {
       </div>
 
       <div className="flex items-center gap-5 ml-10">
-        {/* Client-only component, wrap in Suspense to not break server build, stop client context at this point */}
         <div className="inline-flex items-center font-medium text-colr-d-btn text-base">
           {isLoggedIn ? (
             <Button
@@ -97,9 +96,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
             <TealGradientButton href={RouteNamesEnum.unlock} text="Connect" />
           )}
         </div>
-        <Suspense>
-          <LanguageMenu />
-        </Suspense>
+        <LanguageMenu />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { AuthRedirectWrapper } from '@/app/_wrappers/AuthRedirectWrapper';
 import { LoginMethods } from './_components/loginmethods';
 import Link from 'next/link';
