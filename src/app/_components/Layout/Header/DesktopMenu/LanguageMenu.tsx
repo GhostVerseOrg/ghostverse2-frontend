@@ -4,6 +4,7 @@ import { DropdownMenu } from '@/app/_components/Layout/DrodpownMenu';
 import { useLocale } from 'use-intl';
 import { localesList } from '@/i18n';
 import { useRouter, usePathname } from '@/app/_lib/i18nNavigation';
+import { GB, FR } from 'country-flag-icons/react/3x2';
 
 export const LanguageMenu = () => {
   const router = useRouter();
@@ -15,21 +16,46 @@ export const LanguageMenu = () => {
     router.refresh();
   };
 
+  const flagCode = locale.toUpperCase() || 'EN';
+
   return localesList.length > 1 ? (
     <DropdownMenu
-      title={locale.toUpperCase() || 'EN'}
+      title={
+        <div className="flex items-center gap-x-2">
+          {(() => {
+            switch (flagCode) {
+              case 'FR':
+                return <FR className="w-6 h-4" />;
+              default:
+                return <GB className="w-6 h-4" />;
+            }
+          })()}
+          {flagCode}
+        </div>
+      }
       classNameCustom="text-lg"
     >
       {localesList.map((locale) => {
         return (
           <button
             key={locale + '-desktop-language-item'}
+            className="hover:bg-gray-300 cursor-pointer rounded-lg p-2 px-4 w-full"
             onClick={() => handleChange(locale)}
           >
             <Menu.Item>
-              <a className="hover:bg-gray-300 text-gray-800 cursor-pointer flex items-center justify-center rounded-lg p-2 px-4 text-base font-bold uppercase">
-                {locale}
-              </a>
+              <div className="flex items-center gap-x-2">
+                {(() => {
+                  switch (locale.toUpperCase()) {
+                    case 'FR':
+                      return <FR className="w-6 h-4" />;
+                    default:
+                      return <GB className="w-6 h-4" />;
+                  }
+                })()}
+                <a className="text-gray-800 flex items-center justify-center text-base font-bold uppercase">
+                  {locale}
+                </a>
+              </div>
             </Menu.Item>
           </button>
         );
