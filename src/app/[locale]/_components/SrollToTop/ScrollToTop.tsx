@@ -53,7 +53,7 @@ export const ScrollUp = () => {
     show && (
       <div
         className="
-            group flex items-center justify-center fixed border-none rounded-full z-40
+            group flex items-center justify-center fixed border-none rounded-full z-30
             bottom-6 right-5 w-10 h-10 cursor-pointer bg-slate-400 bg-opacity-40 
             hover:bg-slate-500 
             md:bottom-10 md:right-10
