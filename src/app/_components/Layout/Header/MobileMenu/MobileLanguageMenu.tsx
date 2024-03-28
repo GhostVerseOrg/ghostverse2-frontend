@@ -48,17 +48,26 @@ export const MobileLanguageMenu = () => {
               <button
                 key={locale + '-mobile-language-item'}
                 onClick={() => handleChange(locale)}
-                className="flex font-base gap-x-2 items-center font-medium text-interface-800 uppercase text-lg"
+                className="flex font-base  items-center font-medium text-interface-800 uppercase text-lg"
               >
                 {(() => {
                   switch (locale.toUpperCase()) {
                     case 'FR':
-                      return <FR className="w-6 h-4" />;
+                      return (
+                        <div className="flex items-center gap-x-2 capitalize">
+                          <FR className="w-6 h-4" />
+                          {'Françias'}
+                        </div>
+                      );
                     default:
-                      return <GB className="w-6 h-4" />;
+                      return (
+                        <div className="flex items-center gap-x-2 capitalize">
+                          <GB className="w-6 h-4" />
+                          {'English'}
+                        </div>
+                      );
                   }
                 })()}
-                {locale}
               </button>,
             );
           });
