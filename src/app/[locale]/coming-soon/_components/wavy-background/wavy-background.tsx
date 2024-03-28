@@ -118,14 +118,14 @@ export const WavyBackground = ({
       )}
     >
       <canvas
-        className="absolute inset-0 z-0"
+        className="absolute inset-0"
         ref={canvasRef}
         id="canvas"
         style={{
           ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
         }}
       />
-      <div className={twMerge('relative z-10', className)} {...props}>
+      <div className={twMerge('relative', className)} {...props}>
         {children}
       </div>
     </div>

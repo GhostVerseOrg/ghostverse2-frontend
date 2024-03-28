@@ -21,6 +21,7 @@
     "@strapi/blocks-react-renderer": "^1.0.0",
     "@tailwindcss/container-queries": "^0.1.1",
     "clsx": "^2.1.0",
+    "country-flag-icons": "^1.5.10",
     "cross-env": "^7.0.3",
     "date-fns": "^3.3.1",
     "dotenv-expand": "^10.0.0",

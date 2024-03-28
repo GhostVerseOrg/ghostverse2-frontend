@@ -4,7 +4,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { twMerge } from 'tailwind-merge';
 
 type Props = {
-  title: string;
+  title: any;
   children: ReactNode;
   classNameCustom?: string;
 };
@@ -17,7 +17,7 @@ export const DropdownMenu = ({ title, children, classNameCustom }: Props) => {
           <div>
             <Menu.Button
               className={twMerge(
-                `*:inline-flex justify-center items-center text-lg font-medium 
+                `flex justify-between items-center text-lg font-medium 
                 hover:text-colr-mvx-teal duration-200`,
                 classNameCustom,
               )}
@@ -25,7 +25,7 @@ export const DropdownMenu = ({ title, children, classNameCustom }: Props) => {
               {title}
 
               <ChevronDownIcon
-                className={`-mr-1 ml-2 h-5 w-5 transition-transform [&>path]:stroke-[2] ${
+                className={`ml-2 h-5 w-5 transition-transform [&>path]:stroke-[2] ${
                   open && '-rotate-180'
                 }`}
                 aria-hidden="true"
@@ -42,7 +42,7 @@ export const DropdownMenu = ({ title, children, classNameCustom }: Props) => {
             leaveTo="transform opacity-0 scale-95"
           >
             <Menu.Items
-              className={`absolute z-10 text-lg mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white
+              className={`absolute text-lg mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white
                shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
             >
               {children}
