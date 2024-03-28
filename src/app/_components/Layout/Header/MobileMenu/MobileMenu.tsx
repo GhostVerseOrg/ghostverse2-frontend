@@ -81,7 +81,6 @@ export const MobileMenu = ({ menuItems }: Props) => {
         <div className="flex justify-between items-center w-full px-2">
           <div className="flex justify-between items-center w-full p-4 mx-0">
             <Link href="/" className="shrink-0 flex items-center">
-              {/* Wrapper div for applying custom styles */}
               <div className="inline-block min-w-[50px]">
                 <Image
                   src="/assets/img/logo-ghostverse.png"
@@ -105,7 +104,6 @@ export const MobileMenu = ({ menuItems }: Props) => {
                   transition-all duration-300 
                   absolute h-8 w-8 fill-gray-50`}
             />
-
             {/* Button to collapse the menu */}
             <XMarkIcon
               className={`
@@ -133,7 +131,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
           </div>
         </div>
 
-        <div className="fixed inset-x-0 bottom-0 z-50 p-4 text-lg">
+        <div className="fixed inset-x-0 bottom-0 p-4 text-lg">
           {isLoggedIn ? (
             <Button
               onClick={handleLogout}

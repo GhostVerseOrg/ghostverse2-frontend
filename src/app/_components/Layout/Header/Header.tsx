@@ -12,7 +12,7 @@ export const Header = ({ menuItems }: Props) => {
       <div className="hidden w-full md:block text-colr-d-fg">
         <DesktopMenu menuItems={menuItems} />
       </div>
-      <div className="z-50 md:hidden right-0">
+      <div className="md:hidden right-0">
         <MobileMenu menuItems={menuItems} />
       </div>
     </header>

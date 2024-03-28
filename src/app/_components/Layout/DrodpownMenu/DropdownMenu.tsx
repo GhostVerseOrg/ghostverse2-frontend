@@ -42,7 +42,7 @@ export const DropdownMenu = ({ title, children, classNameCustom }: Props) => {
             leaveTo="transform opacity-0 scale-95"
           >
             <Menu.Items
-              className={`absolute z-10 text-lg mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white
+              className={`absolute text-lg mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white
                shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
             >
               {children}

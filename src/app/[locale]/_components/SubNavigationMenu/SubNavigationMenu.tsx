@@ -38,7 +38,7 @@ export const SubNavigationMenu = () => {
             {menu}
             {/* SVG icon placeholder */}
           </button>
-          <div className="absolute hidden group-hover:block z-10 mt-0 w-80 rounded-md shadow-lg bg-slate-900 text-colr-d-fg">
+          <div className="absolute hidden group-hover:block mt-0 w-80 rounded-md shadow-lg bg-slate-900 text-colr-d-fg">
             {items.map((subItem) => (
               <a
                 href="#"
