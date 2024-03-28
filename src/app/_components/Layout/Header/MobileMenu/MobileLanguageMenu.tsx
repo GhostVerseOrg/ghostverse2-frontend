@@ -4,6 +4,7 @@ import { useTranslations } from 'use-intl';
 import { localesList } from '@/i18n';
 import { useRouter, usePathname } from '@/app/_lib/i18nNavigation';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
+import { GB, FR } from 'country-flag-icons/react/3x2';
 
 export const MobileLanguageMenu = () => {
   const router = useRouter();
@@ -36,8 +37,8 @@ export const MobileLanguageMenu = () => {
       </button>
 
       <div
-        className={`ml-5 transition-all duration-300 overflow-hidden w-full flex flex-col  ${
-          isMenuVisible ? 'h-[100px]' : 'h-0'
+        className={`ml-5 transition-all duration-300 overflow-hidden w-full flex flex-col gap-y-4  ${
+          isMenuVisible ? 'h-[90px]' : 'h-0'
         }`}
       >
         {(() => {
@@ -47,8 +48,16 @@ export const MobileLanguageMenu = () => {
               <button
                 key={locale + '-mobile-language-item'}
                 onClick={() => handleChange(locale)}
-                className="flex font-base font-medium text-interface-800 uppercase text-lg h-16 items-start"
+                className="flex font-base gap-x-2 items-center font-medium text-interface-800 uppercase text-lg"
               >
+                {(() => {
+                  switch (locale.toUpperCase()) {
+                    case 'FR':
+                      return <FR className="w-6 h-4" />;
+                    default:
+                      return <GB className="w-6 h-4" />;
+                  }
+                })()}
                 {locale}
               </button>,
             );
