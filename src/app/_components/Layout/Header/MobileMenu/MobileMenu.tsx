@@ -127,7 +127,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
         )}
       >
         <div className="flex flex-col h-full pt-14">
-          <div className="flex-grow overflow-y-auto p-4 pt-8">
+          <div className="flex-grow overflow-y-auto px-4 pt-3">
             <MobileLanguageMenu />
             {renderLinks()}
           </div>
