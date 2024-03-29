@@ -30,7 +30,7 @@ export const BlogCard = (props) => (
     {/* Blog card text container */}
     <div
       className="
-        flex flex-1 flex-col justify-items-start p-5 
+        flex flex-1 flex-col justify-items-start p-5 pt-0
         @2xl:justify-center @2xl:pl-0"
     >
       {/* Small category label section, pre-defined colors from CMS enum list */}
