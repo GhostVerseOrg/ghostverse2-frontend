@@ -108,8 +108,8 @@ export default async function BlogDetails({ params: { locale, slug } }) {
                   </span>
                 </div>
               </div>
+              <BlogShareLinks />
             </div>
-
             {/* Featured image */}
             <div className="relative w-full aspect-video my-5 lg:my-6">
               <Image
