@@ -74,46 +74,38 @@ export const MobileMenu = ({ menuItems }: Props) => {
 
   return (
     <>
-      <div
-        className="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-black to-slate-900 text-colr-d-fg
-      border-b border border-gray-800"
+      <Link
+        href="/"
+        className="shrink-0 flex justify-between items-center mx-0 z-50"
       >
-        <div className="flex justify-between items-center w-full px-2">
-          <div className="flex justify-between items-center w-full p-4 mx-0">
-            <Link href="/" className="shrink-0 flex items-center">
-              <div className="inline-block min-w-[50px]">
-                <Image
-                  src="/assets/img/logo-ghostverse.png"
-                  alt="Ghost verse Logo"
-                  width={200}
-                  height={40}
-                  priority
-                />
-              </div>
-            </Link>
-          </div>
+        <Image
+          src="/assets/img/logo-ghostverse.png"
+          alt="GhostVerse"
+          width={200}
+          height={40}
+          priority
+        />
+      </Link>
 
-          <button
-            onClick={toggleMenu}
-            className="p-2 relative inline-flex w-12 h-12 items-center justify-center"
-          >
-            {/* Button to open the menu */}
-            <Bars3Icon
-              className={`
+      <button
+        onClick={toggleMenu}
+        className="p-2 relative inline-flex w-12 h-12 items-center justify-center bg-colr-ghostverse-teal rounded-full z-50"
+      >
+        {/* Button to open the menu */}
+        <Bars3Icon
+          className={`
                   ${isMenuOpen ? 'opacity-0 rotate-90 ' : 'delay-200'}
                   transition-all duration-300 
                   absolute h-8 w-8 fill-gray-50`}
-            />
-            {/* Button to collapse the menu */}
-            <XMarkIcon
-              className={`
+        />
+        {/* Button to collapse the menu */}
+        <XMarkIcon
+          className={`
                   ${isMenuOpen ? 'duration-100' : 'opacity-0'}
                   transition-all delay-200 duration-300 
                   absolute h-8 w-8 fill-gray-50`}
-            />
-          </button>
-        </div>
-      </div>
+        />
+      </button>
 
       <div
         className={clsx('fixed inset-0 z-40 bg-black', {
