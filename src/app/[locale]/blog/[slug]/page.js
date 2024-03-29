@@ -92,7 +92,13 @@ export default async function BlogDetails({ params: { locale, slug } }) {
                 className="blog_shadow rounded-xl"
                 src={blog.attributes.FeaturedImage?.data?.attributes?.url}
                 alt="Featured Image"
-                fill={true}
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+                width={500}
+                height={300}
               />
             </div>
 

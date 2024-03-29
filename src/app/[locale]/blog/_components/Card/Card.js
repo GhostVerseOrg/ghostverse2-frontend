@@ -30,13 +30,14 @@ export const BlogCard = (props) => (
     {/* Blog card text container */}
     <div
       className="
-        flex flex-1 flex-col justify-items-start p-5 
+        flex flex-1 flex-col justify-items-start p-5 pt-0
         @2xl:justify-center @2xl:pl-0"
     >
       {/* Small category label section, pre-defined colors from CMS enum list */}
       <ConditionalRenderer condition={props.label}>
         <div
           className={`
+            rounded-full py-1.5 px-3 bg-teal-900/20 w-fit
             mb-2.5 blog_text_c_orange font-semibold
             blog_text_c_${props.color}`}
         >
