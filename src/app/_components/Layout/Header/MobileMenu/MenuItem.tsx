@@ -22,10 +22,7 @@ export const MobileMenuItem = ({
       href={menuItem.Url}
       target={`_${menuItem.Target}`} // Strapi GraphQL removes underline from _blank in enum, add manually
       rel="noopener noreferrer"
-      className={twMerge(
-        'font-base font-medium text-lg h-16 w-full flex items-center',
-        classNameCustom,
-      )}
+      className={twMerge('px-4 py-2 w-full flex items-center', classNameCustom)}
       onClick={onMenuItemClick}
     >
       {menuItem.Label}
