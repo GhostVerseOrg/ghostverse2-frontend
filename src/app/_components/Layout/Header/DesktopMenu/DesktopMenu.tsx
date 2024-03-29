@@ -59,23 +59,21 @@ export const DesktopMenu = ({ menuItems }: Props) => {
   };
 
   return (
-    <div className="flex w-full justify-between items-center p-3 lg:px-20 max-w-[1800px] mx-auto">
-      <div>
-        <Link href="/" className="shrink-0 flex items-center">
-          {/* Wrapper div for applying custom styles */}
-          <div className="inline-block min-w-[150px]">
-            <Image
-              src="/assets/img/logo-ghostverse.png"
-              alt="GhostVerse"
-              width={200}
-              height={40}
-              priority
-            />
-          </div>
-        </Link>
-      </div>
+    <>
+      <Link href="/" className="shrink-0 flex items-center">
+        {/* Wrapper div for applying custom styles */}
+        <div className="inline-block min-w-[150px]">
+          <Image
+            src="/assets/img/logo-ghostverse.png"
+            alt="GhostVerse"
+            width={200}
+            height={40}
+            priority
+          />
+        </div>
+      </Link>
 
-      <div className="flex items-center gap-10 max-w-[1250px] justify-start ml-10">
+      <div className="flex items-center gap-10 justify-start ml-auto">
         {renderLinks()}
       </div>
 
@@ -85,7 +83,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
             <Button
               onClick={handleLogout}
               className="
-              p-3 m-2 rounded-full shadow-sm hover:text-colr-mvx-teal duration-200 bg-colr-mvx-teal transition-colors
+              p-3 m-2 rounded-full shadow-sm duration-200 bg-colr-mvx-teal transition-colors
               hover:bg-colr-d-btn 
               focus:ring-colr-mvx-teal focus:outline-none focus:ring-2 focus:ring-offset-2
                 "
@@ -98,6 +96,6 @@ export const DesktopMenu = ({ menuItems }: Props) => {
         </div>
         <LanguageMenu />
       </div>
-    </div>
+    </>
   );
 };
