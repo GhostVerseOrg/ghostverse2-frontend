@@ -40,20 +40,18 @@ export const DropdownMenu = ({ title, children, classNameCustom }: Props) => {
   }, []);
 
   return (
-    <Menu as="div" className="flex-wrap relative" ref={popoverRef}>
+    <Menu as="div" className="flex-wrap" ref={popoverRef}>
       {({ open }) => (
         <Fragment>
           <div>
             <Menu.Button
               ref={buttonRef}
               className={twMerge(
-                `flex justify-between items-center text-lg font-medium 
-                hover:text-colr-mvx-teal duration-200 outline-none focus:outline-none`,
+                `flex justify-between items-center duration-200 outline-none focus:outline-none hover:text-colr-ghostverse-teal`,
                 classNameCustom,
               )}
             >
               {title}
-
               <ChevronDownIcon
                 className={`ml-2 h-5 w-5 transition-transform [&>path]:stroke-[2] ${
                   open && '-rotate-180'
@@ -71,11 +69,13 @@ export const DropdownMenu = ({ title, children, classNameCustom }: Props) => {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute outline-none focus:outline-none">
-              <div className="pt-2 bg-transparent outline-none focus:outline-none"></div>
-              <div className="divide-gray-100 bg-white divide-y rounded-md shadow-lg ring-1 ring-black ring-opacity-5 outline-none focus:outline-none">
-                {children}
-              </div>
+            <Menu.Items
+              className="
+              absolute bg-black rounded-md
+              border border-gray-800 
+              outline-none focus:outline-none"
+            >
+              {children}
             </Menu.Items>
           </Transition>
         </Fragment>
