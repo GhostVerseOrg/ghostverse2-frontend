@@ -16,8 +16,8 @@ export const DesktopMenuItem = ({ menuItem, onMenuItemClick }: Props) => {
       href={menuItem.Url}
       target={`_${menuItem.Target}`} // Strapi GraphQL removes underline from _blank in enum, add manually
       rel="noopener noreferrer"
-      className="font-base font-medium text-lg my-3
-      hover:text-colr-mvx-teal duration-200"
+      className="py-3
+      hover:text-colr-ghostverse-teal duration-200"
       onClick={onMenuItemClick}
     >
       {menuItem.Label}

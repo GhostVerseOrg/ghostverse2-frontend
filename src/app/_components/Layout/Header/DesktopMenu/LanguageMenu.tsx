@@ -39,7 +39,7 @@ export const LanguageMenu = () => {
         return (
           <button
             key={locale + '-desktop-language-item'}
-            className="hover:bg-gray-300 cursor-pointer rounded-lg p-2 px-4 w-full"
+            className="hover:text-colr-ghostverse-teal cursor-pointer rounded-lg p-2 px-4 w-full"
             onClick={() => handleChange(locale)}
           >
             <Menu.Item>
@@ -52,7 +52,7 @@ export const LanguageMenu = () => {
                       return <GB className="w-6 h-4" />;
                   }
                 })()}
-                <a className="text-gray-800 flex items-center justify-center text-base font-bold uppercase">
+                <a className="hover:text-colr-ghostverse-teal flex items-center justify-center text-base font-bold uppercase">
                   {locale}
                 </a>
               </div>
