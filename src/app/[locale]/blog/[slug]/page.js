@@ -65,21 +65,20 @@ export default async function BlogDetails({ params: { locale, slug } }) {
           <div className="max-w-4xl flex flex-col m-auto pt-8">
             {/* Navigation breadcrumbs */}
             <Breadcrumbs breadcrumbs={breadcrumbs} />
-
             {/* Category label */}
             <div
               className={`
-                blog_text_c_orange text-base font-semibold pt-8 lg:pt-12 py-2
+                blog_text_c_orange text-base font-semibold pt-8 lg:pt-12 py-2 pb-3
                 blog_text_c_${blog.attributes.CategoryColor}`}
             >
-              {blog.attributes.CategoryLabel}
+              <span className="rounded-full py-1.5 px-3 bg-gray-600/30 w-fit">
+                {blog.attributes.CategoryLabel}
+              </span>
             </div>
-
             {/* Title */}
             <div className="text-4xl font-bold">{blog.attributes.Title}</div>
-
             {/* Date and social links*/}
-            <div className="flex justify-between pt-3 text-gray-400">
+            <div className="flex justify-between pt-3 items-center text-gray-400">
               <div className="flex flex-row items-center text-sm">
                 <span className="h-14 w-14 mr-3">
                   <Image
@@ -125,9 +124,8 @@ export default async function BlogDetails({ params: { locale, slug } }) {
                 height={300}
               />
             </div>
-
             {/* Markdown content */}
-            <div className="mb-24 text-base lg:text-lg min-w-full">
+            <div className="mb-12 text-base lg:text-lg min-w-full">
               <ReactMarkdown
                 className="whitespace-pre-line"
                 components={reactMarkdownComponents}
@@ -136,6 +134,16 @@ export default async function BlogDetails({ params: { locale, slug } }) {
               >
                 {blog.attributes.Content}
               </ReactMarkdown>
+            </div>
+            <div className="flex flex-row gap-x-2 pb-4">
+              {blog.attributes.Keywords.split(',').map((x) => (
+                <div
+                  key={x}
+                  className="rounded-full py-1.5 px-3 bg-teal-900/40 w-fit"
+                >
+                  {x}
+                </div>
+              ))}
             </div>
           </div>
         </div>
