@@ -15,11 +15,11 @@ type Props = {
 
 export const Layout = ({ children, menuItems, classNameCustom }: Props) => {
   return (
-    <div className="flex min-h-screen flex-col scroll-smooth bg-colr-d-bg">
+    <div className="flex min-h-screen flex-col scroll-smooth bg-colr-l-bg text-colr-l-fg">
       <Header menuItems={menuItems} />
       <main
         className={twMerge(
-          'flex grow items-stretch justify-center',
+          'flex grow items-stretch justify-center pt-20',
           classNameCustom,
         )}
       >
