@@ -146,9 +146,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
           {renderLinks()}
           <MobileLanguageMenu />
         </div>
-
-      {/* Space after fixed-positioned header, absolute padding from top of screen */}
-      <div className="pt-16" />
+      </div>
     </>
   );
 };
