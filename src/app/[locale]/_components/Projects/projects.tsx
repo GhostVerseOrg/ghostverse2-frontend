@@ -3,7 +3,7 @@ import { HoverEffect } from './hover-effect';
 
 export const ProjectCards = () => {
   return (
-    <section id="projectcards" className="max-w-5xl mx-auto px-8 lg:px-0">
+    <section id="projectcards" className="max-w-5xl mx-auto px-4 lg:px-0">
       <div
         className={twMerge(
           'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10',
