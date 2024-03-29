@@ -55,6 +55,13 @@ export default async function Page({
             <div className="pb-[80px] @container m-auto max-w-[1280px]">
               {currentPage === 1 ? (
                 <BlogCard
+                  authorName={blogsDataUnpacked.blogs[0].attributes?.AuthorName}
+                  publishedAt={
+                    blogsDataUnpacked.blogs[0].attributes?.publishedAt
+                  }
+                  minutesToRead={
+                    blogsDataUnpacked.blogs[0].attributes?.MinutesToRead
+                  }
                   key={blogsDataUnpacked.blogs[0].id}
                   label={blogsDataUnpacked.blogs[0].attributes?.CategoryLabel}
                   color={blogsDataUnpacked.blogs[0].attributes?.CategoryColor}
@@ -81,6 +88,9 @@ export default async function Page({
                       className="flex-1 @container min-w-full @4xl:min-w-[32%] @4xl:max-w-[32%]"
                     >
                       <BlogCard
+                        authorName={blog.attributes?.AuthorName}
+                        publishedAt={blog.attributes?.publishedAt}
+                        minutesToRead={blog.attributes?.MinutesToRead}
                         label={blog.attributes?.CategoryLabel}
                         color={blog.attributes?.CategoryColor}
                         title={blog.attributes?.Title}

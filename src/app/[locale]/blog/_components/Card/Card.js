@@ -2,6 +2,7 @@ import Image from 'next/image';
 import ConditionalRenderer from '../../_utils/conditional-renderer';
 import BlogButton from '@/app/[locale]/blog/_components/Button/Button';
 import Link from 'next/link';
+import { format, parseISO } from 'date-fns';
 
 export const BlogCard = (props) => (
   /* Blog card */
@@ -47,8 +48,23 @@ export const BlogCard = (props) => (
 
       {/* Title */}
       <ConditionalRenderer condition={props.title}>
-        <div className="text-3xl mb-5 font-bold">{props.title}</div>
+        <div className="text-3xl mb-3 font-bold">{props.title}</div>
       </ConditionalRenderer>
+
+      <div className="flex flex-row gap-x-2 mb-3 text-sm text-gray-400 justify-start">
+        <span>
+          {format(Date.parse(props.publishedAt), 'MMMM dd')}
+          <span className="text-sm font-normal text-gray-400">
+            {', '}
+            {props.minutesToRead} {'min read'}
+          </span>
+        </span>
+
+        <span className="text-gray-200/80 italic">
+          {' · '}
+          {props.authorName}
+        </span>
+      </div>
 
       {/* Summary */}
       <ConditionalRenderer condition={props.summary}>
