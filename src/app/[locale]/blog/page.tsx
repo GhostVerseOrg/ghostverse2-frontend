@@ -62,7 +62,7 @@ export default async function Page({
                   summary={blogsDataUnpacked.blogs[0].attributes?.Summary}
                   href={`/blog/${blogsDataUnpacked.blogs[0].attributes?.Slug}`}
                   imageSrc={
-                    blogsDataUnpacked.blogs[0].attributes?.FeaturedImage?.data
+                    blogsDataUnpacked.blogs[0].attributes?.Thumbnail?.data
                       ?.attributes?.url
                   }
                   btnIcon={IconTypes.ARROW_RIGHT}
