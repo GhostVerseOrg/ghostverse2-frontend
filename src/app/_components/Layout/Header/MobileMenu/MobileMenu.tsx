@@ -124,13 +124,6 @@ export const MobileMenu = ({ menuItems }: Props) => {
           },
         )}
       >
-        <div className="flex flex-col h-full pt-14">
-          <div className="flex-grow overflow-y-auto px-4 pt-3">
-            <MobileLanguageMenu />
-            {renderLinks()}
-          </div>
-        </div>
-
         <div className="fixed inset-x-0 bottom-0 p-4 text-lg">
           {isLoggedIn ? (
             <Button
@@ -148,7 +141,11 @@ export const MobileMenu = ({ menuItems }: Props) => {
             </div>
           )}
         </div>
-      </div>
+
+        <div className="flex flex-col h-full mt-20 pt-4 flex-grow overflow-y-auto border-t border-gray-800">
+          {renderLinks()}
+          <MobileLanguageMenu />
+        </div>
 
       {/* Space after fixed-positioned header, absolute padding from top of screen */}
       <div className="pt-16" />
