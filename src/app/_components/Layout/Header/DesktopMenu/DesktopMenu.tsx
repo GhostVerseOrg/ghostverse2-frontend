@@ -13,7 +13,7 @@ import Image from 'next/image';
 import { Button } from '../../../Button';
 import Link from 'next/link';
 import { DesktopMenuItem } from '@/app/_components/Layout/Header/DesktopMenu/MenuItem';
-import TealGradientButton from '@/app/_components/Button/TealButton';
+import TealGradientButton from '@/app/_components/Button/TealGradientButton';
 
 type Props = {
   menuItems: MenuElement[];
