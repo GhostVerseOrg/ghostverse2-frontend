@@ -89,10 +89,16 @@ export default async function BlogDetails({ params: { locale, slug } }) {
             {/* Featured image */}
             <div className="relative w-full aspect-video my-5 lg:my-6">
               <Image
-                className="blog_shadow rounded-xl object-cover"
+                className="blog_shadow rounded-xl"
                 src={blog.attributes.FeaturedImage?.data?.attributes?.url}
                 alt="Featured Image"
-                fill={true}
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+                width={500}
+                height={300}
               />
             </div>
 
