@@ -37,6 +37,7 @@ export const BlogCard = (props) => (
       <ConditionalRenderer condition={props.label}>
         <div
           className={`
+            rounded-full py-1.5 px-3 bg-teal-900/20 w-fit
             mb-2.5 blog_text_c_orange font-semibold
             blog_text_c_${props.color}`}
         >
