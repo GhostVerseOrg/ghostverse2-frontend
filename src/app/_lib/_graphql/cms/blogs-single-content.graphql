@@ -31,6 +31,18 @@ query BlogsSingleContent($locale: I18NLocaleCode, $slug: String) {
             }
           }
         }
+        AuthorPic {
+          data {
+            attributes {
+              url
+              previewUrl
+              caption
+            }
+          }
+        }
+        AuthorName
+        MinutesToRead
+        Keywords
       }
     }
     meta {

@@ -25,7 +25,7 @@ query BlogsPreview($locale: I18NLocaleCode, $limit: Int, $offset: Int) {
             }
           }
         }
-        FeaturedImage {
+        AuthorPic {
           data {
             attributes {
               url
@@ -34,6 +34,9 @@ query BlogsPreview($locale: I18NLocaleCode, $limit: Int, $offset: Int) {
             }
           }
         }
+        AuthorName
+        MinutesToRead
+        Keywords
       }
     }
     meta {

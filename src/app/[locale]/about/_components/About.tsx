@@ -24,11 +24,10 @@ export const About = () => {
           We&apos;re a creative team of developers, designers, and artists
           building the future of the ghost web.
         </p>
-        {/* Add more content here if necessary */}
       </div>
       <div className="lg:w-1/2 max-w-lg mx-auto lg:mx-0">
         <Image
-          src="/assets/img/ghostverse-hero.jpeg" // Replace with your about image path
+          src="/assets/img/ghostverse-hero.jpeg"
           alt="About GhostVerse"
           width={0}
           height={0}

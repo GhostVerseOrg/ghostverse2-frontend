@@ -27,6 +27,10 @@ export type Blogs = {
     Summary: string;
     Thumbnail: Image;
     FeaturedImage: Image;
+    AuthorPic: Image;
+    AuthorName: string;
+    MinutesToRead: number;
+    Keywords: string;
     Content: string;
     CategoryColor: string;
     CategoryLabel: string;

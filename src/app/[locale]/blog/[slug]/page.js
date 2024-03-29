@@ -79,11 +79,35 @@ export default async function BlogDetails({ params: { locale, slug } }) {
             <div className="text-4xl font-bold">{blog.attributes.Title}</div>
 
             {/* Date and social links*/}
-            <div className="flex justify-between pt-3 text-gray-500">
-              <span className="text-sm">
-                {format(parseISO(blog.attributes.publishedAt), 'MMMM dd, yyyy')}
-              </span>
-              <BlogShareLinks />
+            <div className="flex justify-between pt-3 text-gray-400">
+              <div className="flex flex-row items-center text-sm">
+                <span className="h-14 w-14 mr-3">
+                  <Image
+                    className="rounded-full border-2 border-gray-400 relative"
+                    src={blog.attributes.AuthorPic?.data?.attributes?.url}
+                    alt={'Author'}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </span>
+                <div className="flex flex-col gap-y-1">
+                  <span>{blog.attributes.AuthorName}</span>
+                  <span>
+                    {format(
+                      parseISO(blog.attributes.publishedAt),
+                      'MMMM dd, yyyy',
+                    )}
+
+                    <span className="pl-1 text-sm font-normal text-gray-400">
+                      {' · '}
+                      {blog.attributes.MinutesToRead}
+                      {' min read'}
+                    </span>
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Featured image */}
