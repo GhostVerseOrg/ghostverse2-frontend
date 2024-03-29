@@ -35,31 +35,33 @@ export const LanguageMenu = () => {
       }
       classNameCustom="text-lg"
     >
-      {localesList.map((locale) => {
-        return (
-          <button
-            key={locale + '-desktop-language-item'}
-            className="hover:text-colr-ghostverse-teal cursor-pointer rounded-lg p-2 px-4 w-full"
-            onClick={() => handleChange(locale)}
-          >
-            <Menu.Item>
-              <div className="flex items-center gap-x-2">
-                {(() => {
-                  switch (locale.toUpperCase()) {
-                    case 'FR':
-                      return <FR className="w-6 h-4" />;
-                    default:
-                      return <GB className="w-6 h-4" />;
-                  }
-                })()}
-                <a className="hover:text-colr-ghostverse-teal flex items-center justify-center text-base font-bold uppercase">
-                  {locale}
-                </a>
-              </div>
-            </Menu.Item>
-          </button>
-        );
-      })}
+      <div className="flex flex-col">
+        {localesList.map((locale) => {
+          return (
+            <button
+              key={locale + '-desktop-language-item'}
+              className="hover:text-colr-ghostverse-teal cursor-pointer rounded-lg p-2 px-4 w-full"
+              onClick={() => handleChange(locale)}
+            >
+              <Menu.Item>
+                <div className="flex items-center gap-x-2">
+                  {(() => {
+                    switch (locale.toUpperCase()) {
+                      case 'FR':
+                        return <FR className="w-6 h-4" />;
+                      default:
+                        return <GB className="w-6 h-4" />;
+                    }
+                  })()}
+                  <a className="hover:text-colr-ghostverse-teal flex items-center justify-center text-base font-bold uppercase">
+                    {locale}
+                  </a>
+                </div>
+              </Menu.Item>
+            </button>
+          );
+        })}
+      </div>
     </DropdownMenu>
   ) : null;
 };
