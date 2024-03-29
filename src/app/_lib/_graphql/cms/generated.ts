@@ -22,10 +22,14 @@ export type Scalars = {
 
 export type Blog = {
   __typename?: 'Blog';
+  AuthorName?: Maybe<Scalars['String']['output']>;
+  AuthorPic?: Maybe<UploadFileEntityResponse>;
   CategoryColor: Enum_Blog_Categorycolor;
   CategoryLabel: Scalars['String']['output'];
   Content?: Maybe<Scalars['String']['output']>;
   FeaturedImage: UploadFileEntityResponse;
+  Keywords?: Maybe<Scalars['String']['output']>;
+  MinutesToRead?: Maybe<Scalars['Int']['output']>;
   Slug: Scalars['String']['output'];
   Summary: Scalars['String']['output'];
   Thumbnail: UploadFileEntityResponse;
@@ -63,9 +67,12 @@ export type BlogEntityResponseCollection = {
 };
 
 export type BlogFiltersInput = {
+  AuthorName?: InputMaybe<StringFilterInput>;
   CategoryColor?: InputMaybe<StringFilterInput>;
   CategoryLabel?: InputMaybe<StringFilterInput>;
   Content?: InputMaybe<StringFilterInput>;
+  Keywords?: InputMaybe<StringFilterInput>;
+  MinutesToRead?: InputMaybe<IntFilterInput>;
   Slug?: InputMaybe<StringFilterInput>;
   Summary?: InputMaybe<StringFilterInput>;
   Title?: InputMaybe<StringFilterInput>;
@@ -81,10 +88,14 @@ export type BlogFiltersInput = {
 };
 
 export type BlogInput = {
+  AuthorName?: InputMaybe<Scalars['String']['input']>;
+  AuthorPic?: InputMaybe<Scalars['ID']['input']>;
   CategoryColor?: InputMaybe<Enum_Blog_Categorycolor>;
   CategoryLabel?: InputMaybe<Scalars['String']['input']>;
   Content?: InputMaybe<Scalars['String']['input']>;
   FeaturedImage?: InputMaybe<Scalars['ID']['input']>;
+  Keywords?: InputMaybe<Scalars['String']['input']>;
+  MinutesToRead?: InputMaybe<Scalars['Int']['input']>;
   Slug?: InputMaybe<Scalars['String']['input']>;
   Summary?: InputMaybe<Scalars['String']['input']>;
   Thumbnail?: InputMaybe<Scalars['ID']['input']>;

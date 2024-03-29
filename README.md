@@ -52,7 +52,7 @@ To generate types:
 
 ## VSCode | CLI Guide:
 
-This can be executed if you run `yarn generate` from the root of the repository, from where the `codegen.yml` file is situated.! This will run the introspection and update `generated.ts` file, then create the `*.graphql` file and run this command again, it will inspect schema again and also put your queries from new *.graphl files!
+This can be executed if you run `yarn generate` from the root of the repository, from where the `codegen.yml` file is situated.! This will run the introspection and update the `schema.graphql` for you and update `generated.ts` file. Then create your `*.graphql` query file and run this command again, it will inspect schema again and also put your queries from new *.graphl files!
 
 ## WebStorm Guide:
 
