@@ -47,7 +47,7 @@ export default async function Page({
         <div className="w-full min-w-full">
           <header className="py-14 lg:py-20">
             <div className="m-auto max-w-[1280px]">
-              <div className="text-5xl font-medium">Blog</div>
+              <div className="text-3xl font-medium">Blog</div>
             </div>
           </header>
 
