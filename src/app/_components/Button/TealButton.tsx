@@ -18,12 +18,12 @@ const TealGradientButton: React.FC<TealGradientButtonProps> = ({
   const router = useRouter();
 
   const baseStyle = `
-    w-full flex items-center justify-center p-3 rounded-full shadow-sm font-medium 
-    transition-colors duration-300 transition-all
-    md:hover:scale-105 
-    hover:text-colr-mvx-teal hover:bg-colr-d-bg hover:ring-2 hover:ring-colr-mvx-teal
-    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white
-    bg-colr-mvx-teal`;
+    w-full flex items-center justify-center 
+    font-normal text-sm px-6 py-2 rounded-full md:hover:scale-105
+    transition-all duration-300
+    text-white bg-gradient-to-r from-colr-greenghost-teal to-colr-ghostverse-teal to-80%
+    hover:to-100% hover:ring-2 hover:ring-colr-greenghost-teal
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-greenghost-teal`;
 
   // Combine navigation logic with custom click handlers
   const handleClick = () => {

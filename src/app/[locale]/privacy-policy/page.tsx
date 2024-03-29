@@ -53,7 +53,7 @@ export default async function Page({
         <div className="w-full min-w-full">
           <header className="py-14 lg:py-20">
             <div className="m-auto max-w-[1280px]">
-              <div className="text-5xl font-medium pb-10">Privacy Policy</div>
+              <div className="text-3xl font-medium pb-10">Privacy Policy</div>
 
               {/* Markdown content */}
               <div className="mb-24 text-base lg:text-lg min-w-full">

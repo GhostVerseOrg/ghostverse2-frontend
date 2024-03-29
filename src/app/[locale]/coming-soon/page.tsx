@@ -35,7 +35,7 @@ export default async function Page({ params: { locale } }) {
           >
             GhostVerse
           </p>
-          <h1 className="text-5xl text-center font-bold">Coming Soon</h1>
+          <h1 className="text-3xl text-center font-bold">Coming Soon</h1>
           <SignUpForm />
         </div>
       </WavyBackground>

@@ -23,7 +23,7 @@ export default async function Page({ params: { locale } }) {
       <Layout
         // @ts-ignore
         menuItems={pageStaticData.menuItems}
-        classNameCustom="bg-colr-d-bg"
+        classNameCustom=""
       >
         <PageWrapper>
           <ScrollUp />
