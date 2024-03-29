@@ -60,7 +60,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
 
       if (item.Url) {
         return (
-          <div key={item.Url + uuidv4()} className="border-t border-gray-700">
+          <div key={item.Url + uuidv4()}>
             <MobileMenuItem
               menuItem={item}
               onMenuItemClick={toggleMenu}
