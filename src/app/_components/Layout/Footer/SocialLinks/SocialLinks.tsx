@@ -12,13 +12,13 @@ export const SocialLinks = () => {
         }}
       >
         <SocialLink href="https://twitter.com/GhostVerseOrg" label="">
-          <FaXTwitter className="hover:fill-colr-mvx-teal" />
+          <FaXTwitter className="hover:fill-colr-ghostverse-teal transition-all duration-300" />
         </SocialLink>
         <SocialLink href="https://discord.com/invite/tXSeJfVVnH" label="">
-          <FaDiscord className="hover:fill-colr-mvx-teal" />
+          <FaDiscord className="hover:fill-colr-ghostverse-teal transition-all duration-300" />
         </SocialLink>
         <SocialLink href="https://github.com/GhostVerseOrg" label="">
-          <FaGithub className="hover:fill-colr-mvx-teal" />
+          <FaGithub className="hover:fill-colr-ghostverse-teal transition-all duration-300" />
         </SocialLink>
       </IconContext.Provider>
     </div>

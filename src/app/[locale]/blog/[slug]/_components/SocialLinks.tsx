@@ -13,7 +13,7 @@ export const BlogShareLinks = () => {
       <IconContext.Provider
         value={{
           className:
-            'fill-gray-400 w-[18px] h-[18px] lg:w-[21px] lg:h-[21px] hover:fill-colr-mvx-teal duration-300 hover:scale-105 hover:-translate-y-1',
+            'fill-gray-400 w-[18px] h-[18px] lg:w-[21px] lg:h-[21px] hover:fill-colr-ghostverse-teal duration-300 hover:scale-105 hover:-translate-y-1',
         }}
       >
         {/* Instagram */}
