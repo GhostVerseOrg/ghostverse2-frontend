@@ -18,7 +18,7 @@ export const Hero = () => {
           </span>{' '}
           token With <span className="text-colr-l-primary">GhostVerse</span>
         </h1>
-        <p className="text-lg text-colr-l-secondary leading-relaxed my-5">
+        <p className="text-lg text-colr-l-primary leading-relaxed my-5">
           Join a scary universe ghostverned by 2664 Mr Ghost NFT
         </p>
         <div className="flex justify-center gap-5 w-full lg:w-fit mx-auto">
