@@ -23,7 +23,7 @@
 .button_primary_rounded_full,
 .dapp-core-component__main__btn {
   @apply w-full flex items-center justify-center shadow-sm whitespace-nowrap
-  font-normal px-6 py-2 rounded-full
+  font-medium px-6 py-2 rounded-full
   transition-all duration-300
   text-black bg-colr-ghostverse-teal 
   md:hover:scale-105 hover:bg-black hover:text-colr-ghostverse-teal hover:ring-2 hover:ring-colr-ghostverse-teal 
@@ -32,7 +32,7 @@
 
 .button_primary_rounded {
   @apply w-full flex items-center justify-center shadow-sm whitespace-nowrap
-  font-normal px-6 py-2 rounded-md
+  font-medium px-6 py-2 rounded-md
   transition-all duration-300
   text-black bg-colr-ghostverse-teal 
   md:hover:scale-105 hover:bg-black hover:text-colr-ghostverse-teal hover:ring-2 hover:ring-colr-ghostverse-teal 
@@ -41,7 +41,7 @@
 
 .button_secondary_rounded {
   @apply w-full flex items-center justify-center shadow-sm whitespace-nowrap
-  font-normal text-lg px-8 py-4 rounded-md
+  font-medium text-lg px-8 py-4 rounded-md
   transition-all duration-300
   hover:text-black hover:bg-colr-ghostverse-teal border border-colr-ghostverse-teal
   md:hover:scale-105 bg-transparent hover:ring-2 hover:ring-colr-ghostverse-teal 
