@@ -15,7 +15,7 @@ export default async function Page({ params: { locale } }) {
   return (
     <div className="bg-colr-d-bg w-full h-full">
       <WavyBackground>
-        <div className="space-y-5 text-colr-d-fg flex flex-col justify-center text-white">
+        <div className="space-y-5 flex flex-col justify-center text-white">
           <div className="w-3/5 flex justify-center mx-auto">
             <Image
               src="/assets/img/hero-ghostverse.jpeg"
@@ -29,7 +29,7 @@ export default async function Page({ params: { locale } }) {
           {/* App Name */}
           <p
             className="
-          text-6xl text-center font-philosopher-regular font-extrabold whitespace-nowrap
+          text-5xl text-center font-philosopher-regular font-extrabold whitespace-nowrap
           md:text-7xl
           "
           >
