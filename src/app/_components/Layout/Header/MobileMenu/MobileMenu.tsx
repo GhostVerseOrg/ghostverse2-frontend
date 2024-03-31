@@ -125,8 +125,9 @@ export const MobileMenu = ({ menuItems }: Props) => {
               Sign Out
             </Button>
           ) : (
-            <div className="flex justify-between">
+            <div className="flex justify-between pb-0.5">
               <GoldenGradientButton
+                classNameCustom="!p-3"
                 href={RouteNamesEnum.unlock}
                 text="Connect"
               />
