@@ -48,7 +48,7 @@ export const MobileLanguageMenu = () => {
               <button
                 key={locale + '-mobile-language-item'}
                 onClick={() => handleChange(locale)}
-                className="flex font-base  items-center font-medium text-interface-800 uppercase text-lg"
+                className="flex font-base  items-center text-interface-800 uppercase text-lg"
               >
                 {(() => {
                   switch (locale.toUpperCase()) {
