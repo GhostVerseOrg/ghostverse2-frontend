@@ -108,10 +108,13 @@ export const MobileMenu = ({ menuItems }: Props) => {
       </button>
 
       <div
-        className={clsx('fixed inset-0 z-40 bg-black', {
-          'translate-x-0 opacity-100': isMenuOpen,
-          'translate-x-full': !isMenuOpen,
-        })}
+        className={clsx(
+          'fixed inset-0 z-40 bg-black transition-all duration-300',
+          {
+            'translate-x-0 opacity-100': isMenuOpen,
+            'translate-x-full': !isMenuOpen,
+          },
+        )}
       >
         <div className="fixed inset-x-0 bottom-0 p-4 text-lg">
           {isLoggedIn ? (
@@ -122,8 +125,9 @@ export const MobileMenu = ({ menuItems }: Props) => {
               Sign Out
             </Button>
           ) : (
-            <div className="flex justify-between">
+            <div className="flex justify-between pb-0.5">
               <GoldenGradientButton
+                classNameCustom="!p-3"
                 href={RouteNamesEnum.unlock}
                 text="Connect"
               />
@@ -131,7 +135,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
           )}
         </div>
 
-        <div className="flex flex-col h-full mt-20 pt-4 flex-grow overflow-y-auto border-t border-gray-800 divide-y divide-gray-800">
+        <div className="flex flex-col h-full mt-20 flex-grow overflow-y-auto border-t border-gray-800 divide-y divide-gray-800">
           {renderLinks()}
           <MobileLanguageMenu />
         </div>

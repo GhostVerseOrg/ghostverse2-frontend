@@ -24,7 +24,7 @@ export const MobileLanguageMenu = () => {
   return localesList.length > 1 ? (
     <div>
       <button
-        className="flex text-interface-800 flex-row items-center w-full px-4 py-2"
+        className="flex text-interface-800 flex-row items-center w-full px-4 py-2 text-lg"
         onClick={toggleMenu}
       >
         {t('changeLanguage')}
@@ -38,7 +38,7 @@ export const MobileLanguageMenu = () => {
 
       <div
         className={`ml-5 transition-all duration-300 overflow-hidden w-full flex flex-col gap-y-4  ${
-          isMenuVisible ? 'h-[90px]' : 'h-0'
+          isMenuVisible ? 'h-[75px]' : 'h-0'
         }`}
       >
         {(() => {
@@ -48,7 +48,7 @@ export const MobileLanguageMenu = () => {
               <button
                 key={locale + '-mobile-language-item'}
                 onClick={() => handleChange(locale)}
-                className="flex font-base  items-center font-medium text-interface-800 uppercase text-lg"
+                className="flex font-base  items-center text-interface-800 uppercase text-lg"
               >
                 {(() => {
                   switch (locale.toUpperCase()) {
@@ -56,7 +56,7 @@ export const MobileLanguageMenu = () => {
                       return (
                         <div className="flex items-center gap-x-2 capitalize">
                           <FR className="w-6 h-4" />
-                          {'Françias'}
+                          {'Français'}
                         </div>
                       );
                     default:

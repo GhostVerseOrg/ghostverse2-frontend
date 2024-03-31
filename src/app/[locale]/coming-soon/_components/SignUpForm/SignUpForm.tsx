@@ -26,6 +26,7 @@ const SignUpForm: React.FC = () => {
       />
       <div className="px-2">
         <GoldenGradientButton
+          classNameCustom="!py-3"
           text="Sign up for updates"
           onClick={() => console.log('Form submitted')} // Optional click handler if needed
         />
