@@ -38,7 +38,7 @@ export const MobileLanguageMenu = () => {
 
       <div
         className={`ml-5 transition-all duration-300 overflow-hidden w-full flex flex-col gap-y-4  ${
-          isMenuVisible ? 'h-[90px]' : 'h-0'
+          isMenuVisible ? 'h-[75px]' : 'h-0'
         }`}
       >
         {(() => {
@@ -56,7 +56,7 @@ export const MobileLanguageMenu = () => {
                       return (
                         <div className="flex items-center gap-x-2 capitalize">
                           <FR className="w-6 h-4" />
-                          {'Françias'}
+                          {'Français'}
                         </div>
                       );
                     default:

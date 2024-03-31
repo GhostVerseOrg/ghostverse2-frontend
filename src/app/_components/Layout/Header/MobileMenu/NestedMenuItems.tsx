@@ -18,7 +18,7 @@ export const NestedMenuItems = ({ parentMenuItem, onMenuItemClick }: Props) => {
   return (
     <div>
       <button
-        className="flex items-center gap-2 w-full px-4 py-4"
+        className="flex items-center gap-2 w-full px-4 py-4 text-lg"
         onClick={toggleChildren}
       >
         {parentMenuItem.Label}
@@ -31,7 +31,7 @@ export const NestedMenuItems = ({ parentMenuItem, onMenuItemClick }: Props) => {
 
       <div
         className={`transition-all duration-300 overflow-hidden w-full flex flex-col ml-5 ${
-          areChildrenVisible ? 'h-32 -mb-5' : 'h-0'
+          areChildrenVisible ? 'h-[180px] -mt-5' : 'h-0'
         }`}
       >
         {parentMenuItem.Links?.map((item, index) => (
