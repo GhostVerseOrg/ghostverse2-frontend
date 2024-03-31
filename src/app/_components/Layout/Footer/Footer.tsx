@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer className="w-full max-w-[1800px] mx-auto px-4 lg:px-20">
       <Divider />
-      <div className="my-5 pb-4 md:flex md:justify-start">
+      <div className="my-5 pb-4 md:flex md:justify-start pl-5 md:pl-2">
         {/* Footer Logo */}
         <div className="mb-6 md:mb-0 md:min-w-[250px] lg:min-w-[300px]">
           <Link href="/" className="hidden md:flex items-center">
@@ -116,7 +116,7 @@ export const Footer = () => {
 
       {/* Copyright */}
 
-      <div className="mt-6 sm:text-left md:mb-0 md:min-w-[200px] lg:min-w-[300px]">
+      <div className="mt-6 sm:text-left md:mb-0 md:min-w-[200px] lg:min-w-[300px] sm:pl-5 md:pl-2">
         <Link
           href="/"
           className="flex justify-center items-center sm:justify-start md:hidden"
