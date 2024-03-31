@@ -78,7 +78,7 @@ export default async function BlogDetails({ params: { locale, slug } }) {
             {/* Title */}
             <div className="text-4xl font-bold">{blog.attributes.Title}</div>
             {/* Date and social links*/}
-            <div className="flex justify-between pt-3 items-center text-gray-400">
+            <div className="flex justify-between pt-4 items-center text-gray-400">
               <div className="flex flex-row items-center text-sm">
                 <span className="h-14 w-14 mr-3">
                   <Image
