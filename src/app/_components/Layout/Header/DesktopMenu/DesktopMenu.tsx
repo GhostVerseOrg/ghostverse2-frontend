@@ -83,9 +83,9 @@ export const DesktopMenu = ({ menuItems }: Props) => {
             <Button
               onClick={handleLogout}
               className="
-              p-3 m-2 rounded-full shadow-sm duration-200 bg-colr-mvx-teal transition-colors
+              p-3 m-2 rounded-full shadow-sm duration-200 bg-colr-ghostverse-teal transition-colors
               hover:bg-colr-d-btn 
-              focus:ring-colr-mvx-teal focus:outline-none focus:ring-2 focus:ring-offset-2
+              focus:ring-colr-ghostverse-teal focus:outline-none focus:ring-2 focus:ring-offset-2
                 "
             >
               Logout

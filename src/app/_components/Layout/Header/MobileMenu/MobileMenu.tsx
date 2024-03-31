@@ -120,7 +120,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
           {isLoggedIn ? (
             <Button
               onClick={handleLogout}
-              className="w-full flex items-center justify-center p-3 m-2 rounded-full shadow-sm font-medium text-black bg-colr-d-btn hover:bg-colr-mvx-teal transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-mvx-teal"
+              className="w-full flex items-center justify-center p-3 m-2 rounded-full shadow-sm font-medium text-black bg-colr-d-btn hover:bg-colr-ghostverse-teal transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-ghostverse-teal"
             >
               Sign Out
             </Button>
