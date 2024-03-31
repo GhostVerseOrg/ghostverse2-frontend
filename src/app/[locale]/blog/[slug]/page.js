@@ -135,7 +135,7 @@ export default async function BlogDetails({ params: { locale, slug } }) {
                 {blog.attributes.Content}
               </ReactMarkdown>
             </div>
-            <div className="flex flex-row gap-x-2 pb-4">
+            <div className="flex flex-row flex-wrap gap-x-2 pb-4 gap-y-3">
               {blog.attributes?.Keywords?.split(',').map((x) => (
                 <div
                   key={x}
