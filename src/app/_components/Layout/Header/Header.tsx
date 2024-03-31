@@ -15,7 +15,7 @@ export const Header = ({ menuItems }: Props) => {
       <div className="hidden md:flex w-full items-center p-3 lg:px-20 max-w-[1800px] mx-auto">
         <DesktopMenu menuItems={menuItems} />
       </div>
-      <div className="md:hidden right-0 relative bg-black flex justify-between items-center w-full p-4">
+      <div className="md:hidden right-0 bg-black flex justify-between items-center w-full p-4">
         <MobileMenu menuItems={menuItems} />
       </div>
     </header>
