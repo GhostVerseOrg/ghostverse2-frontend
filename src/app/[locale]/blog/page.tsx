@@ -49,7 +49,7 @@ export default async function Page({
             <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight">
               Ghost Chronicles
             </h1>
-            <p className="text-lg text-colr-l-secondary leading-relaxed my-5">
+            <p className="text-lg text-colr-l-primary leading-relaxed my-5">
               Whispers from the Ethereal Ink: The Ghost Chronicles
             </p>
           </div>
