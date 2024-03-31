@@ -9,10 +9,7 @@ export const IconTypes = {
 const BlogButton = (props) => {
   if (props.href) {
     return (
-      <Link
-        className={`blog_button hover:bg-[#1442cb] w-full flex-1 justify-center ${lato.className}`}
-        href={props.href}
-      >
+      <Link className={`button_primary_rounded_full`} href={props.href}>
         {props.children}
         <BlogButton.Icon iconType={props.icon} />
       </Link>
@@ -20,18 +17,14 @@ const BlogButton = (props) => {
   }
 
   return (
-    <button className={`blog_button hover:bg-[#1442cb] ${lato.className}`}>
-      {props.children}
-    </button>
+    <button className={`button_primary_rounded_full`}>{props.children}</button>
   );
 };
 
 // eslint-disable-next-line react/display-name
 BlogButton.Icon = ({ iconType }) => {
   if (iconType === 'ARROW_RIGHT') {
-    return (
-      <ArrowRightIcon aria-hidden="true" fill={'white'} className="h-5 w-5" />
-    );
+    return <ArrowRightIcon aria-hidden="true" className="ml-4 h-5 w-5" />;
   }
 };
 

@@ -20,13 +20,34 @@
   @apply shadow-[6px_7px_21px_rgba(0,0,0,0.20)];
 }
 
-.blog_button {
-  @apply inline-flex items-center w-max border-0 transition-all duration-200 no-underline
-  bg-[#154aea] text-colr-d-fg gap-[0.555rem] p-[0.555rem_1.111rem] font-semibold rounded-full;
+.button_primary_rounded_full,
+.dapp-core-component__main__btn {
+  @apply w-full flex items-center justify-center shadow-sm whitespace-nowrap
+  font-normal px-6 py-2 rounded-full md:hover:scale-105
+  transition-all duration-300
+  text-black bg-colr-ghostverse-teal 
+  md:hover:scale-105 hover:bg-black hover:text-colr-ghostverse-teal hover:ring-2 hover:ring-colr-ghostverse-teal 
+  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-ghostverse-teal !important;
 }
 
-.dapp-core-component__main__btn-primary {
-  @apply w-full max-w-60 lg:w-44 py-3 px-4 text-lg font-medium rounded-lg text-center shadow-sm whitespace-nowrap transition-all duration-300
-  md:hover:scale-105 hover:bg-colr-d-bg hover:ring-2
-  focus:outline-none focus:ring-2 focus:ring-offset-2 border-0 !important;
+.button_primary_rounded {
+  @apply w-full flex items-center justify-center shadow-sm whitespace-nowrap
+  font-normal px-6 py-2 rounded-md md:hover:scale-105
+  transition-all duration-300
+  text-black bg-colr-ghostverse-teal 
+  md:hover:scale-105 hover:bg-black hover:text-colr-ghostverse-teal hover:ring-2 hover:ring-colr-ghostverse-teal 
+  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-ghostverse-teal !important;
+}
+
+.button_secondary_rounded {
+  @apply w-full flex items-center justify-center shadow-sm whitespace-nowrap
+  font-normal text-lg px-8 py-4 rounded-md md:hover:scale-105
+  transition-all duration-300
+  hover:text-black hover:bg-colr-ghostverse-teal border border-colr-ghostverse-teal
+  md:hover:scale-105 bg-transparent hover:ring-2 hover:ring-colr-ghostverse-teal 
+  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-ghostverse-teal !important;
+}
+
+.dapp-core-component__main__btn {
+  @apply m-0 mb-2 lg:mx-2;
 }

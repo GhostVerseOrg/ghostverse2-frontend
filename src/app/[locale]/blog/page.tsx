@@ -45,11 +45,14 @@ export default async function Page({
         classNameCustom="bg-white px-5 bg-colr-d-bg text-gray-100"
       >
         <div className="w-full min-w-full">
-          <header className="py-14 lg:py-20">
-            <div className="m-auto max-w-[1280px]">
-              <div className="text-3xl font-medium">Blog</div>
-            </div>
-          </header>
+          <div className="w-full space-y-6 lg:space-y-8 my-20 text-center">
+            <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight">
+              Ghost Chronicles
+            </h1>
+            <p className="text-lg text-colr-l-secondary leading-relaxed my-5">
+              Whispers from the Ethereal Ink: The Ghost Chronicles
+            </p>
+          </div>
 
           {blogsDataUnpacked.blogs.length > 0 ? (
             <div className="pb-[80px] @container m-auto max-w-[1280px]">

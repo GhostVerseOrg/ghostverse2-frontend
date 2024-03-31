@@ -18,7 +18,7 @@ export const NestedMenuItems = ({ parentMenuItem, onMenuItemClick }: Props) => {
   return (
     <div>
       <button
-        className="flex items-center gap-2 w-full px-4 py-2"
+        className="flex items-center gap-2 w-full px-4 py-4"
         onClick={toggleChildren}
       >
         {parentMenuItem.Label}

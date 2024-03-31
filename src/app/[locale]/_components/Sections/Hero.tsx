@@ -22,29 +22,11 @@ export const Hero = () => {
           Join a scary universe ghostverned by 2664 Mr Ghost NFT
         </p>
         <div className="flex justify-center gap-5 w-full lg:w-fit mx-auto">
-          <Link
-            href="/about"
-            className="
-              px-8 py-4 rounded-lg text-center 
-              transition-all duration-300
-            text-white bg-gradient-to-t from-colr-greenghost-teal to-colr-ghostverse-teal to-80%
-              hover:to-100% hover:ring-2 hover:ring-colr-greenghost-teal
-              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-greenghost-teal"
-          >
+          <Link href="/about" className="button_primary_rounded">
             Learn More
           </Link>
-          <Link
-            href="/unlock"
-            className="
-              rounded-lg text-center p-1
-              transition-all duration-300
-            text-white bg-gradient-to-t from-colr-greenghost-teal to-colr-ghostverse-teal to-80%
-              hover:to-100% hover:ring-2 hover:ring-colr-greenghost-teal
-              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-greenghost-teal"
-          >
-            <span className="flex bg-black py-3 px-4 rounded-lg">
-              Connect Wallet
-            </span>
+          <Link href="/unlock" className="button_secondary_rounded">
+            Connect Wallet
           </Link>
         </div>
       </div>
