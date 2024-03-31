@@ -29,7 +29,7 @@ export const Footer = () => {
               <li className="mb-4">
                 <Link
                   href="https://medium.com/@GokaiLabs"
-                  className="hover:text-colr-mvx-teal"
+                  className="hover:text-colr-ghostverse-teal"
                 >
                   Medium
                 </Link>
@@ -37,7 +37,7 @@ export const Footer = () => {
               <li className="mb-4">
                 <Link
                   href="https://twitter.com/GokaiLabs"
-                  className="hover:text-colr-mvx-teal"
+                  className="hover:text-colr-ghostverse-teal"
                 >
                   Twitter
                 </Link>
@@ -45,7 +45,7 @@ export const Footer = () => {
               <li className="mb-4">
                 <Link
                   href="https://discord.com/invite/tXSeJfVVnH"
-                  className="hover:text-colr-mvx-teal"
+                  className="hover:text-colr-ghostverse-teal"
                 >
                   Discord
                 </Link>
@@ -53,7 +53,7 @@ export const Footer = () => {
               <li>
                 <Link
                   href="https://github.com/gokaiorg"
-                  className="hover:text-colr-mvx-teal"
+                  className="hover:text-colr-ghostverse-teal"
                 >
                   GitHub
                 </Link>
@@ -68,7 +68,7 @@ export const Footer = () => {
               <li className="mb-4">
                 <Link
                   href="/privacy-policy"
-                  className="hover:text-colr-mvx-teal"
+                  className="hover:text-colr-ghostverse-teal"
                 >
                   Governance
                 </Link>
@@ -76,7 +76,7 @@ export const Footer = () => {
               <li className="mb-4">
                 <Link
                   href="/terms-and-conditions"
-                  className="hover:text-colr-mvx-teal"
+                  className="hover:text-colr-ghostverse-teal"
                 >
                   Lightpaper
                 </Link>
@@ -84,7 +84,7 @@ export const Footer = () => {
               <li>
                 <Link
                   href="https://multiversx.com/"
-                  className="hover:text-colr-mvx-teal"
+                  className="hover:text-colr-ghostverse-teal"
                 >
                   Green Token
                 </Link>
@@ -97,12 +97,15 @@ export const Footer = () => {
             </h2>
             <ul className="text-gray-500 font-medium">
               <li className="mb-4">
-                <Link href="/contacts" className="hover:text-colr-mvx-teal">
+                <Link
+                  href="/contacts"
+                  className="hover:text-colr-ghostverse-teal"
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-colr-mvx-teal">
+                <Link href="/about" className="hover:text-colr-ghostverse-teal">
                   About
                 </Link>
               </li>
@@ -135,7 +138,7 @@ export const Footer = () => {
       <div className="container mx-auto lg:px-0 flex flex-col sm:flex-row sm:justify-between items-center my-6 lg:-mt-5">
         <span className="text-sm text-center text-gray-300 mb-2 sm:mb-0 text-nowrap">
           {'© '} {new Date().getFullYear()}{' '}
-          <Link href="/" className="hover:text-colr-mvx-teal">
+          <Link href="/" className="hover:text-colr-ghostverse-teal">
             GhostVerse
           </Link>
           . All Rights Reserved.

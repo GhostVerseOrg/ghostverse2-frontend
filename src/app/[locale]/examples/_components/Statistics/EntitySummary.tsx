@@ -15,7 +15,7 @@ export const EntitySummaryCard: React.FC<EntitySummaryCardProps> = ({
           key={transaction.id}
           className="w-full max-w-xs bg-gradient-to-br from-gray-800 to-gray-900 backdrop-filter backdrop-blur-md rounded-lg shadow-lg p-4 text-white flex flex-col items-center"
         >
-          <h3 className="text-sm sm:text-md font-medium tracking-wide text-colr-mvx-teal">
+          <h3 className="text-sm sm:text-md font-medium tracking-wide text-colr-ghostverse-teal">
             {transaction.recipient}
           </h3>
           <p className="text-lg sm:text-xl font-semibold">
