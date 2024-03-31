@@ -24,7 +24,7 @@ export const MobileLanguageMenu = () => {
   return localesList.length > 1 ? (
     <div>
       <button
-        className="flex text-interface-800 flex-row items-center w-full px-4 py-2"
+        className="flex text-interface-800 flex-row items-center w-full px-4 py-2 text-lg"
         onClick={toggleMenu}
       >
         {t('changeLanguage')}
