@@ -20,7 +20,6 @@
   @apply shadow-[6px_7px_21px_rgba(0,0,0,0.20)];
 }
 
-
 .dapp-core-component__main__btn {
   @apply w-full flex items-center justify-center shadow-sm whitespace-nowrap
   font-medium px-6 py-2 rounded-full
