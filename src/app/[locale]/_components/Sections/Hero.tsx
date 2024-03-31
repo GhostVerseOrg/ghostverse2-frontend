@@ -24,13 +24,13 @@ export const Hero = () => {
         <div className="flex justify-center gap-5 w-full lg:w-fit mx-auto">
           <Link
             href="/about"
-            className="button_primary_rounded max-w-64 lg:min-w-44"
+            className="button_primary_rounded max-w-64 lg:w-44"
           >
             Learn More
           </Link>
           <Link
             href="/unlock"
-            className="button_secondary_rounded max-w-64 lg:min-w-44"
+            className="button_secondary_rounded max-w-64 lg:w-44"
           >
             Connect Wallet
           </Link>
