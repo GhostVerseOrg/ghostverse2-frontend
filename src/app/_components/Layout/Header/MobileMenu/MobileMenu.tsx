@@ -108,10 +108,13 @@ export const MobileMenu = ({ menuItems }: Props) => {
       </button>
 
       <div
-        className={clsx('fixed inset-0 z-40 bg-black', {
-          'translate-x-0 opacity-100': isMenuOpen,
-          'translate-x-full': !isMenuOpen,
-        })}
+        className={clsx(
+          'fixed inset-0 z-40 bg-black transition-all duration-300',
+          {
+            'translate-x-0 opacity-100': isMenuOpen,
+            'translate-x-full': !isMenuOpen,
+          },
+        )}
       >
         <div className="fixed inset-x-0 bottom-0 p-4 text-lg">
           {isLoggedIn ? (
