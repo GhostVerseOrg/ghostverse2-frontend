@@ -17,13 +17,7 @@ const GoldenGradientButton: React.FC<GoldenGradientButtonProps> = ({
 }) => {
   const router = useRouter();
 
-  const baseStyle = `
-    w-full flex items-center justify-center p-3 rounded-full shadow-sm font-medium 
-    transition-colors duration-300 transition-all
-    md:hover:scale-105 hover:text-gray-200
-    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600
-    bg-colr-mvx-teal text-black 
-    `;
+  const baseStyle = `button_primary_rounded_full`;
 
   // Combine navigation logic with custom click handlers
   const handleClick = () => {

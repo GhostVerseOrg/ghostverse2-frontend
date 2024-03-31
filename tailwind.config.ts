@@ -33,13 +33,14 @@ const config: Config = {
         '4k': '2560px', // New breakpoint for 4K screens
       },
       colors: {
-        'colr-mvx-teal': '#13de00', // Custom teal color
-        'colr-l-primary': '#ccceef', // Light theme primary color
-        'colr-l-secondary': '#4B5563', // Light theme secondary color
+        'colr-ghostverse-teal': '#0080e4', // Custom teal color
+        'colr-greenghost-teal': '#13de00', // Custom teal color
+        'colr-l-primary': '#b4b4b4', // Light theme primary color
+        'colr-l-secondary': '#284d5a', // Light theme secondary color
         'colr-d-primary': '#475569', // Dark theme primary color //bg-slate-600 //SET
         'colr-d-secondary': '#D1D5DB', // Dark theme secondary color
-        'colr-l-fg': '#7376aa', // Light theme foreground text color
-        'colr-l-bg': '#ccceef', // Light theme background color
+        'colr-l-fg': '#dadada', // Light theme foreground text color
+        'colr-l-bg': '#000000', // Light theme background color
         'colr-d-fg': '#ccceef', // Dark theme foreground text color
         'colr-d-bg': '#070710', // Dark theme background color
         'colr-d-btn': '#070710', // bg-gray-900

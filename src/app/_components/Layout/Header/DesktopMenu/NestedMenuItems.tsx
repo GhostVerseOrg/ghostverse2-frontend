@@ -15,7 +15,7 @@ const MenuItemWrapper = ({ children }: { children: ReactNode }) => {
       {({ active }) => (
         <span
           className={`${
-            active ? 'bg-gray-300' : ''
+            active ? 'text-colr-ghostverse-teal' : ''
           }  cursor-pointer group flex w-full items-center rounded-lg`}
         >
           {children}
@@ -42,7 +42,7 @@ export const NestedMenuItems = ({ parentMenuItem }: Props) => {
             href={menuItem.Url}
             target={`_${menuItem.Target}`} // Strapi GraphQL removes underline from _blank in enum, add manually
             rel="noopener noreferrer"
-            className="p-2 px-5 text-base font-bold text-gray-800"
+            className="p-2 px-5 hover:text-colr-ghostverse-teal"
           >
             {menuItem.Label}
           </Link>

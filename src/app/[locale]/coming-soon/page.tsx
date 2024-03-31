@@ -15,7 +15,7 @@ export default async function Page({ params: { locale } }) {
   return (
     <div className="bg-colr-d-bg w-full h-full">
       <WavyBackground>
-        <div className="space-y-5 text-colr-d-fg flex flex-col justify-center">
+        <div className="space-y-5 text-colr-d-fg flex flex-col justify-center text-white">
           <div className="w-3/5 flex justify-center mx-auto">
             <Image
               src="/assets/img/hero-ghostverse.jpeg"
@@ -35,7 +35,7 @@ export default async function Page({ params: { locale } }) {
           >
             GhostVerse
           </p>
-          <h1 className="text-5xl text-center font-bold">Coming Soon</h1>
+          <h1 className="text-3xl text-center font-bold">Coming Soon</h1>
           <SignUpForm />
         </div>
       </WavyBackground>

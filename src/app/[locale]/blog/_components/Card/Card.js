@@ -9,8 +9,8 @@ export const BlogCard = (props) => (
   <div
     className="
       hover:scale-[1.02] duration-200
+      border border-gray-800
       blog_shadow h-[calc(100%-30px)] flex flex-col mb-8 gap-[30px] overflow-hidden rounded-xl 
-      bg-gradient-to-t from-slate-800 to-slate-900
       @2xl:h-auto @2xl:flex-row"
   >
     {/* Blog card image container */}

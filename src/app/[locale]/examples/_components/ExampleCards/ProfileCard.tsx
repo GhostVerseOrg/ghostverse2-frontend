@@ -26,7 +26,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           <a
             key={index}
             href={link.url}
-            className="mx-2 text-white hover:text-colr-mvx-teal transition-colors duration-300"
+            className="mx-2 text-white hover:text-colr-ghostverse-teal transition-colors duration-300"
           >
             {link.icon}
           </a>
