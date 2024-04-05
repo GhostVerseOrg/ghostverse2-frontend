@@ -30,10 +30,17 @@ export const LanguageMenu = () => {
                 return <GB className="w-6 h-4" />;
             }
           })()}
-          {flagCode}
+          {(() => {
+            switch (locale.toUpperCase()) {
+              case 'FR':
+                return <>{'Français'}</>;
+              default:
+                return <>{'English'}</>;
+            }
+          })()}
         </div>
       }
-      classNameCustom="text-lg"
+      classNameCustom="text-base"
     >
       <div className="flex flex-col">
         {localesList.map((locale) => {
@@ -53,8 +60,15 @@ export const LanguageMenu = () => {
                         return <GB className="w-6 h-4" />;
                     }
                   })()}
-                  <a className="hover:text-colr-ghostverse-teal flex items-center justify-center text-base font-bold uppercase">
-                    {locale}
+                  <a className="hover:text-colr-ghostverse-teal flex items-center justify-center text-base ">
+                    {(() => {
+                      switch (locale.toUpperCase()) {
+                        case 'FR':
+                          return <>{'Français'}</>;
+                        default:
+                          return <>{'English'}</>;
+                      }
+                    })()}
                   </a>
                 </div>
               </Menu.Item>

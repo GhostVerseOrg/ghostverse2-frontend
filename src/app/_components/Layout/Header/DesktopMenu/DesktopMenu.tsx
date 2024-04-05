@@ -53,7 +53,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
         <DesktopMenuItem
           menuItem={item}
           key={getMenuItemKey(item) + uuidv4()}
-        ></DesktopMenuItem>
+        />
       );
     });
   };
