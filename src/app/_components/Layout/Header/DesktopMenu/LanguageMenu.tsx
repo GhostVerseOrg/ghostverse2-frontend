@@ -40,7 +40,7 @@ export const LanguageMenu = () => {
           })()}
         </div>
       }
-      classNameCustom="text-base"
+      classNameCustom="text-base rounded-full border border-gray-800 px-3 py-2 -ml-2"
     >
       <div className="flex flex-col">
         {localesList.map((locale) => {
