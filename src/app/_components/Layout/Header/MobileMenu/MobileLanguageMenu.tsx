@@ -44,8 +44,8 @@ export const MobileLanguageMenu = () => {
         onClick={toggleMenu}
       >
         <div className="flex items-center gap-x-2">
-          {currLangFlag}
           {currLangFullName}
+          {currLangFlag}
         </div>
 
         <ChevronRightIcon
