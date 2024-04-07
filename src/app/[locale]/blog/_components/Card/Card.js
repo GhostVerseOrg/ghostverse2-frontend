@@ -49,7 +49,7 @@ export const BlogCard = (props) => (
       {/* Title */}
       <ConditionalRenderer condition={props.title}>
         <Link href={props.href} className="text-3xl mb-3 font-bold">
-          {props.title}
+          <p className="line-clamp-3">{props.title}</p>
         </Link>
       </ConditionalRenderer>
 
@@ -70,7 +70,9 @@ export const BlogCard = (props) => (
 
       {/* Summary */}
       <ConditionalRenderer condition={props.summary}>
-        <p className="font-semibold text-base mb-5">{props.summary}</p>
+        <p className="font-semibold text-base mb-5">
+          <p className="line-clamp-5">{props.summary}</p>
+        </p>
       </ConditionalRenderer>
 
       {/* Read More button */}
