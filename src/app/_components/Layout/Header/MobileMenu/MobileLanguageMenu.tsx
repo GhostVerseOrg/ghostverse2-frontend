@@ -29,11 +29,11 @@ export const MobileLanguageMenu = () => {
   switch (locale) {
     case 'fr':
       currLangFullName = 'Français';
-      currLangFlag = <FR className="w-6 h-4" />;
+      currLangFlag = <FR className="w-6 h-4 rounded-sm" />;
       break;
     default:
       currLangFullName = 'English';
-      currLangFlag = <GB className="w-6 h-4" />;
+      currLangFlag = <GB className="w-6 h-4 rounded-sm" />;
       break;
   }
 
@@ -74,14 +74,14 @@ export const MobileLanguageMenu = () => {
                     case 'fr':
                       return (
                         <div className="flex items-center gap-x-2 capitalize">
-                          <FR className="w-6 h-4" />
+                          <FR className="w-6 h-4 rounded-sm" />
                           {'Français'}
                         </div>
                       );
                     default:
                       return (
                         <div className="flex items-center gap-x-2 capitalize">
-                          <GB className="w-6 h-4" />
+                          <GB className="w-6 h-4 rounded-sm" />
                           {'English'}
                         </div>
                       );

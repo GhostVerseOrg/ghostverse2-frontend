@@ -22,11 +22,11 @@ export const LanguageMenu = () => {
   switch (locale) {
     case 'fr':
       currLangFullName = 'Français';
-      currLangFlag = <FR className="w-6 h-4" />;
+      currLangFlag = <FR className="w-6 h-4 rounded-sm" />;
       break;
     default:
       currLangFullName = 'English';
-      currLangFlag = <GB className="w-6 h-4" />;
+      currLangFlag = <GB className="w-6 h-4 rounded-sm" />;
       break;
   }
 
@@ -53,9 +53,9 @@ export const LanguageMenu = () => {
                   {(() => {
                     switch (locale) {
                       case 'fr':
-                        return <FR className="w-6 h-4" />;
+                        return <FR className="w-6 h-4 rounded-sm" />;
                       default:
-                        return <GB className="w-6 h-4" />;
+                        return <GB className="w-6 h-4 rounded-sm" />;
                     }
                   })()}
                   <a className="hover:text-colr-ghostverse-teal flex items-center justify-center text-base ">
