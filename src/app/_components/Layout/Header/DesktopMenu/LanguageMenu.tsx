@@ -16,28 +16,26 @@ export const LanguageMenu = () => {
     router.refresh();
   };
 
-  const flagCode = locale.toUpperCase() || 'EN';
+  // Move logic away from JSX if possible, this is the 'current' language part of selector logic.
+  var currLangFullName;
+  var currLangFlag;
+  switch (locale) {
+    case 'fr':
+      currLangFullName = 'Français';
+      currLangFlag = <FR className="w-6 h-4" />;
+      break;
+    default:
+      currLangFullName = 'English';
+      currLangFlag = <GB className="w-6 h-4" />;
+      break;
+  }
 
   return localesList.length > 1 ? (
     <DropdownMenu
       title={
         <div className="flex items-center gap-x-2">
-          {(() => {
-            switch (flagCode) {
-              case 'FR':
-                return <FR className="w-6 h-4" />;
-              default:
-                return <GB className="w-6 h-4" />;
-            }
-          })()}
-          {(() => {
-            switch (locale.toUpperCase()) {
-              case 'FR':
-                return <>{'Français'}</>;
-              default:
-                return <>{'English'}</>;
-            }
-          })()}
+          {currLangFlag}
+          {currLangFullName}
         </div>
       }
       classNameCustom="text-base rounded-full border border-gray-800 px-3 py-2 -ml-2"
@@ -53,8 +51,8 @@ export const LanguageMenu = () => {
               <Menu.Item>
                 <div className="flex items-center gap-x-2">
                   {(() => {
-                    switch (locale.toUpperCase()) {
-                      case 'FR':
+                    switch (locale) {
+                      case 'fr':
                         return <FR className="w-6 h-4" />;
                       default:
                         return <GB className="w-6 h-4" />;
@@ -62,8 +60,8 @@ export const LanguageMenu = () => {
                   })()}
                   <a className="hover:text-colr-ghostverse-teal flex items-center justify-center text-base ">
                     {(() => {
-                      switch (locale.toUpperCase()) {
-                        case 'FR':
+                      switch (locale) {
+                        case 'fr':
                           return <>{'Français'}</>;
                         default:
                           return <>{'English'}</>;
