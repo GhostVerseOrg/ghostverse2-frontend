@@ -2,7 +2,7 @@ import Image from 'next/image';
 import ConditionalRenderer from '../../_utils/conditional-renderer';
 import BlogButton from '@/app/[locale]/blog/_components/Button/Button';
 import Link from 'next/link';
-import { format, parseISO } from 'date-fns';
+import { format } from 'date-fns';
 
 export const BlogCard = (props) => (
   /* Blog card */
@@ -48,7 +48,9 @@ export const BlogCard = (props) => (
 
       {/* Title */}
       <ConditionalRenderer condition={props.title}>
-        <div className="text-3xl mb-3 font-bold">{props.title}</div>
+        <Link href={props.href} className="text-3xl mb-3 font-bold">
+          {props.title}
+        </Link>
       </ConditionalRenderer>
 
       <div className="flex flex-row gap-x-2 mb-3 text-sm text-gray-400 justify-start">
