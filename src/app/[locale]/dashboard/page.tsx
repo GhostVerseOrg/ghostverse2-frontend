@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
+import { ProtectedPageWrapper } from '@/app/_components/useElvenDapp/elven-ui/protected-page-wrapper';
 
 // @ts-ignore
 export default async function Page({
@@ -13,19 +14,21 @@ export default async function Page({
   const pageStaticData = await getStaticPageDetails(locale);
 
   return (
-    <Layout
-      // @ts-ignore
-      menuItems={pageStaticData.menuItems}
-      classNameCustom="bg-white px-5 bg-colr-d-bg text-gray-100"
-    >
-      <div className="w-full min-w-full">
-        <header className="py-14 lg:py-20">
-          <div className="m-auto max-w-[1280px]">
-            <div className="text-3xl font-medium">Dashboard</div>
-          </div>
-        </header>
-      </div>
-    </Layout>
+    <ProtectedPageWrapper>
+      <Layout
+        // @ts-ignore
+        menuItems={pageStaticData.menuItems}
+        classNameCustom="bg-white px-5 bg-colr-d-bg text-gray-100"
+      >
+        <div className="w-full min-w-full">
+          <header className="py-14 lg:py-20">
+            <div className="m-auto max-w-[1280px]">
+              <div className="text-3xl font-medium">Dashboard</div>
+            </div>
+          </header>
+        </div>
+      </Layout>
+    </ProtectedPageWrapper>
   );
 }
 
