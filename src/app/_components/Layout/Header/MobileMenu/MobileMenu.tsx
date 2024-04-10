@@ -5,15 +5,11 @@ import { NestedMenuItems } from './NestedMenuItems';
 import { getMenuItemKey } from '@/app/_components/Layout/Header/_utils/getMenuItemKey';
 import clsx from 'clsx';
 import { v4 as uuidv4 } from 'uuid';
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { MenuElement } from '@/app/_lib/api/MenuApi';
-import { Button } from '../../../Button';
 import Link from 'next/link';
-import GoldenGradientButton from '@/app/_components/Button/GoldenGradientButton';
-import { useLogin, useLogout } from '@useelven/core';
 import { LoginModalButton } from '@/app/_components/useElvenDapp/elven-ui/login-modal-button';
 
 type Props = {
@@ -23,22 +19,8 @@ type Props = {
 export const MobileMenu = ({ menuItems }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const router = useRouter();
-  const { login, isLoggedIn, error } = useLogin();
-  const { logout } = useLogout();
-
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
-  };
-
-  const onRedirect = () => {
-    router.replace('/');
-  };
-
-  const handleLogout = () => {
-    sessionStorage.clear();
-    logout();
-    onRedirect();
   };
 
   const renderLinks = () => {
@@ -117,22 +99,6 @@ export const MobileMenu = ({ menuItems }: Props) => {
         )}
       >
         <div className="fixed inset-x-0 bottom-0 p-4 text-lg">
-          {/* {isLoggedIn ? (
-            <Button
-              onClick={handleLogout}
-              className="w-full flex items-center justify-center p-3 m-2 rounded-full shadow-sm font-medium text-black bg-colr-d-btn hover:bg-colr-ghostverse-teal transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-ghostverse-teal"
-            >
-              Sign Out
-            </Button>
-          ) : (
-            <div className="flex justify-between pb-0.5">
-              <GoldenGradientButton
-                classNameCustom="!p-3"
-                href={'/unlock'}
-                text="Connect"
-              />
-            </div>
-          )} */}
           <LoginModalButton />
         </div>
 
