@@ -24,7 +24,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
   };
 
   const renderLinks = () => {
-    return menuItems.map((item) => {
+    return menuItems?.map((item) => {
       // Parent element to keep child-links together.
       if (item.Links && item.Links.length > 0) {
         return (
