@@ -3,8 +3,6 @@ import { MobileMenuItem } from './MenuItem';
 import { MobileLanguageMenu } from '@/app/_components/Layout/Header/MobileMenu/MobileLanguageMenu';
 import { NestedMenuItems } from './NestedMenuItems';
 import { getMenuItemKey } from '@/app/_components/Layout/Header/_utils/getMenuItemKey';
-import { RouteNamesEnum } from '@/app/_constants/routes';
-import { useGetIsLoggedIn } from '@/app/_hooks';
 import clsx from 'clsx';
 import { v4 as uuidv4 } from 'uuid';
 import { useRouter } from 'next/navigation';
@@ -13,7 +11,6 @@ import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { MenuElement } from '@/app/_lib/api/MenuApi';
 import { Button } from '../../../Button';
-import { getWindowLocation, logout } from '@multiversx/sdk-dapp/utils';
 import Link from 'next/link';
 import GoldenGradientButton from '@/app/_components/Button/GoldenGradientButton';
 
@@ -25,20 +22,20 @@ export const MobileMenu = ({ menuItems }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const router = useRouter();
-  const isLoggedIn = useGetIsLoggedIn();
+  // const isLoggedIn = useGetIsLoggedIn();
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
   const onRedirect = () => {
-    router.replace(RouteNamesEnum.home);
+    // router.replace(RouteNamesEnum.home);
   };
 
   const handleLogout = () => {
-    const { href } = getWindowLocation();
-    sessionStorage.clear();
-    logout(href, onRedirect, false);
+    // const { href } = getWindowLocation();
+    // sessionStorage.clear();
+    // logout(href, onRedirect, false);
   };
 
   const renderLinks = () => {
@@ -117,7 +114,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
         )}
       >
         <div className="fixed inset-x-0 bottom-0 p-4 text-lg">
-          {isLoggedIn ? (
+          {/* {isLoggedIn ? (
             <Button
               onClick={handleLogout}
               className="w-full flex items-center justify-center p-3 m-2 rounded-full shadow-sm font-medium text-black bg-colr-d-btn hover:bg-colr-ghostverse-teal transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-ghostverse-teal"
@@ -132,7 +129,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
                 text="Connect"
               />
             </div>
-          )}
+          )} */}
         </div>
 
         <div className="flex flex-col h-full mt-20 flex-grow overflow-y-auto border-t border-gray-800 divide-y divide-gray-800">

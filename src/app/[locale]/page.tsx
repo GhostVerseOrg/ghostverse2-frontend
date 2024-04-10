@@ -1,8 +1,6 @@
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { AuthRedirectWrapper } from '@/app/_wrappers/AuthRedirectWrapper';
-import { PageWrapper } from '@/app/_wrappers/PageWrapper';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
 import { ProjectCards } from './_components/Projects/projects';
@@ -19,27 +17,19 @@ export default async function Page({ params: { locale } }) {
   const pageStaticData = await getStaticPageDetails(locale);
 
   return (
-    <AuthRedirectWrapper requireAuth={false}>
-      <Layout
-        // @ts-ignore
-        menuItems={pageStaticData.menuItems}
-        classNameCustom=""
-      >
-        <PageWrapper>
-          <ScrollUp />
+    <Layout
+      // @ts-ignore
+      menuItems={pageStaticData.menuItems}
+      classNameCustom=""
+    >
+      <div className="w-full min-w-full">
+        <ScrollUp />
 
-          <Hero />
+        <Hero />
 
-          <ProjectCards />
-
-          {/*<FeaturesSection />
-          <HowItWorksSection />
-          <TestimonialsSection />
-          <LatestNewsSection />
-          <FinalCTASection /> */}
-        </PageWrapper>
-      </Layout>
-    </AuthRedirectWrapper>
+        <ProjectCards />
+      </div>
+    </Layout>
   );
 }
 

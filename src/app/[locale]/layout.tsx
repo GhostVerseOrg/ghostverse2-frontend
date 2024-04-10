@@ -4,7 +4,6 @@ import '@/styles/globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import React from 'react';
-import App from '@/app/[locale]/_app';
 import { localesList } from '@/i18n';
 import DebugBreakpoint from '../_components/DevTools/DebugBreakpoint';
 
@@ -24,10 +23,8 @@ export default async function LocaleLayout({ children, params: { locale } }) {
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <App>
-            <DebugBreakpoint />
-            {children}
-          </App>
+          <DebugBreakpoint />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

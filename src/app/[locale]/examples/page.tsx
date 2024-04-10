@@ -1,8 +1,6 @@
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { AuthRedirectWrapper } from '@/app/_wrappers/AuthRedirectWrapper';
-import { PageWrapper } from '@/app/_wrappers/PageWrapper';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
 
@@ -31,112 +29,102 @@ export default async function Page({ params: { locale } }) {
   const treasuryFunds = '$661,708.69';
 
   return (
-    <AuthRedirectWrapper requireAuth={false}>
-      <Layout
-        // @ts-ignore
-        menuItems={pageStaticData.menuItems}
-        classNameCustom="bg-colr-d-bg"
-      >
-        <PageWrapper>
-          <div className="max-w-[1280px] md:py-10 mx-auto">
-            {/* Top card section */}
-            <HeroBanner />
+    <Layout
+      // @ts-ignore
+      menuItems={pageStaticData.menuItems}
+      classNameCustom="bg-colr-d-bg"
+    >
+      <div className="max-w-[1280px] md:py-10 mx-auto">
+        {/* Top card section */}
+        <HeroBanner />
 
-            {/* Items section */}
-            <div className="flex flex-col md:flex-row items-center justify-center p-2">
-              <div className="w-full md:w-1/2 p-2 justify-center flex">
-                <InteractiveCard
-                  title="Access DeFi Services Now"
-                  description="Borrow or Deposit, choose your preference."
-                />
-              </div>
-              <div className="flex flex-col md:w-1/2 p-2">
-                <ProfileCard
-                  avatarUrl="assets/icons/avatar.svg"
-                  name="The profilename"
-                  socialLinks={[
-                    {
-                      icon: <span>Connect on Social</span>,
-                      url: '',
-                    },
-                  ]}
-                />
-              </div>
-              <div className="w-full md:w-1/2 p-2 flex flex-col">
-                <HorizontalCard
-                  imageUrl="/assets/img/graph.jpg" // Provide the correct path to your image
-                  title="Your Title Here"
-                  description="This is a description of the media content."
-                />
-                <HorizontalCard
-                  imageUrl="/assets/img/graph.jpg" // Provide the correct path to your image
-                  title="Your Title Here"
-                  description="This is a description of the media content."
-                />
-              </div>
-            </div>
-
-            {/* Total guaranteed certificates */}
-            <div className="flex items-center justify-center p-1">
-              <EntitySummaryCard transactions={DummyEntitySummary1} />
-            </div>
-
-            {/* DeFi lending stats */}
-            <div className="flex items-center justify-center p-1">
-              <EntitySummaryCard transactions={DummyEntitySummary2} />
-            </div>
-
-            {/* Treasury reserves */}
-            <div className="max-w-screen-xl py-1 mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {Array.from({ length: 4 }).map((_, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-center p-0"
-                  >
-                    <TreasuryReservesCard treasuryFunds={treasuryFunds} />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Expandable card section */}
-            <div className="space-y-4">
-              <ExpandableCard
-                title="Expandable Card Title"
-                summary="This is a summary of the content."
-                details="Here are the expanded details that you will see when you click the 'Show More' button."
-              />
-            </div>
-
-            {/* Example interactive card */}
-            <div className="flex items-center justify-center p-2">
-              <InteractiveCard
-                title="Interactive Card Title"
-                description="This is an interactive card with buttons and a slider."
-              />
-            </div>
-
-            {/* Basic and social cards line */}
-            <div className="flex items-center justify-center mx-auto p-4 sm:p-6 lg:p-8">
-              <BasicCard
-                title="Basic Card"
-                content="This is a basic card."
-                footer="Footer Text"
-              />
-            </div>
-
-            {/* Image card */}
-            <div className="flex items-center justify-center p-2">
-              <ImageCard
-                imageUrl="/assets/img/testpic1.jpg"
-                title="Image Card"
-              />
-            </div>
+        {/* Items section */}
+        <div className="flex flex-col md:flex-row items-center justify-center p-2">
+          <div className="w-full md:w-1/2 p-2 justify-center flex">
+            <InteractiveCard
+              title="Access DeFi Services Now"
+              description="Borrow or Deposit, choose your preference."
+            />
           </div>
-        </PageWrapper>
-      </Layout>
-    </AuthRedirectWrapper>
+          <div className="flex flex-col md:w-1/2 p-2">
+            <ProfileCard
+              avatarUrl="assets/icons/avatar.svg"
+              name="The profilename"
+              socialLinks={[
+                {
+                  icon: <span>Connect on Social</span>,
+                  url: '',
+                },
+              ]}
+            />
+          </div>
+          <div className="w-full md:w-1/2 p-2 flex flex-col">
+            <HorizontalCard
+              imageUrl="/assets/img/graph.jpg" // Provide the correct path to your image
+              title="Your Title Here"
+              description="This is a description of the media content."
+            />
+            <HorizontalCard
+              imageUrl="/assets/img/graph.jpg" // Provide the correct path to your image
+              title="Your Title Here"
+              description="This is a description of the media content."
+            />
+          </div>
+        </div>
+
+        {/* Total guaranteed certificates */}
+        <div className="flex items-center justify-center p-1">
+          <EntitySummaryCard transactions={DummyEntitySummary1} />
+        </div>
+
+        {/* DeFi lending stats */}
+        <div className="flex items-center justify-center p-1">
+          <EntitySummaryCard transactions={DummyEntitySummary2} />
+        </div>
+
+        {/* Treasury reserves */}
+        <div className="max-w-screen-xl py-1 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {Array.from({ length: 4 }).map((_, index) => (
+              <div key={index} className="flex items-center justify-center p-0">
+                <TreasuryReservesCard treasuryFunds={treasuryFunds} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Expandable card section */}
+        <div className="space-y-4">
+          <ExpandableCard
+            title="Expandable Card Title"
+            summary="This is a summary of the content."
+            details="Here are the expanded details that you will see when you click the 'Show More' button."
+          />
+        </div>
+
+        {/* Example interactive card */}
+        <div className="flex items-center justify-center p-2">
+          <InteractiveCard
+            title="Interactive Card Title"
+            description="This is an interactive card with buttons and a slider."
+          />
+        </div>
+
+        {/* Basic and social cards line */}
+        <div className="flex items-center justify-center mx-auto p-4 sm:p-6 lg:p-8">
+          <BasicCard
+            title="Basic Card"
+            content="This is a basic card."
+            footer="Footer Text"
+          />
+        </div>
+
+        {/* Image card */}
+        <div className="flex items-center justify-center p-2">
+          <ImageCard imageUrl="/assets/img/testpic1.jpg" title="Image Card" />
+        </div>
+      </div>
+    </Layout>
   );
 }
 

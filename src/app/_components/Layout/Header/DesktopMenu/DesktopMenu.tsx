@@ -1,8 +1,5 @@
 'use client';
 import React from 'react';
-import { useGetIsLoggedIn } from '@/app/_hooks';
-import { getWindowLocation, logout } from '@multiversx/sdk-dapp/utils';
-import { RouteNamesEnum } from '@/app/_constants/routes';
 import { useRouter } from 'next/navigation';
 import { MenuElement } from '@/app/_lib/api/MenuApi';
 import { getMenuItemKey } from '@/app/_components/Layout/Header/_utils/getMenuItemKey';
@@ -21,16 +18,16 @@ type Props = {
 
 export const DesktopMenu = ({ menuItems }: Props) => {
   const router = useRouter();
-  const isLoggedIn = useGetIsLoggedIn();
+  // const isLoggedIn = useGetIsLoggedIn();
 
   const onRedirect = () => {
-    router.replace(RouteNamesEnum.home);
+    // router.replace(RouteNamesEnum.home);
   };
 
   const handleLogout = () => {
-    const { href } = getWindowLocation();
-    sessionStorage.clear();
-    logout(href, onRedirect, false);
+    // const { href } = getWindowLocation();
+    // sessionStorage.clear();
+    // logout(href, onRedirect, false);
   };
 
   const renderLinks = () => {
@@ -79,7 +76,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
 
       <div className="flex items-center gap-5 ml-10">
         <div className="inline-flex items-center font-medium text-colr-d-btn text-base">
-          {isLoggedIn ? (
+          {/* {isLoggedIn ? (
             <Button
               onClick={handleLogout}
               className="
@@ -92,7 +89,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
             </Button>
           ) : (
             <TealGradientButton href={RouteNamesEnum.unlock} text="Connect" />
-          )}
+          )} */}
         </div>
         <LanguageMenu />
       </div>
