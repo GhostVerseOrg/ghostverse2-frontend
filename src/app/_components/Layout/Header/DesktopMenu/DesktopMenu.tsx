@@ -8,6 +8,7 @@ import { NestedMenuItems } from '@/app/_components/Layout/Header/DesktopMenu/Nes
 import { LanguageMenu } from '@/app/_components/Layout/Header/DesktopMenu/LanguageMenu';
 import Image from 'next/image';
 import { Button } from '../../../Button';
+import { useLogin, useLogout } from '@useelven/core';
 import Link from 'next/link';
 import { DesktopMenuItem } from '@/app/_components/Layout/Header/DesktopMenu/MenuItem';
 import TealGradientButton from '@/app/_components/Button/TealGradientButton';
@@ -18,16 +19,17 @@ type Props = {
 
 export const DesktopMenu = ({ menuItems }: Props) => {
   const router = useRouter();
-  // const isLoggedIn = useGetIsLoggedIn();
+  const { login, isLoggedIn, error } = useLogin();
+  const { logout } = useLogout();
 
   const onRedirect = () => {
-    // router.replace(RouteNamesEnum.home);
+    router.replace('/');
   };
 
   const handleLogout = () => {
-    // const { href } = getWindowLocation();
-    // sessionStorage.clear();
-    // logout(href, onRedirect, false);
+    sessionStorage.clear();
+    logout();
+    onRedirect();
   };
 
   const renderLinks = () => {
@@ -76,7 +78,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
 
       <div className="flex items-center gap-5 ml-10">
         <div className="inline-flex items-center font-medium text-colr-d-btn text-base">
-          {/* {isLoggedIn ? (
+          {isLoggedIn ? (
             <Button
               onClick={handleLogout}
               className="
@@ -88,8 +90,8 @@ export const DesktopMenu = ({ menuItems }: Props) => {
               Logout
             </Button>
           ) : (
-            <TealGradientButton href={RouteNamesEnum.unlock} text="Connect" />
-          )} */}
+            <TealGradientButton href={'/unlock'} text="Connect" />
+          )}
         </div>
         <LanguageMenu />
       </div>
