@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { AuthRedirectWrapper } from '@/app/_wrappers/AuthRedirectWrapper';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
 
@@ -44,34 +43,32 @@ export default async function Page({
   };
 
   return (
-    <AuthRedirectWrapper requireAuth={false}>
-      <Layout
-        // @ts-ignore
-        menuItems={pageStaticData.menuItems}
-        classNameCustom="bg-white px-5 bg-colr-d-bg text-gray-100"
-      >
-        <div className="w-full min-w-full">
-          <header className="py-14 lg:py-20">
-            <div className="m-auto max-w-[1280px]">
-              <div className="text-3xl font-medium pb-10">Privacy Policy</div>
+    <Layout
+      // @ts-ignore
+      menuItems={pageStaticData.menuItems}
+      classNameCustom="bg-white px-5 bg-colr-d-bg text-gray-100"
+    >
+      <div className="w-full min-w-full">
+        <header className="py-14 lg:py-20">
+          <div className="m-auto max-w-[1280px]">
+            <div className="text-3xl font-medium pb-10">Privacy Policy</div>
 
-              {/* Markdown content */}
-              <div className="mb-24 text-base lg:text-lg min-w-full">
-                <ReactMarkdown
-                  className="whitespace-pre-line"
-                  // @ts-ignore
-                  components={reactMarkdownComponents}
-                  rehypePlugins={[rehypeRaw]}
-                  remarkPlugins={[remarkGfm]}
-                >
-                  {legals}
-                </ReactMarkdown>
-              </div>
+            {/* Markdown content */}
+            <div className="mb-24 text-base lg:text-lg min-w-full">
+              <ReactMarkdown
+                className="whitespace-pre-line"
+                // @ts-ignore
+                components={reactMarkdownComponents}
+                rehypePlugins={[rehypeRaw]}
+                remarkPlugins={[remarkGfm]}
+              >
+                {legals}
+              </ReactMarkdown>
             </div>
-          </header>
-        </div>
-      </Layout>
-    </AuthRedirectWrapper>
+          </div>
+        </header>
+      </div>
+    </Layout>
   );
 }
 

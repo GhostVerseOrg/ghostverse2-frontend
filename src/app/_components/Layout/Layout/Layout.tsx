@@ -1,10 +1,7 @@
 import React from 'react';
 import { Footer } from '@/app/_components/Layout/Footer';
 import { Header } from '@/app/_components/Layout/Header';
-import { AuthenticatedRoutesWrapper } from '@/app/_components/sdkDappComponents/sdkDappComponents';
 import { twMerge } from 'tailwind-merge';
-import { RouteNamesEnum } from '@/app/_constants/routes';
-import { routes } from '@/app/_routes';
 import { MenuElement } from '@/app/_lib/api/MenuApi';
 
 type Props = {
@@ -23,12 +20,7 @@ export const Layout = ({ children, menuItems, classNameCustom }: Props) => {
           classNameCustom,
         )}
       >
-        <AuthenticatedRoutesWrapper
-          routes={routes}
-          unlockRoute={`${RouteNamesEnum.unlock}`}
-        >
-          {children}
-        </AuthenticatedRoutesWrapper>
+        {children}
       </main>
       <Footer />
     </div>

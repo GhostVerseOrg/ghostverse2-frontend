@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { AuthRedirectWrapper } from '../../../_wrappers/AuthRedirectWrapper';
 import { Layout } from '../../../_components/Layout/Layout';
 import { PageSettingsApi } from '../../../_lib/api/pageSettingsApi';
 import Image from 'next/image';
@@ -55,100 +54,98 @@ export default async function BlogDetails({ params: { locale, slug } }) {
   };
 
   return (
-    <AuthRedirectWrapper requireAuth={false}>
-      <Layout
-        // @ts-ignore
-        menuItems={pageStaticData.menuItems}
-        classNameCustom="px-5 bg-colr-d-bg text-gray-100"
-      >
-        <div className="w-full min-w-full">
-          <div className="max-w-4xl flex flex-col m-auto pt-8">
-            {/* Navigation breadcrumbs */}
-            <Breadcrumbs breadcrumbs={breadcrumbs} />
-            {/* Category label */}
-            <div
-              className={`
+    <Layout
+      // @ts-ignore
+      menuItems={pageStaticData.menuItems}
+      classNameCustom="px-5 bg-colr-d-bg text-gray-100"
+    >
+      <div className="w-full min-w-full">
+        <div className="max-w-4xl flex flex-col m-auto pt-8">
+          {/* Navigation breadcrumbs */}
+          <Breadcrumbs breadcrumbs={breadcrumbs} />
+          {/* Category label */}
+          <div
+            className={`
                 blog_text_c_orange text-base font-semibold pt-8 lg:pt-12 py-2 pb-3
                 blog_text_c_${blog.attributes.CategoryColor}`}
-            >
-              <span className="rounded-full py-1.5 px-3 bg-gray-600/30 w-fit">
-                {blog.attributes.CategoryLabel}
+          >
+            <span className="rounded-full py-1.5 px-3 bg-gray-600/30 w-fit">
+              {blog.attributes.CategoryLabel}
+            </span>
+          </div>
+          {/* Title */}
+          <div className="text-4xl font-bold">{blog.attributes.Title}</div>
+          {/* Date and social links*/}
+          <div className="flex justify-between pt-4 items-center text-gray-400">
+            <div className="flex flex-row items-center text-sm">
+              <span className="h-14 w-14 mr-3">
+                <Image
+                  className="rounded-full border-2 border-gray-400 relative"
+                  src={blog.attributes.AuthorPic?.data?.attributes?.url}
+                  alt={'Author'}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                />
               </span>
-            </div>
-            {/* Title */}
-            <div className="text-4xl font-bold">{blog.attributes.Title}</div>
-            {/* Date and social links*/}
-            <div className="flex justify-between pt-4 items-center text-gray-400">
-              <div className="flex flex-row items-center text-sm">
-                <span className="h-14 w-14 mr-3">
-                  <Image
-                    className="rounded-full border-2 border-gray-400 relative"
-                    src={blog.attributes.AuthorPic?.data?.attributes?.url}
-                    alt={'Author'}
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: '100%', height: 'auto' }}
-                  />
-                </span>
-                <div className="flex flex-col gap-y-1">
-                  <span>{blog.attributes.AuthorName}</span>
-                  <span>
-                    {format(
-                      parseISO(blog.attributes.publishedAt),
-                      'MMMM dd, yyyy',
-                    )}
+              <div className="flex flex-col gap-y-1">
+                <span>{blog.attributes.AuthorName}</span>
+                <span>
+                  {format(
+                    parseISO(blog.attributes.publishedAt),
+                    'MMMM dd, yyyy',
+                  )}
 
-                    <span className="pl-1 text-sm font-normal text-gray-400">
-                      {' · '}
-                      {blog.attributes.MinutesToRead}
-                      {' min read'}
-                    </span>
+                  <span className="pl-1 text-sm font-normal text-gray-400">
+                    {' · '}
+                    {blog.attributes.MinutesToRead}
+                    {' min read'}
                   </span>
-                </div>
+                </span>
               </div>
-              <BlogShareLinks />
             </div>
-            {/* Featured image */}
-            <div className="relative w-full aspect-video my-5 lg:my-6">
-              <Image
-                className="blog_shadow rounded-xl"
-                src={blog.attributes.FeaturedImage?.data?.attributes?.url}
-                alt="Featured Image"
-                sizes="100vw"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                }}
-                width={500}
-                height={300}
-              />
-            </div>
-            {/* Markdown content */}
-            <div className="mb-12 text-base lg:text-lg min-w-full">
-              <ReactMarkdown
-                className="whitespace-pre-line"
-                components={reactMarkdownComponents}
-                rehypePlugins={[rehypeRaw]}
-                remarkPlugins={[remarkGfm]}
+            <BlogShareLinks />
+          </div>
+          {/* Featured image */}
+          <div className="relative w-full aspect-video my-5 lg:my-6">
+            <Image
+              className="blog_shadow rounded-xl"
+              src={blog.attributes.FeaturedImage?.data?.attributes?.url}
+              alt="Featured Image"
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+              width={500}
+              height={300}
+            />
+          </div>
+          {/* Markdown content */}
+          <div className="mb-12 text-base lg:text-lg min-w-full">
+            <ReactMarkdown
+              className="whitespace-pre-line"
+              components={reactMarkdownComponents}
+              rehypePlugins={[rehypeRaw]}
+              remarkPlugins={[remarkGfm]}
+            >
+              {blog.attributes.Content}
+            </ReactMarkdown>
+          </div>
+          <div className="flex flex-row flex-wrap gap-x-2 pb-4 gap-y-3">
+            {blog.attributes?.Keywords?.split(',').map((x) => (
+              <div
+                key={x}
+                className="rounded-full py-1.5 px-3 bg-teal-900/40 w-fit"
               >
-                {blog.attributes.Content}
-              </ReactMarkdown>
-            </div>
-            <div className="flex flex-row flex-wrap gap-x-2 pb-4 gap-y-3">
-              {blog.attributes?.Keywords?.split(',').map((x) => (
-                <div
-                  key={x}
-                  className="rounded-full py-1.5 px-3 bg-teal-900/40 w-fit"
-                >
-                  {x}
-                </div>
-              ))}
-            </div>
+                {x}
+              </div>
+            ))}
           </div>
         </div>
-      </Layout>
-    </AuthRedirectWrapper>
+      </div>
+    </Layout>
   );
 }
 

@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { AuthRedirectWrapper } from '@/app/_wrappers/AuthRedirectWrapper';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
 import { BlogsApi } from '@/app/_lib/api/BlogsApi';
@@ -38,89 +37,85 @@ export default async function Page({
       : blogsDataUnpacked.blogs;
 
   return (
-    <AuthRedirectWrapper requireAuth={false}>
-      <Layout
-        // @ts-ignore
-        menuItems={pageStaticData.menuItems}
-        classNameCustom="bg-white px-5 bg-colr-d-bg text-gray-100"
-      >
-        <div className="w-full min-w-full">
-          <div className="w-full space-y-6 lg:space-y-8 my-20 text-center">
-            <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight">
-              Ghost Chronicles
-            </h1>
-            <p className="text-lg text-colr-l-primary leading-relaxed my-5">
-              Whispers from the Ethereal Ink: The Ghost Chronicles
-            </p>
-          </div>
-
-          {blogsDataUnpacked.blogs.length > 0 ? (
-            <div className="pb-[80px] @container m-auto max-w-[1280px]">
-              {currentPage === 1 ? (
-                <BlogCard
-                  authorName={blogsDataUnpacked.blogs[0].attributes?.AuthorName}
-                  publishedAt={
-                    blogsDataUnpacked.blogs[0].attributes?.publishedAt
-                  }
-                  minutesToRead={
-                    blogsDataUnpacked.blogs[0].attributes?.MinutesToRead
-                  }
-                  key={blogsDataUnpacked.blogs[0].id}
-                  label={blogsDataUnpacked.blogs[0].attributes?.CategoryLabel}
-                  color={blogsDataUnpacked.blogs[0].attributes?.CategoryColor}
-                  title={blogsDataUnpacked.blogs[0].attributes?.Title}
-                  summary={blogsDataUnpacked.blogs[0].attributes?.Summary}
-                  href={`/blog/${blogsDataUnpacked.blogs[0].attributes?.Slug}`}
-                  imageSrc={
-                    blogsDataUnpacked.blogs[0].attributes?.Thumbnail?.data
-                      ?.attributes?.url
-                  }
-                  btnIcon={IconTypes.ARROW_RIGHT}
-                  imageAlt="Featured Image"
-                  btnLabel="Read More"
-                />
-              ) : null}
-
-              <div className="flex flex-wrap w-full justify-start gap-x-[2%]">
-                {/* Slice(1) helps us to avoid first featured element here, blogs are already sorted by date */}
-                {blogsDataWithOrWithoutFeaturedPost.map(
-                  // @ts-ignore
-                  (blog) => (
-                    <div
-                      key={blog.id}
-                      className="flex-1 @container min-w-full @4xl:min-w-[32%] @4xl:max-w-[32%]"
-                    >
-                      <BlogCard
-                        authorName={blog.attributes?.AuthorName}
-                        publishedAt={blog.attributes?.publishedAt}
-                        minutesToRead={blog.attributes?.MinutesToRead}
-                        label={blog.attributes?.CategoryLabel}
-                        color={blog.attributes?.CategoryColor}
-                        title={blog.attributes?.Title}
-                        summary={blog.attributes?.Summary}
-                        href={`/blog/${blog.attributes?.Slug}`}
-                        imageSrc={
-                          blog.attributes?.Thumbnail?.data?.attributes?.url
-                        }
-                        btnIcon={IconTypes.ARROW_RIGHT}
-                        imageAlt="Featured Image"
-                        btnLabel="Read More"
-                      />
-                    </div>
-                  ),
-                )}
-              </div>
-
-              <div className="mt-20 flex justify-center">
-                <BlogPaginationHandler blogsData={blogsDataUnpacked} />
-              </div>
-            </div>
-          ) : (
-            notFound()
-          )}
+    <Layout
+      // @ts-ignore
+      menuItems={pageStaticData.menuItems}
+      classNameCustom="bg-white px-5 bg-colr-d-bg text-gray-100"
+    >
+      <div className="w-full min-w-full">
+        <div className="w-full space-y-6 lg:space-y-8 my-20 text-center">
+          <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight">
+            Ghost Chronicles
+          </h1>
+          <p className="text-lg text-colr-l-primary leading-relaxed my-5">
+            Whispers from the Ethereal Ink: The Ghost Chronicles
+          </p>
         </div>
-      </Layout>
-    </AuthRedirectWrapper>
+
+        {blogsDataUnpacked.blogs.length > 0 ? (
+          <div className="pb-[80px] @container m-auto max-w-[1280px]">
+            {currentPage === 1 ? (
+              <BlogCard
+                authorName={blogsDataUnpacked.blogs[0].attributes?.AuthorName}
+                publishedAt={blogsDataUnpacked.blogs[0].attributes?.publishedAt}
+                minutesToRead={
+                  blogsDataUnpacked.blogs[0].attributes?.MinutesToRead
+                }
+                key={blogsDataUnpacked.blogs[0].id}
+                label={blogsDataUnpacked.blogs[0].attributes?.CategoryLabel}
+                color={blogsDataUnpacked.blogs[0].attributes?.CategoryColor}
+                title={blogsDataUnpacked.blogs[0].attributes?.Title}
+                summary={blogsDataUnpacked.blogs[0].attributes?.Summary}
+                href={`/blog/${blogsDataUnpacked.blogs[0].attributes?.Slug}`}
+                imageSrc={
+                  blogsDataUnpacked.blogs[0].attributes?.Thumbnail?.data
+                    ?.attributes?.url
+                }
+                btnIcon={IconTypes.ARROW_RIGHT}
+                imageAlt="Featured Image"
+                btnLabel="Read More"
+              />
+            ) : null}
+
+            <div className="flex flex-wrap w-full justify-start gap-x-[2%]">
+              {/* Slice(1) helps us to avoid first featured element here, blogs are already sorted by date */}
+              {blogsDataWithOrWithoutFeaturedPost.map(
+                // @ts-ignore
+                (blog) => (
+                  <div
+                    key={blog.id}
+                    className="flex-1 @container min-w-full @4xl:min-w-[32%] @4xl:max-w-[32%]"
+                  >
+                    <BlogCard
+                      authorName={blog.attributes?.AuthorName}
+                      publishedAt={blog.attributes?.publishedAt}
+                      minutesToRead={blog.attributes?.MinutesToRead}
+                      label={blog.attributes?.CategoryLabel}
+                      color={blog.attributes?.CategoryColor}
+                      title={blog.attributes?.Title}
+                      summary={blog.attributes?.Summary}
+                      href={`/blog/${blog.attributes?.Slug}`}
+                      imageSrc={
+                        blog.attributes?.Thumbnail?.data?.attributes?.url
+                      }
+                      btnIcon={IconTypes.ARROW_RIGHT}
+                      imageAlt="Featured Image"
+                      btnLabel="Read More"
+                    />
+                  </div>
+                ),
+              )}
+            </div>
+
+            <div className="mt-20 flex justify-center">
+              <BlogPaginationHandler blogsData={blogsDataUnpacked} />
+            </div>
+          </div>
+        ) : (
+          notFound()
+        )}
+      </div>
+    </Layout>
   );
 }
 

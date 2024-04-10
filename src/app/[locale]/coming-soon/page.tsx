@@ -26,7 +26,6 @@ export default async function Page({ params: { locale } }) {
               style={{ width: '100%', height: 'auto' }}
             />
           </div>
-          {/* App Name */}
           <p
             className="
           text-5xl text-center font-philosopher-regular font-extrabold whitespace-nowrap

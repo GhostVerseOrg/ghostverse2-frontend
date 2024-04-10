@@ -1,4 +1,3 @@
-import { lato } from '@/app/_utils/fonts';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Link } from '@/app/_lib/i18nNavigation';
 
