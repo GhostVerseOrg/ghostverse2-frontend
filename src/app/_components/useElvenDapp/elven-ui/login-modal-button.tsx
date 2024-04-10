@@ -53,7 +53,7 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
           {isLoggingIn ? 'Connecting...' : 'Connect'}
         </Button>
       )}
-      <DialogContent className="max-w-xs sm:max-w-lg bg-white dark:bg-zinc-950 p-0">
+      <DialogContent className="max-w-xs sm:max-w-lg bg-colr-d-bg/70 text-white p-0">
         <DialogHeader className="px-6 pt-6">
           <DialogTitle>Connect your wallet</DialogTitle>
         </DialogHeader>
