@@ -14,6 +14,7 @@ import { Button } from '../../../Button';
 import Link from 'next/link';
 import GoldenGradientButton from '@/app/_components/Button/GoldenGradientButton';
 import { useLogin, useLogout } from '@useelven/core';
+import { LoginModalButton } from '@/app/_components/useElvenDapp/elven-ui/login-modal-button';
 
 type Props = {
   menuItems: MenuElement[];
@@ -116,7 +117,7 @@ export const MobileMenu = ({ menuItems }: Props) => {
         )}
       >
         <div className="fixed inset-x-0 bottom-0 p-4 text-lg">
-          {isLoggedIn ? (
+          {/* {isLoggedIn ? (
             <Button
               onClick={handleLogout}
               className="w-full flex items-center justify-center p-3 m-2 rounded-full shadow-sm font-medium text-black bg-colr-d-btn hover:bg-colr-ghostverse-teal transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-colr-ghostverse-teal"
@@ -131,7 +132,8 @@ export const MobileMenu = ({ menuItems }: Props) => {
                 text="Connect"
               />
             </div>
-          )}
+          )} */}
+          <LoginModalButton />
         </div>
 
         <div className="flex flex-col h-full mt-20 flex-grow overflow-y-auto border-t border-gray-800 divide-y divide-gray-800">

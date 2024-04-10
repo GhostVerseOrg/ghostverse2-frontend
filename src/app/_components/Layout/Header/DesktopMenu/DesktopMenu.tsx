@@ -12,6 +12,7 @@ import { useLogin, useLogout } from '@useelven/core';
 import Link from 'next/link';
 import { DesktopMenuItem } from '@/app/_components/Layout/Header/DesktopMenu/MenuItem';
 import TealGradientButton from '@/app/_components/Button/TealGradientButton';
+import { LoginModalButton } from '@/app/_components/useElvenDapp/elven-ui/login-modal-button';
 
 type Props = {
   menuItems: MenuElement[];
@@ -78,7 +79,7 @@ export const DesktopMenu = ({ menuItems }: Props) => {
 
       <div className="flex items-center gap-5 ml-10">
         <div className="inline-flex items-center font-medium text-colr-d-btn text-base">
-          {isLoggedIn ? (
+          {/* {isLoggedIn ? (
             <Button
               onClick={handleLogout}
               className="
@@ -91,7 +92,8 @@ export const DesktopMenu = ({ menuItems }: Props) => {
             </Button>
           ) : (
             <TealGradientButton href={'/unlock'} text="Connect" />
-          )}
+          )} */}
+          <LoginModalButton />
         </div>
         <LanguageMenu />
       </div>
