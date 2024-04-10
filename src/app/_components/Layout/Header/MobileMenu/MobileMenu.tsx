@@ -140,5 +140,3 @@ export const MobileMenu = ({ menuItems }: Props) => {
     </>
   );
 };
-
-// hover:scale-110 transition-transform duration-300 ease-in-out mr-5
