@@ -24,18 +24,6 @@ const nextConfig = {
     },
   },
 
-  // useGetIsLoggedIn causes (Module not found: Can't resolve 'fs' in Next.js application) error, so we ignore the fs
-  // as otherwise we can't start the frontend, and it's how metaversx handles this in dapp sample we use.
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false };
-    config.externals.push('pino-pretty', 'lokijs', 'encoding', {
-      bufferutil: 'bufferutil',
-      'utf-8-validate': 'utf-8-validate',
-    });
-
-    return config;
-  },
-
   // Allow all image hosts, lock remote pattern to only production-ones when we have some known domain name for storage.
   images: {
     remotePatterns: [
