@@ -55,11 +55,11 @@ export const DesktopMenu = ({ menuItems }: Props) => {
         </div>
       </Link>
 
-      <div className="flex items-center gap-10 justify-start m-auto">
+      <div className="flex items-center md:gap-5 lg:gap-10 justify-start m-auto">
         {renderLinks()}
       </div>
 
-      <div className="flex items-center gap-5 ml-10">
+      <div className="flex items-center gap-5">
         <div className="inline-flex items-center font-medium text-colr-d-btn text-base">
           <LoginModalButton />
         </div>
