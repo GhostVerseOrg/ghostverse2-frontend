@@ -106,14 +106,20 @@ export const MobileMenu = ({ menuItems }: Props) => {
 
         <div className="flex flex-col h-full mt-20 flex-grow overflow-y-auto border-t border-gray-800 divide-y divide-gray-800">
           {renderLinks()}
-          <MobileMenuItem
-            menuItem={{
-              Target: 'self',
-              Label: 'Dashboard',
-              Links: null,
-              Url: '/dashboard',
-            }}
-          />
+          {(() => {
+            if (isLoggedIn) {
+              return (
+                <MobileMenuItem
+                  menuItem={{
+                    Target: 'self',
+                    Label: 'Dashboard',
+                    Links: null,
+                    Url: '/dashboard',
+                  }}
+                />
+              );
+            }
+          })()}
           <MobileLanguageMenu />
         </div>
       </div>
