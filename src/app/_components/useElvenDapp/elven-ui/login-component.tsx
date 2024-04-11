@@ -72,23 +72,16 @@ export const LoginComponent = memo(() => {
           <Button
             className="w-full select-none h-auto py-3"
             variant="outline"
-            onClick={handleLogin(LoginMethodsEnum.walletconnect)}
-          >
-            xPortal Mobile App
-          </Button>
-          <Button
-            className="w-full select-none h-auto py-3"
-            variant="outline"
             onClick={handleLogin(LoginMethodsEnum.extension)}
           >
-            MultiversX Browser Extension
+            MultiversX DeFi Wallet
           </Button>
           <Button
             className="w-full select-none h-auto py-3"
             variant="outline"
-            onClick={handleLogin(LoginMethodsEnum.wallet)}
+            onClick={handleLogin(LoginMethodsEnum.walletconnect)}
           >
-            MultiversX Web Wallet
+            xPortal App
           </Button>
           <Button
             className="w-full select-none h-auto py-3"
@@ -100,10 +93,17 @@ export const LoginComponent = memo(() => {
           <Button
             className="w-full select-none h-auto py-3"
             variant="outline"
+            onClick={handleLogin(LoginMethodsEnum.wallet)}
+          >
+            MultiversX Web Wallet
+          </Button>
+          {/* <Button
+            className="w-full select-none h-auto py-3"
+            variant="outline"
             onClick={handleLogin(LoginMethodsEnum.xalias)}
           >
             xAlias
-          </Button>
+          </Button> */}
         </div>
       )}
 
