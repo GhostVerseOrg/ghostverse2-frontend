@@ -4,6 +4,7 @@ import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
 import { ProtectedPageWrapper } from '@/app/_components/useElvenDapp/elven-ui/protected-page-wrapper';
 import { SimpleDemo } from '@/app/_components/useElvenDapp/demo/simple-demo';
+import { GetUserDataDemo } from '@/app/_components/useElvenDapp/demo/get-user-data-demo';
 
 // @ts-ignore
 export default async function Page({
@@ -27,6 +28,7 @@ export default async function Page({
               <div className="text-3xl font-medium">Dashboard</div>
 
               <SimpleDemo />
+              <GetUserDataDemo />
             </div>
           </header>
         </div>
