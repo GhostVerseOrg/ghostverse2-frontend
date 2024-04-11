@@ -11,6 +11,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { MenuElement } from '@/app/_lib/api/MenuApi';
 import Link from 'next/link';
 import { LoginModalButton } from '@/app/_components/useElvenDapp/elven-ui/login-modal-button';
+import { useLogin } from '@useelven/core';
 
 type Props = {
   menuItems: MenuElement[];
@@ -18,6 +19,7 @@ type Props = {
 
 export const MobileMenu = ({ menuItems }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isLoggedIn } = useLogin();
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
@@ -104,6 +106,14 @@ export const MobileMenu = ({ menuItems }: Props) => {
 
         <div className="flex flex-col h-full mt-20 flex-grow overflow-y-auto border-t border-gray-800 divide-y divide-gray-800">
           {renderLinks()}
+          <MobileMenuItem
+            menuItem={{
+              Target: 'self',
+              Label: 'Dashboard',
+              Links: null,
+              Url: '/dashboard',
+            }}
+          />
           <MobileLanguageMenu />
         </div>
       </div>

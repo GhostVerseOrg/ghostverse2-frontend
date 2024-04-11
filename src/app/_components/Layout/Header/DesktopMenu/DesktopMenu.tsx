@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MenuElement } from '@/app/_lib/api/MenuApi';
 import { getMenuItemKey } from '@/app/_components/Layout/Header/_utils/getMenuItemKey';
 import { v4 as uuidv4 } from 'uuid';
@@ -9,12 +9,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { DesktopMenuItem } from '@/app/_components/Layout/Header/DesktopMenu/MenuItem';
 import { LoginModalButton } from '@/app/_components/useElvenDapp/elven-ui/login-modal-button';
+import { useLogin } from '@useelven/core';
 
 type Props = {
   menuItems: MenuElement[];
 };
 
 export const DesktopMenu = ({ menuItems }: Props) => {
+  const { isLoggedIn } = useLogin();
+
   const renderLinks = () => {
     return menuItems?.map((item) => {
       // Parent element to keep child-links together.
@@ -57,6 +60,21 @@ export const DesktopMenu = ({ menuItems }: Props) => {
 
       <div className="flex items-center md:gap-5 lg:gap-10 justify-start m-auto">
         {renderLinks()}
+
+        {(() => {
+          if (isLoggedIn) {
+            return (
+              <DesktopMenuItem
+                menuItem={{
+                  Target: 'self',
+                  Label: 'Dashboard',
+                  Links: null,
+                  Url: '/dashboard',
+                }}
+              />
+            );
+          }
+        })()}
       </div>
 
       <div className="flex items-center gap-5">
