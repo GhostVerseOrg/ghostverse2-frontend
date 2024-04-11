@@ -3,6 +3,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
 import { ProtectedPageWrapper } from '@/app/_components/useElvenDapp/elven-ui/protected-page-wrapper';
+import { SimpleDemo } from '@/app/_components/useElvenDapp/demo/simple-demo';
 
 // @ts-ignore
 export default async function Page({
@@ -24,6 +25,8 @@ export default async function Page({
           <header className="py-14 lg:py-20">
             <div className="m-auto max-w-[1280px]">
               <div className="text-3xl font-medium">Dashboard</div>
+
+              <SimpleDemo />
             </div>
           </header>
         </div>
