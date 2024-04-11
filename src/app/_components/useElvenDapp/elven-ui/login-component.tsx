@@ -8,6 +8,7 @@ import { LedgerAccountsList } from './ledger-accounts-list';
 import { getLoginMethodDeviceName } from '../lib/get-signing-device-name';
 import { Spinner } from '../ui/spinner';
 import { Button } from '../ui/button';
+import Link from 'next/link';
 
 export const LoginComponent = memo(() => {
   const {
@@ -104,6 +105,14 @@ export const LoginComponent = memo(() => {
           >
             xAlias
           </Button> */}
+          <p className="pt-2 -mb-1.5">New to MultiversX?</p>
+          <Link
+            className="underline -mb-2 hover:text-gray-300"
+            href="https://wallet.multiversx.com/"
+            target="_blank"
+          >
+            Learn how to setup a wallet
+          </Link>
         </div>
       )}
 
