@@ -60,13 +60,14 @@ export const ProfileNFTsList = () => {
   return (
     <>
       <SimpleGrid
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5"
         my={{ base: '8', md: '12' }}
         columns={{ base: 1, sm: 2, md: 3, xl: 5 }}
         gap={{ base: 1, sm: 2, md: 3, xl: 5 }}
       >
         {nfts?.map((nft) => (
           <Card
-            w="100%"
+            className="h-fit w-fit"
             key={nft.identifier}
             backgroundColor="ghostVerse.color1.lighter"
             borderColor="ghostVerse.color1.darker"
@@ -74,8 +75,8 @@ export const ProfileNFTsList = () => {
             borderRadius="0"
             backdropFilter="blur(3px)"
           >
-            <CardBody p={{ base: 1, sm: 2, md: 3 }}>
-              <Stack position="relative">
+            <CardBody className="h-fit w-fit" p={{ base: 1, sm: 2, md: 3 }}>
+              <Stack position="relative" className="h-fit w-fit">
                 <NftImageHelper
                   thumbnail={nft.media?.[0].thumbnailUrl}
                   multiversxIPFSGatewayUrl={nft.url}
