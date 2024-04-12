@@ -33,6 +33,13 @@ const nextConfig = {
       },
     ],
   },
+
+  // Fix for dependency coming from GhostVerse dApp example, fix without installing unrelated dependencies.
+  // https://github.com/WalletConnect/walletconnect-monorepo/issues/1908#issuecomment-1487801131
+  webpack: (config) => {
+    config.externals.push('pino-pretty', 'lokijs', 'encoding');
+    return config;
+  },
 };
 
 module.exports = withNextIntl(nextConfig);
