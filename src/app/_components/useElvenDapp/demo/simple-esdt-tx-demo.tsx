@@ -33,7 +33,8 @@ export const SimpleESDTTxDemo = ({
     <Card className="flex flex-1 flex-col justify-between">
       <CardContent className="mt-6">
         <div className="mb-4">
-          1. You will be sending 1 BUILDO-22c0a5 to the address: <br />
+          1. (ONLY IN DEVNET) You will be sending 1 BUILDO-22c0a5 to the
+          address: <br />
           <a
             className="font-bold"
             href={`${explorerAddress}/accounts/${transferAddress}`}

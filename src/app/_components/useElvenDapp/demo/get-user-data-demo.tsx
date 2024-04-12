@@ -88,7 +88,9 @@ export const GetUserDataDemo = () => {
             : '-'}
         </div>
         <div>
-          <span className="inline-block font-bold">GREEN balance:</span>{' '}
+          <span className="inline-block font-bold">
+            (Mainnet) GREEN balance:
+          </span>{' '}
           {balanceGreen ? balanceGreen : '-'}
         </div>
       </CardContent>
