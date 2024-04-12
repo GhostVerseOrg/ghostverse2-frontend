@@ -5,6 +5,7 @@ import { Layout } from '@/app/_components/Layout/Layout';
 import { ProtectedPageWrapper } from '@/app/_components/useElvenDapp/elven-ui/protected-page-wrapper';
 import { SimpleDemo } from '@/app/_components/useElvenDapp/demo/simple-demo';
 import { GetUserDataDemo } from '@/app/_components/useElvenDapp/demo/get-user-data-demo';
+import { ProfileNFTsList } from '@/app/_components/GhostVerseDapp/ProfileNFTsList';
 
 // @ts-ignore
 export default async function Page({
@@ -29,6 +30,7 @@ export default async function Page({
 
               <SimpleDemo />
               <GetUserDataDemo />
+              <ProfileNFTsList />
             </div>
           </header>
         </div>
