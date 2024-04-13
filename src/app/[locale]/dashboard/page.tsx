@@ -2,9 +2,9 @@ import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
-import { ProtectedPageWrapper } from '@/app/_components/useElvenDapp/elven-ui/protected-page-wrapper';
-import { SimpleDemo } from '@/app/_components/useElvenDapp/demo/simple-demo';
-import { GetUserDataDemo } from '@/app/_components/useElvenDapp/demo/get-user-data-demo';
+import { ProtectedPageWrapper } from '@/app/_components/port/useElvenDapp/elven-ui/protected-page-wrapper';
+import { SimpleDemo } from '@/app/_components/port/useElvenDapp/demo/simple-demo';
+import { GetUserDataDemo } from '@/app/_components/port/useElvenDapp/demo/get-user-data-demo';
 import { ProfileNFTsList } from '@/app/_components/GhostVerseDapp/ProfileNFTsList';
 
 // @ts-ignore

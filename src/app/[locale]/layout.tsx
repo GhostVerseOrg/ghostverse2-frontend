@@ -6,7 +6,7 @@ import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import React from 'react';
 import { localesList } from '@/i18n';
 import DebugBreakpoint from '../_components/DevTools/DebugBreakpoint';
-import { ElvenInit } from '../_components/useElvenDapp/elven-ui/elven-init';
+import { ElvenInit } from '../_components/port/useElvenDapp/elven-ui/elven-init';
 
 const inter = Inter({ subsets: ['latin'] });
 

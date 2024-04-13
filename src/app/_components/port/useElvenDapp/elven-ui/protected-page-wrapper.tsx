@@ -4,7 +4,7 @@ import { useEffect, PropsWithChildren, FC } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLogin } from '@useelven/core';
 import { Spinner } from '../ui/spinner';
-import { Layout } from '../../Layout/Layout/Layout';
+import { Layout } from '../../../Layout/Layout/Layout';
 
 interface ProtectedPageWrapper {
   redirectPath?: string;
