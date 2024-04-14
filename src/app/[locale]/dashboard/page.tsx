@@ -7,6 +7,7 @@ import { SimpleDemo } from '@/app/_components/port/useElvenDapp/demo/simple-demo
 import { GetUserDataDemo } from '@/app/_components/port/useElvenDapp/demo/get-user-data-demo';
 import { ProfileNFTsList } from '@/app/_components/port/GhostVerseDapp/ProfileNFTsList';
 import { CreateCollectionForm } from '@/app/[locale]/dashboard/_components/SimpleCreateCollection-demo';
+import { ActivateCollectionForm } from './_components/SimpleActivateCollection-demo';
 
 // @ts-ignore
 export default async function Page({
@@ -30,6 +31,7 @@ export default async function Page({
               <div className="text-3xl font-medium">Dashboard</div>
 
               <CreateCollectionForm />
+              <ActivateCollectionForm />
               <SimpleDemo />
               <GetUserDataDemo />
               <ProfileNFTsList />
