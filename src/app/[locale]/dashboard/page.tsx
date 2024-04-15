@@ -6,6 +6,9 @@ import { ProtectedPageWrapper } from '@/app/_components/port/useElvenDapp/elven-
 import { SimpleDemo } from '@/app/_components/port/useElvenDapp/demo/simple-demo';
 import { GetUserDataDemo } from '@/app/_components/port/useElvenDapp/demo/get-user-data-demo';
 import { ProfileNFTsList } from '@/app/_components/port/GhostVerseDapp/ProfileNFTsList';
+import { CreateCollectionForm } from '@/app/[locale]/dashboard/_components/SimpleCreateCollection-demo';
+import { ActivateCollectionForm } from './_components/SimpleActivateCollection-demo';
+import { CreateNFTForm } from './_components/CreateNFT-demo';
 
 // @ts-ignore
 export default async function Page({
@@ -27,6 +30,10 @@ export default async function Page({
           <header className="py-14 lg:py-20">
             <div className="m-auto max-w-[1280px]">
               <div className="text-3xl font-medium">Dashboard</div>
+
+              <CreateCollectionForm />
+              <ActivateCollectionForm />
+              <CreateNFTForm />
 
               <SimpleDemo />
               <GetUserDataDemo />
