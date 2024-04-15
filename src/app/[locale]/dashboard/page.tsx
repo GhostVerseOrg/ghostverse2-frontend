@@ -8,6 +8,7 @@ import { GetUserDataDemo } from '@/app/_components/port/useElvenDapp/demo/get-us
 import { ProfileNFTsList } from '@/app/_components/port/GhostVerseDapp/ProfileNFTsList';
 import { CreateCollectionForm } from '@/app/[locale]/dashboard/_components/SimpleCreateCollection-demo';
 import { ActivateCollectionForm } from './_components/SimpleActivateCollection-demo';
+import { CreateNFTForm } from './_components/CreateNFT-demo';
 
 // @ts-ignore
 export default async function Page({
@@ -32,6 +33,8 @@ export default async function Page({
 
               <CreateCollectionForm />
               <ActivateCollectionForm />
+              <CreateNFTForm />
+
               <SimpleDemo />
               <GetUserDataDemo />
               <ProfileNFTsList />
