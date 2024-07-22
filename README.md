@@ -27,6 +27,12 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - https://medium.com/@agusetyawan/supercharge-your-web-development-harnessing-the-power-of-local-port-forwarding-in-vs-code-bad362e6b719
 
 ## Code format
+
+Install prettier
+```bash
+npm install -g prettier
+```
+
 Use scripts from the `package.json` file, it includes these scripts
 ```bash
 prettier --write .
