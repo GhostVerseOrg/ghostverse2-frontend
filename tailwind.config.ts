@@ -10,20 +10,7 @@ const config: Config = {
           '0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)',
       },
       fontFamily: {
-        sans: [
-          'SF Pro',
-          'Inter',
-          'Helvetica Neue',
-          'Helvetica',
-          'Arial',
-          'sans-serif',
-        ],
-        serif: ['Lora', 'serif'],
-        Anta: ['Anta', 'sans-serif'],
-        'permanent-marker-regular': ['Permanent Marker', 'cursive'],
-        'russo-one-regular': ['Russo One', 'sans-serif'],
         'philosopher-regular': ['Philosopher', 'sans-serif'],
-        'philosopher-bold': ['Philosopher', 'sans-serif'],
       },
       fontSize: {
         tiny: '0.75rem', // 12px
