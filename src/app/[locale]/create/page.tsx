@@ -3,18 +3,15 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
 import { ProtectedPageWrapper } from '@/app/_components/port/useElvenDapp/elven-ui/protected-page-wrapper';
-// import { SimpleDemo } from '@/app/_components/port/useElvenDapp/demo/simple-demo';
-// import { GetUserDataDemo } from '@/app/_components/port/useElvenDapp/demo/get-user-data-demo';
-// import { ProfileNFTsList } from '@/app/_components/port/GhostVerseDapp/ProfileNFTsList';
-// import { CreateCollectionForm } from '@/app/[locale]/dashboard/_components/SimpleCreateCollection-demo';
-// import { ActivateCollectionForm } from './_components/SimpleActivateCollection-demo';
-// import { CreateNFTForm } from './_components/CreateNFT-demo';
+import { Launchpad } from './_components/Launchpad';
 
 // @ts-ignore
 export default async function Page({
   params: { locale },
+  searchParams,
 }: {
   params: { locale: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   unstable_setRequestLocale(locale);
   const pageStaticData = await getStaticPageDetails(locale);
@@ -28,18 +25,27 @@ export default async function Page({
       >
         <div className="w-full min-w-full">
           <header className="py-14 lg:py-20">
-            <div className="m-auto max-w-[1280px]">
+            <div className="m-auto max-w-[1280px] justify-center">
               <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center">
-                Ghost Launchpad
+                Update the Metaverse
               </h1>
 
-              {/* <CreateCollectionForm />
-                            <ActivateCollectionForm />
-                            <CreateNFTForm />
+              <Launchpad currentStep={String(searchParams['step'])} />
 
-                            <SimpleDemo />
-                            <GetUserDataDemo />
-                            <ProfileNFTsList /> */}
+              {/* {(currentStep === "create-collection") ?
+                <CreateCollectionForm />
+                : null
+              }
+
+              {(currentStep === "activate-collection") ?
+                <ActivateCollectionForm />
+                : null
+              }
+
+              {(currentStep === "create-nft") ?
+                <CreateNFTForm />
+                : null
+              } */}
             </div>
           </header>
         </div>

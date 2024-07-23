@@ -64,7 +64,6 @@ export const GetUserDataDemo = () => {
       if (res.status === 200) {
         const data = await res.json();
 
-        console.log(data.data.account.username);
         // Check if response is empty.
         if (data.data.account.username) {
           // Default is like @build.elrond, we need to pick the first part only.
