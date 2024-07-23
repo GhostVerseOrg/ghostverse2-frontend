@@ -98,9 +98,14 @@ export const Footer = () => {
                   Contact Us
                 </Link>
               </li>
-              <li>
+              <li className="mb-4">
                 <Link href="/about" className="hover:text-colr-ghostverse-teal">
                   About
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className="hover:text-colr-ghostverse-teal">
+                  Team
                 </Link>
               </li>
             </ul>

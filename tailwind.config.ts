@@ -10,8 +10,12 @@ const config: Config = {
       },
       fontFamily: {
         'philosopher-regular': ['Philosopher', 'sans-serif'],
+        // https://nextjs.org/docs/app/building-your-application/optimizing/fonts#local-fonts
+        cubic10: ['var(--cubic-10)'],
+        cubic12: ['var(--cubic-12)'],
       },
       screens: {
+        xs: '320px',
         '4k': '2560px', // New breakpoint for 4K screens.
       },
       colors: {
@@ -26,7 +30,7 @@ const config: Config = {
         'colr-d-fg': '#ccceef',
         'colr-d-bg': '#070710',
         'colr-d-btn': '#070710',
-      },
+        'ghost-color2': '#e5e8f1',
       },
     },
   },

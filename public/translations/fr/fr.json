@@ -1,12 +1,11 @@
 {
   "mainPageTitle": "GhostVerse",
   "mainPageDescription": "SEO de GhostVerse en français",
-
+  "teamPageTitle": "Team",
+  "teamPageDescription": "The Ghost Team SEO en français",
   "changeLanguage": "Language",
-
   "blogPageTitle": "Blog",
   "blogPageNoBlogsSorry": "Actuellement, il n'y a aucun blog.",
-
   "navHome": "Accueil",
   "navDashboard": "Tableau de bord",
   "navDAO": "DAO",
@@ -15,14 +14,11 @@
   "navMembers": "Membres",
   "navTokenomics": "Tokenomics",
   "navAbout": "À propos",
-
   "aboutPageTitle": "(FR) À propos de nous - GhostVerse",
   "aboutPageDescription": "En savoir plus sur GhostVerse et notre mission.",
   "header": "À propos de nous",
   "content": "Ici, chez GhostVerse, nous croyons en...",
-
   "sorry": "Pardon!",
   "genericError": "Il y a une erreur.",
-
   "treasuryReserves": "Réserves de trésorerie"
 }
