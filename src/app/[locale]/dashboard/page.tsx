@@ -3,12 +3,8 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { PageSettingsApi } from '@/app/_lib/api/pageSettingsApi';
 import { Layout } from '@/app/_components/Layout/Layout';
 import { ProtectedPageWrapper } from '@/app/_components/port/useElvenDapp/elven-ui/protected-page-wrapper';
-import { SimpleDemo } from '@/app/_components/port/useElvenDapp/demo/simple-demo';
 import { GetUserDataDemo } from '@/app/_components/port/useElvenDapp/demo/get-user-data-demo';
 import { ProfileNFTsList } from '@/app/_components/port/GhostVerseDapp/ProfileNFTsList';
-import { CreateCollectionForm } from '@/app/[locale]/dashboard/_components/SimpleCreateCollection-demo';
-import { ActivateCollectionForm } from './_components/SimpleActivateCollection-demo';
-import { CreateNFTForm } from './_components/CreateNFT-demo';
 
 // @ts-ignore
 export default async function Page({
@@ -33,11 +29,6 @@ export default async function Page({
                 My Ghostverse
               </h1>
 
-              {/* <CreateCollectionForm />
-              <ActivateCollectionForm />
-              <CreateNFTForm />
-
-              <SimpleDemo /> */}
               <GetUserDataDemo />
               <ProfileNFTsList />
             </div>
