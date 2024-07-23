@@ -38,12 +38,15 @@ export const ScrollUp = () => {
 
   const handleClick = () => {
     const targetSection = document.getElementById('header');
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
+    console.log(targetSection);
+    // if (targetSection) {
+    //   targetSection.scrollIntoView({
+    //     behavior: 'smooth',
+    //     block: 'start',
+    //   });
+    // }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     // Avoid cases when button is still visible after scrolling to top on large screens.
     // NB! If user has stopped scrolling manually then button won't appear back automatically.
     setShow(false);
