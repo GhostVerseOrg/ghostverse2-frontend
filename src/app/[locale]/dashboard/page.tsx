@@ -29,7 +29,9 @@ export default async function Page({
         <div className="w-full min-w-full">
           <header className="py-14 lg:py-20">
             <div className="m-auto max-w-[1280px]">
-              <div className="text-3xl font-medium">Dashboard</div>
+              <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center pb-6">
+                My Ghostverse
+              </h1>
 
               <CreateCollectionForm />
               <ActivateCollectionForm />

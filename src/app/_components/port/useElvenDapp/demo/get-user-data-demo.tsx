@@ -13,6 +13,8 @@ export const GetUserDataDemo = () => {
 
   // Fetch GREEN token balance for the current wallet session.
   const [balanceGreen, setBalanceGreen] = useState<number>();
+  const [herotag, setHerotag] = useState<string>('');
+
   useEffect(() => {
     const getGreenBalance = async () => {
       const res = await fetch(
@@ -46,10 +48,47 @@ export const GetUserDataDemo = () => {
     getGreenBalance();
   }, [address]);
 
+  useEffect(() => {
+    const getGreenBalance = async () => {
+      const res = await fetch(
+        'https://api.multiversx.com' + `/address/` + address,
+        {
+          method: 'GET',
+        },
+      );
+
+      if (!res.ok) {
+        return console.error(await res.text());
+      }
+
+      if (res.status === 200) {
+        const data = await res.json();
+
+        console.log(data.data.account.username);
+        // Check if response is empty.
+        if (data.data.account.username) {
+          // Default is like @build.elrond, we need to pick the first part only.
+          let username = data.data.account.username.split('.')[0];
+
+          if (username != '') {
+            setHerotag(username);
+          }
+        }
+      }
+    };
+
+    getGreenBalance();
+  }, [address]);
+
   return (
     <Card className="flex-1">
       <CardContent className="mt-6">
-        <div className="text-xl mb-2 font-bold">User data:</div>
+        {!herotag ? (
+          <div className="text-xl mb-2 font-bold">User data:</div>
+        ) : null}
+        {herotag ? (
+          <div className="text-xl mb-2 font-bold">Hello @{herotag} !</div>
+        ) : null}
         <div>
           <span className="inline-block font-bold">address:</span>{' '}
           {address ? (
@@ -64,7 +103,7 @@ export const GetUserDataDemo = () => {
           )}
         </div>
         <div>
-          <span className="inline-block font-bold">guardian:</span>{' '}
+          {/* <span className="inline-block font-bold">guardian:</span>{' '}
           {activeGuardianAddress ? (
             <Link
               className="underline"
@@ -74,13 +113,13 @@ export const GetUserDataDemo = () => {
             </Link>
           ) : (
             <span>-</span>
-          )}
+          )} */}
         </div>
+        {/* <div> */}
+        {/* <span className="inline-block font-bold">nonce:</span> {nonce}
+        </div> */}
         <div>
-          <span className="inline-block font-bold">nonce:</span> {nonce}
-        </div>
-        <div>
-          <span className="inline-block font-bold">EGLD balance:</span>{' '}
+          <span className="inline-block font-bold">EGLD:</span>{' '}
           {balance
             ? parseFloat(
                 TokenTransfer.egldFromBigInteger(balance).toPrettyString(),
@@ -88,9 +127,7 @@ export const GetUserDataDemo = () => {
             : '-'}
         </div>
         <div>
-          <span className="inline-block font-bold">
-            (Mainnet) GREEN balance:
-          </span>{' '}
+          <span className="inline-block font-bold">GREEN:</span>{' '}
           {balanceGreen ? balanceGreen : '-'}
         </div>
       </CardContent>

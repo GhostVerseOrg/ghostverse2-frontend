@@ -59,7 +59,9 @@ export const ProfileNFTsList = () => {
 
   return (
     <>
-      <p>mainnet ghosts</p>
+      <h1 className="text-2xl lg:text-4xl font-bold lg:leading-tight text-center py-6">
+        My Ghosts
+      </h1>
       <SimpleGrid
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5"
         my={{ base: '8', md: '12' }}
