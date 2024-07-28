@@ -70,7 +70,7 @@ export const CreateCollectionNFT = ({
           disabled={pending || !loggedIn}
           onClick={handleSendTx}
         >
-          Send Transaction
+          Create
         </Button>
       </CardFooter>
     </Card>
