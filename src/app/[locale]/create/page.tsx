@@ -26,9 +26,9 @@ export default async function Page({
         <div className="w-full min-w-full">
           <header className="py-14 lg:py-20">
             <div className="m-auto max-w-[1280px] justify-center">
-              <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center">
+              {/* <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center">
                 Update the Metaverse
-              </h1>
+              </h1> */}
 
               <Launchpad currentStep={String(searchParams['step'])} />
 

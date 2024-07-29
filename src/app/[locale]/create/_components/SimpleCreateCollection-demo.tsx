@@ -87,7 +87,7 @@ export const CreateCollectionForm = () => {
       )}
       {result?.type && (
         <div className="flex flex-col items-center justify-center absolute inset-0 backdrop-blur-sm bg-zinc-200 bg-opacity-60 dark:bg-zinc-950 dark:bg-opacity-60">
-          {result.type === 'tx' &&
+          {result.type === 'tx' && (
             <>
               <div className="text-xl font-bold">Transaction hash:</div>
               <a
@@ -98,7 +98,7 @@ export const CreateCollectionForm = () => {
                 {shortenHash(result.content, 10)}
               </a>
             </>
-          }
+          )}
 
           <Button variant="outline" className="mt-4" onClick={handleClose}>
             Close

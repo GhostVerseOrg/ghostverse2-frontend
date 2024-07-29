@@ -13,7 +13,7 @@ export const Launchpad: React.FC<LaunchpadProps> = ({ currentStep }) => {
     <div className="py-6">
       {currentStep === 'create-collection' ? (
         <>
-          <h1 className="text-2xl lg:text-4xl font-bold lg:leading-tight text-center">
+          <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center">
             Create Collection
           </h1>
           <CreateCollectionForm />
@@ -22,7 +22,7 @@ export const Launchpad: React.FC<LaunchpadProps> = ({ currentStep }) => {
 
       {currentStep === 'activate-collection' ? (
         <>
-          <h1 className="text-2xl lg:text-4xl font-bold lg:leading-tight text-center">
+          <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center">
             Activate Collection
           </h1>
           <ActivateCollectionForm />
@@ -31,7 +31,7 @@ export const Launchpad: React.FC<LaunchpadProps> = ({ currentStep }) => {
 
       {currentStep === 'create-nft' ? (
         <>
-          <h1 className="text-2xl lg:text-4xl font-bold lg:leading-tight text-center">
+          <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center">
             Create NFT
           </h1>
           <CreateNFTForm />

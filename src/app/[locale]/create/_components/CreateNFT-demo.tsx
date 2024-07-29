@@ -102,7 +102,7 @@ export const CreateNFTForm = () => {
             <>
               <div className="text-xl font-bold">Query result</div>
               <div className="text-lg">
-                Data returned is {' '}
+                Data returned is{' '}
                 <span className="font-bold text-xl inline-block">
                   {result.content}
                 </span>{' '}
