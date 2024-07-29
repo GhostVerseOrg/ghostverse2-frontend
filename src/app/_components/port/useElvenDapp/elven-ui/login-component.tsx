@@ -8,6 +8,9 @@ import { LedgerAccountsList } from './ledger-accounts-list';
 import { getLoginMethodDeviceName } from '../lib/get-signing-device-name';
 import { Spinner } from '../ui/spinner';
 import { Button } from '../ui/button';
+import { ChevronRightIcon } from '@heroicons/react/20/solid';
+import Image from 'next/image';
+
 import Link from 'next/link';
 
 export const LoginComponent = memo(() => {
@@ -69,45 +72,125 @@ export const LoginComponent = memo(() => {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col gap-3 items-center lg:px-8">
+        <div className="flex flex-col gap-1.5 items-center lg:px-8">
           <Button
-            className="w-full select-none h-auto py-3"
+            className="w-full select-none h-auto py-3 justify-between whitespace-nowrap bg-login-modal-label-background/[0.08] border-login-modal-label-background/[0.06] border-[1px]"
             variant="outline"
             onClick={handleLogin(LoginMethodsEnum.extension)}
           >
-            MultiversX DeFi Wallet
+            <div className="flex items-center gap-2.5">
+              <span className="size-4 text-white stroke-white items-center flex">
+                <Image
+                  alt="MultiversX DeFi Wallet login"
+                  src="/assets/icons/login-app.svg"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  priority
+                />
+              </span>
+              <span>MultiversX DeFi Wallet</span>
+            </div>
+            <div className="flex items-center text-xs">
+              <span className="text-login-modal-label-method font-philosopher-regular">
+                Extension
+              </span>
+              <span className="gray-500 text-gray-500 items-center flex">
+                <ChevronRightIcon className="h-4 w-4" />
+              </span>
+            </div>
           </Button>
           <Button
-            className="w-full select-none h-auto py-3"
+            className="w-full select-none h-auto py-3 justify-between whitespace-nowrap bg-login-modal-label-background/[0.08] border-login-modal-label-background/[0.06] border-[1px]"
             variant="outline"
             onClick={handleLogin(LoginMethodsEnum.walletconnect)}
           >
-            xPortal App
+            <div className="flex items-center gap-2.5">
+              <span className="size-4 text-white stroke-white items-center flex">
+                <Image
+                  alt="MultiversX DeFi Wallet login"
+                  src="/assets/icons/login-xportal.svg"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  priority
+                />
+              </span>
+              <span>xPortal App</span>
+            </div>
+            <div className="flex items-center text-xs">
+              <span className="text-login-modal-label-method font-philosopher-regular">
+                Mobile
+              </span>
+              <span className="gray-500 text-gray-500 items-center flex">
+                <ChevronRightIcon className="h-4 w-4" />
+              </span>
+            </div>
           </Button>
           <Button
-            className="w-full select-none h-auto py-3"
+            className="w-full select-none h-auto py-3 justify-between whitespace-nowrap bg-login-modal-label-background/[0.08] border-login-modal-label-background/[0.06] border-[1px]"
             variant="outline"
             onClick={handleLedgerAccountsList}
           >
-            Ledger
+            <div className="flex items-center gap-2.5">
+              <span className="-ml-1 -mr-1.5 size-7 text-white stroke-white items-center flex">
+                <Image
+                  alt="MultiversX DeFi Wallet login"
+                  src="/assets/icons/login-ledger.svg"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  priority
+                />
+              </span>
+              <span>Ledger</span>
+            </div>
+            <div className="flex items-center text-xs">
+              <span className="text-login-modal-label-method font-philosopher-regular">
+                Hardware
+              </span>
+              <span className="gray-500 text-gray-500 items-center flex">
+                <ChevronRightIcon className="h-4 w-4" />
+              </span>
+            </div>
           </Button>
           <Button
-            className="w-full select-none h-auto py-3"
+            className="w-full select-none h-auto py-3 justify-between whitespace-nowrap bg-login-modal-label-background/[0.08] border-login-modal-label-background/[0.06] border-[1px]"
             variant="outline"
             onClick={handleLogin(LoginMethodsEnum.wallet)}
           >
-            MultiversX Web Wallet
+            <div className="flex items-center gap-2.5">
+              <span className="size-4 text-white stroke-white items-center flex">
+                <Image
+                  alt="MultiversX DeFi Wallet login"
+                  src="/assets/icons/login-web.svg"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  priority
+                />
+              </span>
+              <span>MultiversX Web Wallet</span>
+            </div>
+            <div className="flex items-center text-xs">
+              <span className="text-login-modal-label-method font-philosopher-regular">
+                Browser
+              </span>
+              <span className="gray-500 text-gray-500 items-center flex">
+                <ChevronRightIcon className="h-4 w-4" />
+              </span>
+            </div>
           </Button>
-          {/* <Button
-            className="w-full select-none h-auto py-3"
-            variant="outline"
-            onClick={handleLogin(LoginMethodsEnum.xalias)}
-          >
-            xAlias
-          </Button> */}
-          <p className="pt-2 -mb-1.5">New to MultiversX?</p>
+          <hr className="w-full h-px mx-auto bg-white/20 border-0 rounded mt-2 md:my-6" />
+          <p className="-mb-1.5 text-sm text-login-modal-label-method">
+            New to MultiversX?
+          </p>
           <Link
-            className="underline -mb-2 hover:text-gray-300"
+            className="underline -mb-5 text-login-modal-label-method hover:text-gray-300 text-sm"
             href="https://wallet.multiversx.com/"
             target="_blank"
           >

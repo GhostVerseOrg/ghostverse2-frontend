@@ -53,11 +53,17 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
           {isLoggingIn ? 'Connecting...' : 'Connect'}
         </Button>
       )}
-      <DialogContent className="max-w-xs sm:max-w-lg bg-colr-d-bg/70 text-white p-0">
-        <DialogHeader className="px-6 pt-6">
-          <DialogTitle>Connect your wallet</DialogTitle>
-        </DialogHeader>
-        <div className="grid gap-4 overflow-y-auto max-h-[calc(100vh-160px)] px-6 pb-12 pt-6">
+      <DialogContent className="max-w-xs sm:max-w-lg bg-login-modal-background border-white/30 text-login-modal-text p-0">
+        <div
+          className="
+            flex justify-center gap-2
+            px-6 pt-6 
+            text-xl tracking-tight text-white/85"
+        >
+          <p className="font-cubic12">Connect to </p>
+          <p className="font-cubic12">GhostVerse</p>
+        </div>
+        <div className="grid gap-4 overflow-y-auto max-h-[calc(100vh-160px)] px-6 pb-12 pt-3">
           <LoginComponent />
         </div>
       </DialogContent>

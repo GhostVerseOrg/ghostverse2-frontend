@@ -33,7 +33,7 @@ export const WalletConnectPairings: FC<WalletConnectPairingsProps> = ({
         )}
         {pairings.map((pairing) => (
           <div
-            className="bg-colr-d-bg/70 my-3 py-2 px-4 pr-8 rounded-md cursor-pointer select-none relative border border-solid border-zinc-300 dark:border-0"
+            className="my-3 py-2 px-4 pr-8 rounded-md cursor-pointer select-none relative border border-solid border-white/20 dark:border-0"
             key={pairing.topic}
             onClick={handleLogin(pairing.topic)}
           >
