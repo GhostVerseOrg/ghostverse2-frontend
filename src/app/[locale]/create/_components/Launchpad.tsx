@@ -18,18 +18,14 @@ export const Launchpad: React.FC<LaunchpadProps> = ({ currentStep }) => {
           </h1>
           <CreateCollectionForm />
         </>
-      ) : null}
-
-      {currentStep === 'activate-collection' ? (
+      ) : currentStep === 'activate-collection' ? (
         <>
           <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center">
             Activate Collection
           </h1>
           <ActivateCollectionForm />
         </>
-      ) : null}
-
-      {currentStep === 'create-nft' ? (
+      ) : currentStep === 'create-nft' ? (
         <>
           <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center">
             Create NFT
