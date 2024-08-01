@@ -49,9 +49,9 @@ export const ProfileNFTsList = () => {
   if (!nfts || nfts.length === 0) {
     return (
       <Box mt={12} textAlign="center">
-        <Text>No NFTs minted yet!</Text>
-        <Link href="/mxghosts">
-          <Text textDecoration="underline">Mint some!</Text>
+        <Text>No Ghosts available yet!</Text>
+        <Link href="/marketplace">
+          <Text textDecoration="underline">Go get some!</Text>
         </Link>
       </Box>
     );
