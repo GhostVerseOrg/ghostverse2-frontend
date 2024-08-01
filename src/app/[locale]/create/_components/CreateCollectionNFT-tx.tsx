@@ -29,7 +29,7 @@ export const CreateCollectionNFT = ({
   const [canChangeOwner, setCanChangeOwner] = useState(false); // Token management can be transferred to a different account.
   const [canTransferNFTCreateRole, setCanTransferNFTCreateRole] =
     useState(false); // The token manager can transfer NFT/SFT/Meta creation role
-  const [canAddSpecialRoles, setCanAddSpecialRoles] = useState(false); // The token manager can assign a specific role(s). Important for token management.
+  const [canAddSpecialRoles, setCanAddSpecialRoles] = useState(true); // The token manager can assign a specific role(s). Important for token management. NB! Without "true" we won't be able to activate collection.
   const [canUpgrade, setCanUpgrade] = useState(false); // The token manager may change these properties. Without it you won't be able to change these properties in the future.
   // We don't take 'canMint' property here as we are creating a collection token, not minting it.
   const canMint = false;
@@ -46,14 +46,14 @@ export const CreateCollectionNFT = ({
         new StringValue(String(canPause)),
         new StringValue('canWipe'),
         new StringValue(String(canWipe)),
-        new StringValue('canChangeOwner'),
-        new StringValue(String(canChangeOwner)),
-        new StringValue('canTransferNFTCreateRole'),
-        new StringValue(String(canTransferNFTCreateRole)),
-        new StringValue('canAddSpecialRoles'),
-        new StringValue(String(canAddSpecialRoles)),
-        new StringValue('canUpgrade'),
-        new StringValue(String(canUpgrade)),
+        // new StringValue('canChangeOwner'),
+        // new StringValue(String(canChangeOwner)),
+        // new StringValue('canTransferNFTCreateRole'),
+        // new StringValue(String(canTransferNFTCreateRole)),
+        // new StringValue('canAddSpecialRoles'),
+        // new StringValue(String(canAddSpecialRoles)),
+        // new StringValue('canUpgrade'),
+        // new StringValue(String(canUpgrade)),
       ])
       .build();
 
@@ -128,7 +128,7 @@ export const CreateCollectionNFT = ({
         />
       </div>
 
-      <div className="flex justify-between mt-2 hidden">
+      {/* <div className="flex justify-between mt-2">
         <FieldSwitch
           id={'canChangeOwner'}
           name={'Can Change Owner'}
@@ -149,7 +149,7 @@ export const CreateCollectionNFT = ({
           name={'Can Upgrade'}
           setExternalValue={setCanUpgrade}
         />
-      </div>
+      </div> */}
 
       <div className="flex justify-center">
         <Button
