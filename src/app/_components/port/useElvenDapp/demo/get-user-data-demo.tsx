@@ -13,7 +13,7 @@ export const GetUserDataDemo = () => {
 
   // Fetch GREEN token balance for the current wallet session.
   const [balanceGreen, setBalanceGreen] = useState<number>();
-  const [herotag, setHerotag] = useState<string>('');
+  const [username, setUsername] = useState<string>('');
 
   useEffect(() => {
     const getGreenBalance = async () => {
@@ -49,7 +49,7 @@ export const GetUserDataDemo = () => {
   }, [address]);
 
   useEffect(() => {
-    const getGreenBalance = async () => {
+    const getUsername = async () => {
       const res = await fetch(
         'https://api.multiversx.com' + `/address/` + address,
         {
@@ -70,24 +70,23 @@ export const GetUserDataDemo = () => {
           let username = data.data.account.username.split('.')[0];
 
           if (username != '') {
-            setHerotag(username);
+            setUsername(username);
           }
         }
       }
     };
 
-    getGreenBalance();
+    getUsername();
   }, [address]);
 
   return (
     <Card className="flex-1">
       <CardContent className="mt-6">
-        {!herotag ? (
+        {username ? (
+          <div className="text-xl mb-2 font-bold">Hello @{username} !</div>
+        ) : (
           <div className="text-xl mb-2 font-bold">User data:</div>
-        ) : null}
-        {herotag ? (
-          <div className="text-xl mb-2 font-bold">Hello @{herotag} !</div>
-        ) : null}
+        )}
         <div>
           <span className="inline-block font-bold">address:</span>{' '}
           {address ? (
@@ -122,12 +121,12 @@ export const GetUserDataDemo = () => {
           {balance
             ? parseFloat(
                 TokenTransfer.egldFromBigInteger(balance).toPrettyString(),
-              )
+              ).toFixed(2)
             : '-'}
         </div>
         <div>
           <span className="inline-block font-bold">GREEN:</span>{' '}
-          {balanceGreen ? balanceGreen : '-'}
+          {balanceGreen ? (balanceGreen / 100_000_000).toFixed(2) : '-'}
         </div>
       </CardContent>
     </Card>
