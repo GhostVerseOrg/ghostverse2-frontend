@@ -12,9 +12,9 @@ import {
 import { Button } from '../../../_components/port/useElvenDapp/ui/button';
 import { Spinner } from '../../../_components/port/useElvenDapp/ui/spinner';
 import { shortenHash } from '../../../_components/port/useElvenDapp/lib/shorten-hash';
-import { ActivateCollectionNFT } from './ActivateCollectionNFT-tx';
+import { CreateCollectionNFT } from './CreateCollection-tx';
 
-export const ActivateCollectionForm = () => {
+export const CreateCollectionForm = () => {
   const [result, setResult] = useState<{ type: string; content: string }>();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string>();
@@ -52,7 +52,7 @@ export const ActivateCollectionForm = () => {
   return (
     <div className="relative">
       <div className="flex gap-8 flex-wrap justify-center items-stretch mb-4 flex-col lg:flex-row">
-        <ActivateCollectionNFT cb={handleTxCb} />
+        <CreateCollectionNFT cb={handleTxCb} />
       </div>
       {error && (
         <div className="flex flex-col items-center justify-center absolute inset-0 backdrop-blur-sm bg-zinc-200 bg-opacity-60 dark:bg-zinc-950 dark:bg-opacity-60">
@@ -87,7 +87,7 @@ export const ActivateCollectionForm = () => {
       )}
       {result?.type && (
         <div className="flex flex-col items-center justify-center absolute inset-0 backdrop-blur-sm bg-zinc-200 bg-opacity-60 dark:bg-zinc-950 dark:bg-opacity-60">
-          {result.type === 'tx' ? (
+          {result.type === 'tx' && (
             <>
               <div className="text-xl font-bold">Transaction hash:</div>
               <a
@@ -97,17 +97,6 @@ export const ActivateCollectionForm = () => {
               >
                 {shortenHash(result.content, 10)}
               </a>
-            </>
-          ) : (
-            <>
-              <div className="text-xl font-bold">Query result</div>
-              <div className="text-lg">
-                Data returned is{' '}
-                <span className="font-bold text-xl inline-block">
-                  {result.content}
-                </span>{' '}
-                !
-              </div>
             </>
           )}
 

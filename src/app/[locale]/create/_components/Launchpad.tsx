@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { CreateCollectionForm } from '@/app/[locale]/create/_components/SimpleCreateCollection-demo';
-import { ActivateCollectionForm } from '../_components/SimpleActivateCollection-demo';
-import { CreateNFTForm } from '../_components/CreateNFT-demo';
+import { CreateCollectionForm } from '@/app/[locale]/create/_components/CreateCollectionStep';
+import { ActivateCollectionForm } from './ActivateCollectionStep';
+import { CreateNFTForm } from './CreateNFTstep';
 
 interface LaunchpadProps {
   currentStep: string;
