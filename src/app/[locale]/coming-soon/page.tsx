@@ -16,23 +16,13 @@ export default async function Page({ params: { locale } }) {
     <div className="bg-colr-d-bg w-full h-full">
       <WavyBackground>
         <div className="space-y-5 flex flex-col justify-center text-white">
-          <div className="w-3/5 flex justify-center mx-auto">
-            <Image
-              src="/assets/img/hero-ghostverse.jpeg"
-              alt="GhostVerse Logo"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-            />
-          </div>
           <p
             className="
           text-5xl text-center font-philosopher-regular font-extrabold whitespace-nowrap
           md:text-7xl
           "
           >
-            GhostVerse
+            GhostVerse2
           </p>
           <h1 className="text-3xl text-center font-bold">Coming Soon</h1>
           <SignUpForm />
