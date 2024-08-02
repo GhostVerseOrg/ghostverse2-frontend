@@ -26,13 +26,13 @@ export const CreateCollectionNFT = ({
   const [canFreeze, setCanFreeze] = useState(false); // The token manager may freeze the token balance in a specific account, preventing transfers to and from that account.
   const [canPause, setCanPause] = useState(false); // The token manager may prevent all transactions of the token, apart from minting and burning.
   const [canWipe, setCanWipe] = useState(false); // The token manager may wipe out the tokens held by a frozen account, reducing the supply.
-  const [canChangeOwner, setCanChangeOwner] = useState(false); // Token management can be transferred to a different account.
-  const [canTransferNFTCreateRole, setCanTransferNFTCreateRole] =
-    useState(false); // The token manager can transfer NFT/SFT/Meta creation role
-  const [canAddSpecialRoles, setCanAddSpecialRoles] = useState(true); // The token manager can assign a specific role(s). Important for token management. NB! Without "true" we won't be able to activate collection.
-  const [canUpgrade, setCanUpgrade] = useState(false); // The token manager may change these properties. Without it you won't be able to change these properties in the future.
-  // We don't take 'canMint' property here as we are creating a collection token, not minting it.
-  const canMint = false;
+  // const [canChangeOwner, setCanChangeOwner] = useState(false); // Token management can be transferred to a different account.
+  // const [canTransferNFTCreateRole, setCanTransferNFTCreateRole] =
+  //   useState(false); // The token manager can transfer NFT/SFT/Meta creation role
+  // const [canAddSpecialRoles, setCanAddSpecialRoles] = useState(true); // The token manager can assign a specific role(s). Important for token management. NB! Without "true" we won't be able to activate collection.
+  // const [canUpgrade, setCanUpgrade] = useState(false); // The token manager may change these properties. Without it you won't be able to change these properties in the future.
+  // // We don't take 'canMint' property here as we are creating a collection token, not minting it.
+  // const canMint = false;
 
   const handleSendTx = () => {
     const transactionPayload = new ContractCallPayloadBuilder()
