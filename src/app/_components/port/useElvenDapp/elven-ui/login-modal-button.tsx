@@ -2,7 +2,7 @@
 
 import { FC, useState } from 'react';
 import { useLogin, useLogout } from '@useelven/core';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../ui/dialog';
+import { Dialog, DialogContent } from '../ui/dialog';
 import { LoginComponent } from './login-component';
 import { Button } from '../ui/button';
 import { useEffectOnlyOnUpdate } from '../hooks/use-effect-only-on-update';
@@ -18,7 +18,6 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { isLoggedIn, isLoggingIn, setLoggingInState } = useLogin();
-
   const { logout } = useLogout();
 
   useEffectOnlyOnUpdate(() => {
@@ -45,7 +44,12 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
   return (
     <Dialog open={isOpen} onOpenChange={onCloseComplete}>
       {isLoggedIn ? (
-        <Button variant="ghostTheme" onClick={() => logout()}>
+        <Button
+          variant="ghostTheme"
+          onClick={async () => {
+            await logout();
+          }}
+        >
           Logout
         </Button>
       ) : (

@@ -1,24 +1,28 @@
 'use client';
 
 import { useEffect, PropsWithChildren, FC } from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useLogin } from '@useelven/core';
-import { Spinner } from '../ui/spinner';
 import { Layout } from '../../../Layout/Layout/Layout';
 
 interface ProtectedPageWrapper {
   redirectPath?: string;
+  searchParams?: any;
 }
 
 export const ProtectedPageWrapper: FC<
   PropsWithChildren<ProtectedPageWrapper>
-> = ({ children, redirectPath = '/' }) => {
+> = ({ children, redirectPath = '/login', searchParams }) => {
   const router = useRouter();
+  const pathname = usePathname();
   const { isLoggedIn, isLoggingIn } = useLogin();
+
+  const params = new URLSearchParams(searchParams);
 
   useEffect(() => {
     if (!isLoggingIn && !isLoggedIn) {
-      router.push(redirectPath);
+      params.set('route', pathname);
+      router.push(redirectPath + '?' + params.toString());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoggedIn, isLoggingIn]);

@@ -106,51 +106,51 @@ export const MobileMenu = ({ menuItems }: Props) => {
 
         <div className="flex flex-col h-full mt-20 flex-grow overflow-y-auto border-t border-gray-800 divide-y divide-gray-800">
           {renderLinks()}
-          {(() => {
+          {/* {(() => {
             if (isLoggedIn) {
-              return (
-                <>
-                  <MobileMenuItem
-                    menuItem={{
-                      Target: 'self',
-                      Label: 'Dashboard',
-                      Links: null,
-                      Url: '/dashboard',
-                    }}
-                  />
-                  <NestedMenuItems
-                    parentMenuItem={{
-                      Target: 'self',
-                      Label: 'Create',
-                      Links: [
-                        {
-                          Label: 'Create Collection',
-                          Url: '/create?step=create-collection',
-                          Target: 'self',
-                          Links: null,
-                        },
-                        {
-                          Label: 'Activate Collection',
-                          Url: '/create?step=activate-collection',
-                          Target: 'self',
-                          Links: null,
-                        },
-                        {
-                          Label: 'Create NFT',
-                          Url: '/create?step=create-nft',
-                          Target: 'self',
-                          Links: null,
-                        },
-                      ],
-                      Url: '/create',
-                    }}
-                    onMenuItemClick={toggleMenu}
-                    key={'Create Collections'}
-                  />
-                </>
-              );
+              return ( */}
+          <>
+            <MobileMenuItem
+              menuItem={{
+                Target: 'self',
+                Label: 'Dashboard',
+                Links: null,
+                Url: '/dashboard',
+              }}
+            />
+            <NestedMenuItems
+              parentMenuItem={{
+                Target: 'self',
+                Label: 'Create',
+                Links: [
+                  {
+                    Label: 'Create Collection',
+                    Url: '/create?step=create-collection',
+                    Target: 'self',
+                    Links: null,
+                  },
+                  {
+                    Label: 'Activate Collection',
+                    Url: '/create?step=activate-collection',
+                    Target: 'self',
+                    Links: null,
+                  },
+                  {
+                    Label: 'Create NFT',
+                    Url: '/create?step=create-nft',
+                    Target: 'self',
+                    Links: null,
+                  },
+                ],
+                Url: '/create',
+              }}
+              onMenuItemClick={toggleMenu}
+              key={'Create Collections'}
+            />
+          </>
+          {/* );
             }
-          })()}
+          })()} */}
           <MobileLanguageMenu />
         </div>
       </div>

@@ -19,7 +19,7 @@ export default function (req: NextRequest): NextResponse {
 }
 
 export const config = {
-  // Fix for redirects to unprefixed pathnames, e.g., /unlock.
+  // Fix for redirects to unprefixed pathnames, e.g., /login.
   matcher: [
     // Match all pathnames except for
     // - … if they start with `/api`, `/_next` or `/_vercel`

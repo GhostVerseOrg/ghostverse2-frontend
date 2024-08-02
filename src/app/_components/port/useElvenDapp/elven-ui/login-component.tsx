@@ -1,6 +1,6 @@
 // Login component wraps all auth services in one place
 // You can always use only one of them if needed
-import { useCallback, memo, useState } from 'react';
+import { useCallback, memo, useState, useEffect } from 'react';
 import { useLogin, LoginMethodsEnum } from '@useelven/core';
 import { WalletConnectQRCode } from './walletconnect-qr-code';
 import { WalletConnectPairings } from './walletconnect-pairings';
@@ -12,11 +12,16 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 export const LoginComponent = memo(() => {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const {
     login,
     isLoggingIn,
+    isLoggedIn,
     error,
     walletConnectUri,
     getHWAccounts,
@@ -34,6 +39,19 @@ export const LoginComponent = memo(() => {
     },
     [login],
   );
+
+  const handleLoginFromRedirectedRoute = useEffect(() => {
+    if (isLoggedIn) {
+      // Redirect to the route that was requested before redirection to login page.
+      const redirectPath = new URLSearchParams(window.location.search).get(
+        'route',
+      );
+      console.log(redirectPath);
+      if (redirectPath) {
+        router.push(`${redirectPath}`);
+      }
+    }
+  }, [isLoggedIn]);
 
   const handleLedgerAccountsList = useCallback(() => {
     setLoginMethod(LoginMethodsEnum.ledger);

@@ -9,14 +9,16 @@ import { ProfileNFTsList } from '@/app/_components/port/GhostVerseDapp/ProfileNF
 // @ts-ignore
 export default async function Page({
   params: { locale },
+  searchParams,
 }: {
   params: { locale: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   unstable_setRequestLocale(locale);
   const pageStaticData = await getStaticPageDetails(locale);
 
   return (
-    <ProtectedPageWrapper>
+    <ProtectedPageWrapper searchParams={searchParams}>
       <Layout
         // @ts-ignore
         menuItems={pageStaticData.menuItems}

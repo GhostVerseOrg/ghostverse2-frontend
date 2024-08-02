@@ -1,7 +1,7 @@
 import React from 'react';
-import { LoginMethods } from './_components/loginmethods';
 import Link from 'next/link';
 import { XMarkIcon } from '@heroicons/react/24/solid';
+import { LoginMethods } from './_components/loginmethods';
 
 export default function Page() {
   return (
@@ -16,11 +16,6 @@ export default function Page() {
         className="flex flex-col p-6 items-center justify-center gap-4 rounded-xl bg-colr-d-bg"
         data-testid="unlockPage"
       >
-        <div className="flex flex-col items-center gap-1">
-          <h2 className="text-2xl text-colr-d-fg">Login</h2>
-          <p className="text-center text-colr-l-fg">Choose a login method</p>
-        </div>
-
         <LoginMethods />
       </div>
     </div>

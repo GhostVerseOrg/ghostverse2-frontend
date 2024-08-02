@@ -16,7 +16,7 @@ type Props = {
 };
 
 export const DesktopMenu = ({ menuItems }: Props) => {
-  const { isLoggedIn } = useLogin();
+  // const { isLoggedIn } = useLogin();
 
   const renderLinks = () => {
     return menuItems?.map((item) => {
@@ -61,50 +61,50 @@ export const DesktopMenu = ({ menuItems }: Props) => {
       <div className="flex items-center md:gap-5 lg:gap-10 justify-start m-auto">
         {renderLinks()}
 
-        {(() => {
+        {/* {(() => {
           if (isLoggedIn) {
-            return (
-              <>
-                <DesktopMenuItem
-                  menuItem={{
-                    Target: 'self',
-                    Label: 'Dashboard',
-                    Links: null,
-                    Url: '/dashboard',
-                  }}
-                />
-                <NestedMenuItems
-                  parentMenuItem={{
-                    Target: 'self',
-                    Label: 'Create',
-                    Links: [
-                      {
-                        Label: 'Create Collection',
-                        Url: '/create?step=create-collection',
-                        Target: 'self',
-                        Links: null,
-                      },
-                      {
-                        Label: 'Activate Collection',
-                        Url: '/create?step=activate-collection',
-                        Target: 'self',
-                        Links: null,
-                      },
-                      {
-                        Label: 'Create NFT',
-                        Url: '/create?step=create-nft',
-                        Target: 'self',
-                        Links: null,
-                      },
-                    ],
-                    Url: '/create',
-                  }}
-                  key={'Create Collections'}
-                />
-              </>
-            );
+            return ( */}
+        <>
+          <DesktopMenuItem
+            menuItem={{
+              Target: 'self',
+              Label: 'Dashboard',
+              Links: null,
+              Url: '/dashboard',
+            }}
+          />
+          <NestedMenuItems
+            parentMenuItem={{
+              Target: 'self',
+              Label: 'Create',
+              Links: [
+                {
+                  Label: 'Create Collection',
+                  Url: '/create?step=create-collection',
+                  Target: 'self',
+                  Links: null,
+                },
+                {
+                  Label: 'Activate Collection',
+                  Url: '/create?step=activate-collection',
+                  Target: 'self',
+                  Links: null,
+                },
+                {
+                  Label: 'Create NFT',
+                  Url: '/create?step=create-nft',
+                  Target: 'self',
+                  Links: null,
+                },
+              ],
+              Url: '/create',
+            }}
+            key={'Create Collections'}
+          />
+        </>
+        {/* );
           }
-        })()}
+        })()} */}
       </div>
 
       <div className="flex items-center gap-5">

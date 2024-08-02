@@ -29,7 +29,7 @@ export const Hero = () => {
             Learn More
           </Link>
           <Link
-            href="/unlock"
+            href="/login"
             className="hero_button_secondary_rounded min-w-36 max-w-64 lg:w-44"
           >
             Connect Wallet
