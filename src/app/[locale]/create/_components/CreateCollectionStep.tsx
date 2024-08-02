@@ -51,7 +51,7 @@ export const CreateCollectionForm = () => {
 
   return (
     <div className="relative">
-      <div className="flex gap-8 flex-wrap justify-center items-stretch mb-4 flex-col lg:flex-row">
+      <div className="flex gap-8 flex-wrap justify-center items-stretch mb-4 flex-col lg:flex-row mx-auto lg:w-1/2">
         <CreateCollectionNFT cb={handleTxCb} />
       </div>
       {error && (

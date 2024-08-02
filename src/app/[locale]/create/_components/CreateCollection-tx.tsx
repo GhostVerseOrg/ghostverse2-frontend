@@ -68,7 +68,7 @@ export const CreateCollectionNFT = ({
   };
 
   return (
-    <div className="flex flex-col gap-y-3">
+    <form className="flex flex-col gap-y-4 lg:w-xl">
       <div className="sm:mt-4">
         <div className="text-center text-md text-gray-300 font-bold">
           {'Token Name'}
@@ -155,13 +155,13 @@ export const CreateCollectionNFT = ({
         <Button
           variant="ghostTheme"
           size={'lg'}
-          className="!w-1/2"
+          className="lg:!w-1/2 !w-2/6"
           disabled={pending || !loggedIn}
           onClick={handleSendTx}
         >
           Create
         </Button>
       </div>
-    </div>
+    </form>
   );
 };

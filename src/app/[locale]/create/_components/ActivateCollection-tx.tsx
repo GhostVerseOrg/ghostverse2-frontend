@@ -6,8 +6,6 @@ import {
   useLoggingIn,
   useTransaction,
   useApiCall,
-  SCQueryType,
-  useConfig,
 } from '@useelven/core';
 import { Button } from '../../../_components/port/useElvenDapp/ui/button';
 import {
@@ -17,7 +15,7 @@ import {
   ContractCallPayloadBuilder,
 } from '@multiversx/sdk-core';
 import { TokenTransfer, Address } from '@multiversx/sdk-core';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export const ActivateCollectionNFT = ({
   cb,
@@ -56,7 +54,7 @@ export const ActivateCollectionNFT = ({
   };
 
   return (
-    <form className="flex flex-col gap-y-4">
+    <form className="flex flex-col gap-y-4 lg:w-xl">
       <div className="sm:mt-4">
         <div className="text-center text-md text-gray-300 font-bold">
           {'Activate an existing collection token to create NFTs on top of it'}
@@ -103,7 +101,7 @@ export const ActivateCollectionNFT = ({
         <Button
           variant="ghostTheme"
           size={'lg'}
-          className="!w-1/2"
+          className="lg:!w-1/2 !w-2/6"
           disabled={pending || !loggedIn || !collectionTicker}
           onClick={handleSendTx}
         >

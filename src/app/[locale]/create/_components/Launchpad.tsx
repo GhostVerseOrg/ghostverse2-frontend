@@ -33,7 +33,7 @@ const renderSwitch = (param: string) => {
       return (
         <>
           <h1 className="text-3xl lg:text-5xl font-bold lg:leading-tight text-center">
-            Create NFT
+            Update the metaverse
           </h1>
           <CreateNFTForm />
         </>

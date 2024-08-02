@@ -51,7 +51,7 @@ export const CreateNFTForm = () => {
 
   return (
     <div className="relative">
-      <div className="flex gap-8 flex-wrap justify-center items-stretch mb-4 flex-col lg:flex-row">
+      <div className="flex gap-8 flex-wrap justify-center items-stretch mb-4 flex-col lg:flex-row mx-auto lg:w-1/2">
         <CreateNFT cb={handleTxCb} />
       </div>
       {error && (
@@ -87,7 +87,7 @@ export const CreateNFTForm = () => {
       )}
       {result?.type && (
         <div className="flex flex-col items-center justify-center absolute inset-0 backdrop-blur-sm bg-zinc-200 bg-opacity-60 dark:bg-zinc-950 dark:bg-opacity-60">
-          {result.type === 'tx' ? (
+          {result.type === 'tx' && (
             <>
               <div className="text-xl font-bold">Transaction hash:</div>
               <a
@@ -97,17 +97,6 @@ export const CreateNFTForm = () => {
               >
                 {shortenHash(result.content, 10)}
               </a>
-            </>
-          ) : (
-            <>
-              <div className="text-xl font-bold">Query result</div>
-              <div className="text-lg">
-                Data returned is{' '}
-                <span className="font-bold text-xl inline-block">
-                  {result.content}
-                </span>{' '}
-                !
-              </div>
             </>
           )}
 
