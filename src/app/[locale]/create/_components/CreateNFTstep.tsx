@@ -17,17 +17,24 @@ import { CreateNFT } from './CreateNFT-tx';
 export const CreateNFTForm = () => {
   const [result, setResult] = useState<{ type: string; content: string }>();
   const [pending, setPending] = useState(false);
-  const [error, setError] = useState<string>();
+  const [error, setError] = useState<any>();
   const { loginMethod } = useLoginInfo();
   const { explorerAddress } = useConfig();
 
   // TODO: these callbacks will be deprecated in useElven
   const handleTxCb = useCallback(
-    ({ transaction, pending, error }: TransactionCallbackParams) => {
+    ({ transaction, pending, error, txResult }: TransactionCallbackParams) => {
       if (transaction) {
         setResult({ type: 'tx', content: transaction.getHash().hex() });
         setPending(false);
-        setError(undefined);
+        // setError(false);
+
+        // Handle the SC query error in case of creating new NFTs.
+        if (txResult?.status.toString() != 'success') {
+          setError(txResult?.status.toString());
+        } else {
+          setError(false);
+        }
       }
       if (pending) {
         setPending(true);
@@ -85,7 +92,7 @@ export const CreateNFTForm = () => {
           </div>
         </div>
       )}
-      {result?.type && (
+      {!error && result?.type && (
         <div className="flex flex-col items-center justify-center absolute inset-0 backdrop-blur-sm bg-zinc-200 bg-opacity-60 dark:bg-zinc-950 dark:bg-opacity-60">
           {result.type === 'tx' && (
             <>
